@@ -1,0 +1,341 @@
+local ChangerTrip = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local face = Instance.new("ImageButton")
+local UICorner_2 = Instance.new("UICorner")
+local face_2 = Instance.new("ImageButton")
+local UICorner_3 = Instance.new("UICorner")
+local face_3 = Instance.new("ImageButton")
+local UICorner_4 = Instance.new("UICorner")
+local face_4 = Instance.new("ImageButton")
+local UICorner_5 = Instance.new("UICorner")
+local face_5 = Instance.new("ImageButton")
+local UICorner_6 = Instance.new("UICorner")
+local face_6 = Instance.new("ImageButton")
+local UICorner_7 = Instance.new("UICorner")
+local face_7 = Instance.new("ImageButton")
+local UICorner_8 = Instance.new("UICorner")
+local face_8 = Instance.new("ImageButton")
+local UICorner_9 = Instance.new("UICorner")
+local face_9 = Instance.new("ImageButton")
+local UICorner_10 = Instance.new("UICorner")
+local face_10 = Instance.new("ImageButton")
+local UICorner_11 = Instance.new("UICorner")
+local face_11 = Instance.new("ImageButton")
+local UICorner_12 = Instance.new("UICorner")
+local face_12 = Instance.new("ImageButton")
+local UICorner_13 = Instance.new("UICorner")
+local face_13 = Instance.new("ImageButton")
+local UICorner_14 = Instance.new("UICorner")
+local face_14 = Instance.new("ImageButton")
+local UICorner_15 = Instance.new("UICorner")
+local face_15 = Instance.new("ImageButton")
+local UICorner_16 = Instance.new("UICorner")
+local face_16 = Instance.new("ImageButton")
+local UICorner_17 = Instance.new("UICorner")
+local face_17 = Instance.new("ImageButton")
+local UICorner_18 = Instance.new("UICorner")
+local face_18 = Instance.new("ImageButton")
+local UICorner_19 = Instance.new("UICorner")
+local face_19 = Instance.new("ImageButton")
+local UICorner_20 = Instance.new("UICorner")
+
+ChangerTrip.Name = "ChangerTrip"
+ChangerTrip.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ChangerTrip.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ChangerTrip.ResetOnSpawn = false
+
+Frame.Parent = ChangerTrip
+Frame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+Frame.Position = UDim2.new(0.195288748, 0, 0.197775036, 0)
+Frame.Size = UDim2.new(0, 337, 0, 390)
+Frame.Active = true
+Frame.Draggable = true
+
+UICorner.CornerRadius = UDim.new(0, 13)
+UICorner.Parent = Frame
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+TextLabel.BorderColor3 = Color3.fromRGB(25, 25, 25)
+TextLabel.Position = UDim2.new(0.0385756642, 0, 0, 0)
+TextLabel.Size = UDim2.new(0, 311, 0, 69)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Face Changer Trip"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+ScrollingFrame.Parent = Frame
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+ScrollingFrame.BorderColor3 = Color3.fromRGB(25, 25, 25)
+ScrollingFrame.Position = UDim2.new(0.00890207756, 0, 0.202564105, 0)
+ScrollingFrame.Size = UDim2.new(0, 330, 0, 303)
+
+face.Name = "face"
+face.Parent = ScrollingFrame
+face.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+face.BorderColor3 = Color3.fromRGB(35, 35, 35)
+face.Size = UDim2.new(0, 100, 0, 100)
+face.Image = "http://www.roblox.com/asset/?id=129900258 "
+face.MouseButton1Down:Connect(function()
+	game.Players.LocalPlayer.Character.Head.face.Texture = "http://www.roblox.com/asset/?id=129900258"
+end)
+UICorner_2.CornerRadius = UDim.new(0, 13)
+UICorner_2.Parent = face
+
+face_2.Name = "face"
+face_2.Parent = ScrollingFrame
+face_2.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+face_2.BorderColor3 = Color3.fromRGB(35, 35, 35)
+face_2.Position = UDim2.new(0.606060624, 0, 0.128205135, 0)
+face_2.Size = UDim2.new(0, 100, 0, 100)
+face_2.Image = "http://www.roblox.com/asset/?id=49493144"
+face_2.MouseButton1Down:Connect(function()
+	game.Players.LocalPlayer.Character.Head.face.Texture = "http://www.roblox.com/asset/?id=49493144"
+end)
+
+UICorner_3.CornerRadius = UDim.new(0, 13)
+UICorner_3.Parent = face_2
+
+face_3.Name = "face"
+face_3.Parent = ScrollingFrame
+face_3.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+face_3.BorderColor3 = Color3.fromRGB(35, 35, 35)
+face_3.Position = UDim2.new(0.303030312, 0, 0.128205135, 0)
+face_3.Size = UDim2.new(0, 100, 0, 100)
+face_3.Image = "http://www.roblox.com/asset/?id=629947734 "
+face_3.MouseButton1Down:Connect(function()
+	game.Players.LocalPlayer.Character.Head.face.Texture = "http://www.roblox.com/asset/?id=629947734"
+end)
+
+UICorner_4.CornerRadius = UDim.new(0, 13)
+UICorner_4.Parent = face_3
+
+face_4.Name = "face"
+face_4.Parent = ScrollingFrame
+face_4.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+face_4.BorderColor3 = Color3.fromRGB(35, 35, 35)
+face_4.Position = UDim2.new(0, 0, 0.128205135, 0)
+face_4.Size = UDim2.new(0, 100, 0, 100)
+face_4.Image = "http://www.roblox.com/asset/?id=209712379 "
+face_4.MouseButton1Down:Connect(function()
+	game.Players.LocalPlayer.Character.Head.face.Texture = "http://www.roblox.com/asset/?id=209712379"
+end)
+
+UICorner_5.CornerRadius = UDim.new(0, 13)
+UICorner_5.Parent = face_4
+
+face_5.Name = "face"
+face_5.Parent = ScrollingFrame
+face_5.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+face_5.BorderColor3 = Color3.fromRGB(35, 35, 35)
+face_5.Position = UDim2.new(0.606060624, 0, 0, 0)
+face_5.Size = UDim2.new(0, 100, 0, 100)
+face_5.Image = "http://www.roblox.com/asset/?id=25975157"
+face_5.MouseButton1Down:Connect(function()
+	game.Players.LocalPlayer.Character.Head.face.Texture = "http://www.roblox.com/asset/?id=25975157"
+end)
+
+UICorner_6.CornerRadius = UDim.new(0, 13)
+UICorner_6.Parent = face_5
+
+face_6.Name = "face"
+face_6.Parent = ScrollingFrame
+face_6.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+face_6.BorderColor3 = Color3.fromRGB(35, 35, 35)
+face_6.Position = UDim2.new(0.303030312, 0, 0, 0)
+face_6.Size = UDim2.new(0, 100, 0, 100)
+face_6.Image = "http://www.roblox.com/asset/?id=2409281591"
+face_6.MouseButton1Down:Connect(function()
+	game.Players.LocalPlayer.Character.Head.face.Texture = "http://www.roblox.com/asset/?id=2409281591"
+end)
+
+UICorner_7.CornerRadius = UDim.new(0, 13)
+UICorner_7.Parent = face_6
+
+face_7.Name = "face"
+face_7.Parent = ScrollingFrame
+face_7.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+face_7.BorderColor3 = Color3.fromRGB(35, 35, 35)
+face_7.Position = UDim2.new(0, 0, 0.384615421, 0)
+face_7.Size = UDim2.new(0, 100, 0, 100)
+face_7.Image = "http://www.roblox.com/asset/?id=133867453 "
+face_7.MouseButton1Down:Connect(function()
+	game.Players.LocalPlayer.Character.Head.face.Texture = "http://www.roblox.com/asset/?id=133867453"
+end)
+
+UICorner_8.CornerRadius = UDim.new(0, 13)
+UICorner_8.Parent = face_7
+
+face_8.Name = "face"
+face_8.Parent = ScrollingFrame
+face_8.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+face_8.BorderColor3 = Color3.fromRGB(35, 35, 35)
+face_8.Position = UDim2.new(0.303030312, 0, 0.384615421, 0)
+face_8.Size = UDim2.new(0, 100, 0, 100)
+face_8.Image = "https://www.roblox.com/asset/?id=554654683"
+face_8.MouseButton1Down:Connect(function()
+	game.Players.LocalPlayer.Character.Head.face.Texture = "https://www.roblox.com/asset/?id=554654683"
+end)
+
+UICorner_9.CornerRadius = UDim.new(0, 13)
+UICorner_9.Parent = face_8
+
+face_9.Name = "face"
+face_9.Parent = ScrollingFrame
+face_9.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+face_9.BorderColor3 = Color3.fromRGB(35, 35, 35)
+face_9.Position = UDim2.new(0.606060624, 0, 0.383333355, 0)
+face_9.Size = UDim2.new(0, 100, 0, 100)
+face_9.Image = "https://www.roblox.com/asset/?id=554655304"
+face_9.MouseButton1Down:Connect(function()
+	game.Players.LocalPlayer.Character.Head.face.Texture = "https://www.roblox.com/asset/?id=554655304"
+end)
+
+UICorner_10.CornerRadius = UDim.new(0, 13)
+UICorner_10.Parent = face_9
+
+face_10.Name = "face"
+face_10.Parent = ScrollingFrame
+face_10.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+face_10.BorderColor3 = Color3.fromRGB(35, 35, 35)
+face_10.Position = UDim2.new(0, 0, 0.256410271, 0)
+face_10.Size = UDim2.new(0, 100, 0, 100)
+face_10.Image = "http://www.roblox.com/asset/?id=508398801"
+face_10.MouseButton1Down:Connect(function()
+	game.Players.LocalPlayer.Character.Head.face.Texture = "http://www.roblox.com/asset/?id=508398801"
+end)
+
+UICorner_11.CornerRadius = UDim.new(0, 13)
+UICorner_11.Parent = face_10
+
+face_11.Name = "face"
+face_11.Parent = ScrollingFrame
+face_11.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+face_11.BorderColor3 = Color3.fromRGB(35, 35, 35)
+face_11.Position = UDim2.new(0.303030312, 0, 0.256410271, 0)
+face_11.Size = UDim2.new(0, 100, 0, 100)
+face_11.Image = "http://www.roblox.com/asset/?id=629930519"
+face_11.MouseButton1Down:Connect(function()
+	game.Players.LocalPlayer.Character.Head.face.Texture = "http://www.roblox.com/asset/?id=629930519"
+end)
+
+UICorner_12.CornerRadius = UDim.new(0, 13)
+UICorner_12.Parent = face_11
+
+face_12.Name = "face"
+face_12.Parent = ScrollingFrame
+face_12.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+face_12.BorderColor3 = Color3.fromRGB(35, 35, 35)
+face_12.Position = UDim2.new(0.606060624, 0, 0.256410271, 0)
+face_12.Size = UDim2.new(0, 100, 0, 100)
+face_12.Image = "rbxassetid://1213444061"
+face_12.MouseButton1Down:Connect(function()
+	game.Players.LocalPlayer.Character.Head.face.Texture = "rbxassetid://1213444061"
+end)
+
+UICorner_13.CornerRadius = UDim.new(0, 13)
+UICorner_13.Parent = face_12
+
+face_13.Name = "face"
+face_13.Parent = ScrollingFrame
+face_13.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+face_13.BorderColor3 = Color3.fromRGB(35, 35, 35)
+face_13.Position = UDim2.new(0.303030312, 0, 0.644871831, 0)
+face_13.Size = UDim2.new(0, 100, 0, 100)
+face_13.Image = "http://www.roblox.com/asset?id=494290547"
+face_13.MouseButton1Down:Connect(function()
+	game.Players.LocalPlayer.Character.Head.face.Texture = "http://www.roblox.com/asset?id=494290547"
+end)
+
+UICorner_14.CornerRadius = UDim.new(0, 13)
+UICorner_14.Parent = face_13
+
+face_14.Name = "face"
+face_14.Parent = ScrollingFrame
+face_14.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+face_14.BorderColor3 = Color3.fromRGB(35, 35, 35)
+face_14.Position = UDim2.new(0.606060624, 0, 0.644871831, 0)
+face_14.Size = UDim2.new(0, 100, 0, 100)
+face_14.Image = "http://www.roblox.com/asset/?id=19382647"
+face_14.MouseButton1Down:Connect(function()
+	game.Players.LocalPlayer.Character.Head.face.Texture = "http://www.roblox.com/asset/?id=19382647"
+end)
+
+UICorner_15.CornerRadius = UDim.new(0, 13)
+UICorner_15.Parent = face_14
+
+face_15.Name = "face"
+face_15.Parent = ScrollingFrame
+face_15.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+face_15.BorderColor3 = Color3.fromRGB(35, 35, 35)
+face_15.Position = UDim2.new(0, 0, 0.512820542, 0)
+face_15.Size = UDim2.new(0, 100, 0, 100)
+face_15.Image = "http://www.roblox.com/asset/?id=8329438"
+face_15.MouseButton1Down:Connect(function()
+	game.Players.LocalPlayer.Character.Head.face.Texture = "http://www.roblox.com/asset/?id=8329438"
+end)
+
+UICorner_16.CornerRadius = UDim.new(0, 13)
+UICorner_16.Parent = face_15
+
+face_16.Name = "face"
+face_16.Parent = ScrollingFrame
+face_16.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+face_16.BorderColor3 = Color3.fromRGB(35, 35, 35)
+face_16.Position = UDim2.new(0.303030312, 0, 0.514102578, 0)
+face_16.Size = UDim2.new(0, 100, 0, 100)
+face_16.Image = "http://www.roblox.com/asset/?id=8329434"
+face_16.MouseButton1Down:Connect(function()
+	game.Players.LocalPlayer.Character.Head.face.Texture = "http://www.roblox.com/asset/?id=8329434"
+end)
+
+UICorner_17.CornerRadius = UDim.new(0, 13)
+UICorner_17.Parent = face_16
+
+face_17.Name = "face"
+face_17.Parent = ScrollingFrame
+face_17.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+face_17.BorderColor3 = Color3.fromRGB(35, 35, 35)
+face_17.Position = UDim2.new(0.606060624, 0, 0.514102578, 0)
+face_17.Size = UDim2.new(0, 100, 0, 100)
+face_17.Image = "rbxassetid://1191123237"
+face_17.MouseButton1Down:Connect(function()
+	game.Players.LocalPlayer.Character.Head.face.Texture = "1191123237"
+end)
+
+UICorner_18.CornerRadius = UDim.new(0, 13)
+UICorner_18.Parent = face_17
+
+face_18.Name = "face"
+face_18.Parent = ScrollingFrame
+face_18.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+face_18.BorderColor3 = Color3.fromRGB(35, 35, 35)
+face_18.Position = UDim2.new(0, 0, 0.644871831, 0)
+face_18.Size = UDim2.new(0, 100, 0, 100)
+face_18.Image = "http://www.roblox.com/asset/?id=7074827"
+face_18.MouseButton1Down:Connect(function()
+	game.Players.LocalPlayer.Character.Head.face.Texture = "http://www.roblox.com/asset/?id=7074827"
+end)
+
+UICorner_19.CornerRadius = UDim.new(0, 13)
+UICorner_19.Parent = face_18
+
+face_19.Name = "face"
+face_19.Parent = ScrollingFrame
+face_19.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+face_19.BorderColor3 = Color3.fromRGB(35, 35, 35)
+face_19.Position = UDim2.new(0, 0, 0.773076952, 0)
+face_19.Size = UDim2.new(0, 100, 0, 100)
+face_19.Image = "http://www.roblox.com/asset/?id=19264782"
+face_19.MouseButton1Down:Connect(function()
+	game.Players.LocalPlayer.Character.Head.face.Texture = "http://www.roblox.com/asset/?id=19264782"
+end)
+
+UICorner_20.CornerRadius = UDim.new(0, 13)
+UICorner_20.Parent = face_19
