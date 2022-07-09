@@ -1,0 +1,154 @@
+local welcome = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local ImageLabel = Instance.new("ImageLabel")
+local UICorner = Instance.new("UICorner")
+local UICorner_2 = Instance.new("UICorner")
+local xd = Instance.new("TextLabel")
+local TextLabel_3 = Instance.new("TextLabel")
+local TextButton = Instance.new("TextButton")
+local TextButton2 = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+
+
+welcome.Name = "welcome "
+welcome.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+welcome.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+welcome.ResetOnSpawn = false
+
+
+
+Frame.Parent = welcome
+Frame.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+Frame.BorderColor3 = Color3.fromRGB(25, 25, 25)
+Frame.Position = UDim2.new(0.284722209, 0, 0.304832727, 0)
+Frame.Size = UDim2.new(0, 562, 0, 361)
+Frame.Active = true
+Frame.Draggable = true
+
+local script = Instance.new("LocalScript",Frame)
+
+
+local tween = Instance.new("LocalScript")
+local object = script.Parent
+object.AnchorPoint = Vector2.new(0.5, 0.5)
+object.Position = UDim2.new(0.5, 0, 0.-1, 0)
+
+wait(1)
+
+object:TweenPosition(UDim2.new(0.5, 0, 0.5, 0))
+
+
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+TextLabel.BorderColor3 = Color3.fromRGB(35, 35, 35)
+TextLabel.Position = UDim2.new(0.0215279963, 0, 0.478236377, 0)
+TextLabel.Size = UDim2.new(0, 145, 0, 45)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "welcome"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+TextLabel_2.Parent = Frame
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+TextLabel_2.BorderColor3 = Color3.fromRGB(35, 35, 35)
+TextLabel_2.Position = UDim2.new(0.272954404, 0, 0.632761121, 0)
+TextLabel_2.Size = UDim2.new(0, 252, 0, 46)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = "trip hub premiun"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextWrapped = true
+
+ImageLabel.Parent = Frame
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.Position = UDim2.new(0.409351707, 0, 0.115196645, 0)
+ImageLabel.Size = UDim2.new(0, 100, 0, 100)
+ImageLabel.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+
+UICorner.CornerRadius = UDim.new(1, 0)
+UICorner.Parent = ImageLabel
+
+UICorner_2.CornerRadius = UDim.new(0, 9)
+UICorner_2.Parent = Frame
+
+UICorner_3.CornerRadius = UDim.new(0, 9)
+UICorner_3.Parent = TextButton2
+
+xd.Name = "xd"
+xd.Parent = Frame
+xd.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+xd.BorderColor3 = Color3.fromRGB(35, 35, 35)
+xd.Position = UDim2.new(0.303411126, 0, 0.488205105, 0)
+xd.Size = UDim2.new(0, 291, 0, 37)
+xd.Font = Enum.Font.SourceSans
+xd.Text = "Name"
+xd.TextColor3 = Color3.fromRGB(255, 255, 255)
+xd.TextSize = 47.000
+xd.TextWrapped = true
+
+TextLabel_3.Parent = Frame
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+TextLabel_3.BorderColor3 = Color3.fromRGB(35, 35, 35)
+TextLabel_3.Position = UDim2.new(0.820482731, 0, 0.475466222, 0)
+TextLabel_3.Size = UDim2.new(0, 92, 0, 45)
+TextLabel_3.Font = Enum.Font.SourceSans
+TextLabel_3.Text = "to"
+TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.TextScaled = true
+TextLabel_3.TextSize = 14.000
+TextLabel_3.TextWrapped = true
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+TextButton.BorderColor3 = Color3.fromRGB(35, 35, 35)
+TextButton.Position = UDim2.new(0.190391451, 0, 0.825484753, 0)
+TextButton.Size = UDim2.new(0, 354, 0, 53)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "play trip hub"
+TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.TextScaled = true
+TextButton.TextSize = 14.000
+TextButton.TextWrapped = true
+TextButton.MouseButton1Down:connect(function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/scripts/main/ez",true))()
+	Frame:Destroy()
+end)
+
+-- Scripts:
+
+local function RQPF_fake_script() -- ImageLabel.image 
+	local script = Instance.new('LocalScript', ImageLabel)
+
+	local Players = game:GetService("Players")
+	local player = Players.LocalPlayer
+
+	localuserId = player.UserId
+	local thumbType = Enum.ThumbnailType.HeadShot
+	local thumbSize = Enum.ThumbnailSize.Size420x420
+	local content, isReady = Players:GetUserThumbnailAsync(localuserId, thumbType, thumbSize)
+
+	local ImageLabel = script.Parent
+	ImageLabel.Image = content
+end
+coroutine.wrap(RQPF_fake_script)()
+local function NQHHDFX_fake_script() -- xd.name 
+	local script = Instance.new('LocalScript', xd)
+
+	local player = game.Players.LocalPlayer
+	if player then
+		script.Parent.Text = ""..player.Name..""
+	end
+end
+coroutine.wrap(NQHHDFX_fake_script)()
+local function FRBRYQF_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
+
+	local r = { Color3.fromRGB(254, 0, 0); Color3.fromRGB(255, 127, 0); Color3.fromRGB(255, 221, 1); Color3.fromRGB(0, 200, 0); Color3.fromRGB(0, 160, 199); Color3.fromRGB(0, 55, 230); Color3.fromRGB(129, 16, 210)} local info = TweenInfo.new(0.2, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, 0, false, 0) script.Parent.TextColor3 = r[1] i = 1 while true do local tween = game:GetService("TweenService"):Create(script.Parent, info, { TextColor3 = r[i]}) tween:Play() repeat wait() until tween.Completed wait(0.4) if i == #r then i = 1 else i = i + 1 end end
+end
+coroutine.wrap(FRBRYQF_fake_script)()
