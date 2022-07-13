@@ -516,6 +516,27 @@ Section:NewButton("silent (350)", "silent (350)", function()
 end)
 
 
+Section:NewButton("silent (30)", "silent (30)", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/GamerEmilianoFF/silent/main/silent%2030'))()
+end)
+
+Section:NewButton("silent (40)", "silent (40)", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/GamerEmilianoFF/silent/main/silent%2040'))()
+end)
+
+Section:NewButton("silent (50)", "silent (50)", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/GamerEmilianoFF/silent/main/silent%2050'))()
+end)
+
+Section:NewButton("silent (60)", "silent (60)", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/GamerEmilianoFF/silent/main/silent%2060'))()
+end)
+
+Section:NewButton("silent (70)", "silent (70)", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/GamerEmilianoFF/silent/main/silent%2070'))()
+end)
+
+
 local Tab = Window:NewTab("animation (FE")
 local Section = Tab:NewSection("animation (FE)")
 
