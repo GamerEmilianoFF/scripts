@@ -1,0 +1,705 @@
+local Library = loadstring(game:HttpGet("https://pastebin.com/raw/jybNtPCD"))()
+ 
+--checker user
+loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+ 
+local Window = Library:Create("trip hub","Untitled Hood")
+
+local scri = Window:Tab("Main",true)
+ 
+scri:Label("speed bypass")
+ 
+scri:Button("speed script (c)",function(value)
+ plr = game:GetService('Players').LocalPlayer
+    down = true
+    function onButton1Down(mouse)
+        down = true
+        while down do
+            if not down then break end
+            local char = plr.Character
+            char.HumanoidRootPart.Velocity = char.HumanoidRootPart.CFrame.lookVector * 230
+            wait()
+        end
+    end
+    function onButton1Up(mouse)
+        down = false
+    end
+    function onSelected(mouse)
+        mouse.KeyDown:connect(function(c) if c:lower()=="c"then onButton1Down(mouse)end end)
+        mouse.KeyUp:connect(function(c) if c:lower()=="c"then onButton1Up(mouse)end end)
+    end
+    onSelected(game.Players.LocalPlayer:GetMouse())
+    
+--end
+end)
+
+scri:Button("speed script (f)",function(value)
+    plr = game:GetService('Players').LocalPlayer
+    down = true
+    function onButton1Down(mouse)
+        down = true
+        while down do
+            if not down then break end
+            local char = plr.Character
+            char.HumanoidRootPart.Velocity = char.HumanoidRootPart.CFrame.lookVector * 230
+            wait()
+        end
+    end
+    function onButton1Up(mouse)
+        down = false
+    end
+    function onSelected(mouse)
+        mouse.KeyDown:connect(function(f) if f:lower()=="f"then onButton1Down(mouse)end end)
+        mouse.KeyUp:connect(function(f) if f:lower()=="f"then onButton1Up(mouse)end end)
+    end
+    onSelected(game.Players.LocalPlayer:GetMouse())
+--end
+end)
+
+scri:Slider("speed slider",0,400,function(value)
+plr = game:GetService('Players').LocalPlayer
+ 
+down = true
+ 
+function onButton1Down(mouse)
+ 
+    down = true
+ 
+    while down do
+ 
+        if not down then break end
+ 
+        local char = plr.Character
+ 
+        char.HumanoidRootPart.Velocity = char.HumanoidRootPart.CFrame.lookVector * value
+ 
+        wait()
+ 
+    end
+ 
+end
+ 
+function onButton1Up(mouse)
+ 
+    down = false
+ 
+end
+ 
+function onSelected(mouse)
+ 
+    mouse.KeyDown:connect(function(c) if c:lower()=="c"then onButton1Down(mouse)end end)
+ 
+    mouse.KeyUp:connect(function(c) if c:lower()=="c"then onButton1Up(mouse)end end)
+ 
+end
+ 
+onSelected(game.Players.LocalPlayer:GetMouse())
+--end
+end)
+
+scri:Button("speed script button",function(value)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/madebyemiliano/main/Speed%20bypass",true))()
+end)
+
+scri:Button("speed script toggle",function(value)
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/toggles_speed/main/Speed",true))()
+end)
+
+scri:Label("server")
+
+scri:Button("server finder hub",function(value)
+  loadstring(game:HttpGet("https://www.scriptblox.com/raw/Server-Browser_80", true))();
+end)
+
+scri:Button("enter server fast",function(value)
+local Http = game:GetService("HttpService")
+    local TPS = game:GetService("TeleportService")
+    local Api = "https://games.roblox.com/v1/games/"
+     
+    local _place = game.PlaceId
+    local _servers = Api.._place.."/servers/Public?sortOrder=Asc&limit=100"
+    function ListServers(cursor)
+       local Raw = game:HttpGet(_servers .. ((cursor and "&cursor="..cursor) or ""))
+       return Http:JSONDecode(Raw)
+    end
+     
+    local Server, Next; repeat
+       local Servers = ListServers(Next)
+       Server = Servers.data[1]
+       Next = Servers.nextPageCursor
+    until Server
+     
+    TPS:TeleportToPlaceInstance(_place,Server.id,game.Players.LocalPlayer)
+end)
+
+scri:Button("rejoin",function(value)
+  loadstring(game:HttpGet("https://pastebin.com/raw/hAaXGTdq",true))()
+end)
+
+scri:Label("chat scripts")
+
+scri:Button("chat spy v1",function(value)
+loadstring(game:HttpGet('https://pastebin.com/raw/TBRu2TW5'))()
+end)
+
+scri:Button("chat spy v2",function(value)
+loadstring(game:HttpGet('https://pastebin.com/raw/7MYwu6cD'))()
+end)
+
+scri:Toggle("dark chat",function(value)
+   game.Players.LocalPlayer.Information.DarkChat.Value = value
+end)
+
+scri:Button("trash talk button",function(value)
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/GamerEmilianoFF/main/trash%20gui",true))()
+end)
+
+scri:Label("jumps scripts")
+
+scri:Button("no jumps limits",function(value)
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/infinite_jumps/main/Jumps",true))()
+end)
+
+scri:Button("inf jumps",function(value)
+  loadstring(game:HttpGet("https://pastebin.com/raw/jEVLjZ5a",true))()
+ 
+    local InfiniteJumpEnabled = true
+     
+    game:GetService("UserInputService").JumpRequest:connect(function()
+     
+        if InfiniteJumpEnabled then
+     
+            game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+     
+        end
+     
+    end)
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/infinite_jumps/main/Jumps",true))()
+end)
+
+scri:Label("anti stomp")
+
+scri:Button("anti stomp (k)",function(value)
+  local tecla = Enum.KeyCode.K
+    local lol = game:GetService("UserInputService")
+    
+    lol.InputBegan:Connect(function(key)
+            if key.KeyCode == tecla then
+    game.Players.LocalPlayer.Character.UpperTorso:Destroy()
+    game.Players.LocalPlayer.Character.LeftUpperLeg:Destroy()
+    game.Players.LocalPlayer.Character.RightUpperLeg:Destroy()
+    game.Players.LocalPlayer.Character.LeftLowerArm:Destroy()
+    game.Players.LocalPlayer.Character.RightLowerArm:Destroy()
+         end
+    end)
+end)
+
+scri:Button("anti stomp (u)",function(value)
+  local tecla = Enum.KeyCode.U
+    local lol = game:GetService("UserInputService")
+    
+    lol.InputBegan:Connect(function(key)
+            if key.KeyCode == tecla then
+    game.Players.LocalPlayer.Character.UpperTorso:Destroy()
+    game.Players.LocalPlayer.Character.LeftUpperLeg:Destroy()
+    game.Players.LocalPlayer.Character.RightUpperLeg:Destroy()
+    game.Players.LocalPlayer.Character.LeftLowerArm:Destroy()
+    game.Players.LocalPlayer.Character.RightLowerArm:Destroy()
+         end
+    end)
+end)
+
+scri:Button("anti stomp (l)",function(value)
+  local tecla = Enum.KeyCode.L
+    local lol = game:GetService("UserInputService")
+    
+    lol.InputBegan:Connect(function(key)
+            if key.KeyCode == tecla then
+    game.Players.LocalPlayer.Character.UpperTorso:Destroy()
+    game.Players.LocalPlayer.Character.LeftUpperLeg:Destroy()
+    game.Players.LocalPlayer.Character.RightUpperLeg:Destroy()
+    game.Players.LocalPlayer.Character.LeftLowerArm:Destroy()
+    game.Players.LocalPlayer.Character.RightLowerArm:Destroy()
+         end
+    end)
+end)
+
+scri:Button("anti stomp (h)",function(value)
+  local tecla = Enum.KeyCode.H
+    local lol = game:GetService("UserInputService")
+    
+    lol.InputBegan:Connect(function(key)
+            if key.KeyCode == tecla then
+    game.Players.LocalPlayer.Character.UpperTorso:Destroy()
+    game.Players.LocalPlayer.Character.LeftUpperLeg:Destroy()
+    game.Players.LocalPlayer.Character.RightUpperLeg:Destroy()
+    game.Players.LocalPlayer.Character.LeftLowerArm:Destroy()
+    game.Players.LocalPlayer.Character.RightLowerArm:Destroy()
+         end
+    end)
+end)
+
+scri:Button("anti stomp (t)",function(value)
+  local tecla = Enum.KeyCode.T
+    local lol = game:GetService("UserInputService")
+    
+    lol.InputBegan:Connect(function(key)
+            if key.KeyCode == tecla then
+    game.Players.LocalPlayer.Character.UpperTorso:Destroy()
+    game.Players.LocalPlayer.Character.LeftUpperLeg:Destroy()
+    game.Players.LocalPlayer.Character.RightUpperLeg:Destroy()
+    game.Players.LocalPlayer.Character.LeftLowerArm:Destroy()
+    game.Players.LocalPlayer.Character.RightLowerArm:Destroy()
+         end
+    end)
+end)
+
+scri:Button("anti stomp button",function(value)
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/scripts/main/anti%20stomp%20button",true))()
+end)
+
+scri:Label("other scripts")
+
+scri:Button("kick me button",function(value)
+  loadstring(game:HttpGet("https://pastebin.com/raw/x6pKVqxw", true))()
+end)
+
+scri:Slider("Light",0,250,function(value)
+ game:GetService("Lighting").GlobalShadows = false
+game:GetService("Lighting").ShadowSoftness = 0
+game:GetService("Lighting").Brightness = value
+game:GetService("Lighting").FogEnd = 9e9
+game:GetService("Lighting").FogStart = 9e9
+end)
+
+
+scri:Button("no fog",function(value)
+loadstring(game:HttpGet("https://pastebin.com/raw/06iG6YkU", true))()
+end)
+
+scri:Button("fly (X)",function(value)
+  loadstring(game:HttpGet("https://pastebin.com/raw/uxKf9adp",true))()
+end)
+
+scri:Button("anti slow",function(value)
+    loadstring(game:HttpGet("https://pastebin.com/raw/8dib2xhn",true))()
+end)
+
+scri:Label("kill streak")
+
+scri:Slider("kill streak",0,99999,function(value)
+ game.Players.LocalPlayer.Information.Streaks.Value = value
+end)
+
+scri:Label("armor")
+
+scri:Slider("armor",0,650,function(value)
+ game.Players.LocalPlayer.Information.Armor.Value = value
+end)
+
+scri:Label("scripts")
+
+scri:Button("headless",function(value)
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/Invooker11/Koblox-and-Headless/main/Headless"))()
+end)
+
+scri:Button("korblox left",function(value)
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/korblox-left/main/xd",true))()
+end)
+
+scri:Button("korblox right (FE)",function(value)
+  game.Players.LocalPlayer.Character.RightUpperLeg:Destroy()
+end)
+
+scri:Button("korblox left and right",function(value)
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/korbloxpermant/main/xd",true))()
+end)
+
+scri:Button("face changer",function(value)
+  loadstring(game:HttpGet("https://pastebin.com/raw/VcDwuMDD",true))()
+end)
+
+
+
+
+local cursor = Window:Tab("cursor custom",false)
+ 
+cursor:Label("cursors")
+
+cursor:Button("cursor red circle",function(value)
+ local IAPortable = Instance.new("ScreenGui")
+    local Cursor = Instance.new("ImageLabel")
+    local Hitmarker = Instance.new("ImageLabel")
+    IAPortable.Name = "IAPortable"
+    IAPortable.Parent = game:GetService('CoreGui')
+    IAPortable.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+    Cursor.Name = "Cursor"
+    Cursor.Parent = IAPortable
+    Cursor.AnchorPoint = Vector2.new(0.5, 0.5)
+    Cursor.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    Cursor.BackgroundTransparency = 20.000
+    Cursor.Size = UDim2.new(0, 150, 0, 350)
+    Cursor.Image = "rbxassetid://973823018"
+    Cursor.ScaleType = Enum.ScaleType.Fit
+    Cursor.Position = UDim2.new(0.5, 0, 0.46, 0)
+end)
+
+cursor:Button("cursor white (+)",function(value)
+local IAPortable = Instance.new("ScreenGui")
+    local Cursor = Instance.new("ImageLabel")
+    local Hitmarker = Instance.new("ImageLabel")
+    IAPortable.Name = "IAPortable"
+    IAPortable.Parent = game:GetService('CoreGui')
+    IAPortable.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+    Cursor.Name = "Cursor"
+    Cursor.Parent = IAPortable
+    Cursor.AnchorPoint = Vector2.new(0.5, 0.5)
+    Cursor.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    Cursor.BackgroundTransparency = 20.000
+    Cursor.Size = UDim2.new(0, 70, 0, 25)
+    Cursor.Image = "rbxassetid://3874001308"
+    Cursor.ScaleType = Enum.ScaleType.Fit
+    Cursor.Position = UDim2.new(0.5, 0, 0.5, 0)
+end)
+
+cursor:Button("cursor white circle",function(value)
+ local IAPortable = Instance.new("ScreenGui")
+    local Cursor = Instance.new("ImageLabel")
+    local Hitmarker = Instance.new("ImageLabel")
+    IAPortable.Name = "IAPortable"
+    IAPortable.Parent = game:GetService('CoreGui')
+    IAPortable.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+    Cursor.Name = "Cursor"
+    Cursor.Parent = IAPortable
+    Cursor.AnchorPoint = Vector2.new(0.5, 0.5)
+    Cursor.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    Cursor.BackgroundTransparency = 1.000
+    Cursor.Size = UDim2.new(0, 400, 0, 300)
+    Cursor.Image = "rbxassetid://3355815697"
+    Cursor.ScaleType = Enum.ScaleType.Fit
+    Cursor.Position = UDim2.new(0.5, 0, 0.5, 0)
+end)
+
+cursor:Label("destroy cursors")
+
+cursor:Button("destroy",function(value)
+  game.CoreGui.IAPortable:Destroy()
+    game.CoreGui.IAPortable:Destroy()
+    game.CoreGui.IAPortable:Destroy()
+    game.CoreGui.IAPortable:Destroy()
+    game.CoreGui.IAPortable:Destroy()
+    game.CoreGui.IAPortable:Destroy()
+    game.CoreGui.IAPortable:Destroy()
+    game.CoreGui.IAPortable:Destroy()
+    game.CoreGui.IAPortable:Destroy()
+    game.CoreGui.IAPortable:Destroy()
+    game.CoreGui.IAPortable:Destroy()
+    game.CoreGui.IAPortable:Destroy()
+end)
+
+
+local esp = Window:Tab("esp",false)
+ 
+esp:Label("esp")
+
+esp:Button("esp box",function(value)
+ spawn(loadstring(game:HttpGet("https://pastebin.com/raw/zKjj0TQD", true)))();
+end)
+
+esp:Button("esp box and name",function(value)
+local ESP = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kiriot22/ESP-Lib/main/ESP.lua"))()
+    ESP:Toggle(true)
+end)
+
+esp:Button("owl hub",function(value)
+  local t = {}
+    setmetatable(t, {
+    __index = function(t, k)
+        return function() end
+    end
+    })
+    getgenv().Input = t
+     
+    local funcs = {"writefile", "readfile", "appendfile"}
+    for i,v in pairs(funcs) do
+    getgenv()[v] = function() end
+    end
+     
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
+end)
+
+
+local fov = Window:Tab("fov",false)
+ 
+fov:Label("fovs")
+
+fov:Button("fov 70",function(value)
+  local FOV = 70
+    game.Workspace.Camera.FieldOfView = FOV
+end)
+
+fov:Button("fov 80",function(value)
+  local FOV = 80
+    game.Workspace.Camera.FieldOfView = FOV
+end)
+
+fov:Button("fov 90",function(value)
+  local FOV = 90
+    game.Workspace.Camera.FieldOfView = FOV
+end)
+
+fov:Button("fov 100",function(value)
+  local FOV = 100
+    game.Workspace.Camera.FieldOfView = FOV
+end)
+
+fov:Button("fov 110",function(value)
+  local FOV = 110
+    game.Workspace.Camera.FieldOfView = FOV
+end)
+
+fov:Button("fov 120",function(value)
+  local FOV = 120
+    game.Workspace.Camera.FieldOfView = FOV
+end)
+
+fov:Slider("fov",0,120,function(value)
+ local FOV = value
+game.Workspace.Camera.FieldOfView = FOV
+end)
+
+
+local aim = Window:Tab("aim lock",false)
+ 
+aim:Label("aim locks")
+
+aim:Button("aim ware (Q)",function(value)
+ loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Hyotinhofofinho/s1mple/main/LIXO"))()
+end)
+
+aim:Button("The ware",function(value)
+loadstring(game:HttpGet('https://raw.githubusercontent.com/carlcoded/Scripts/main/carltw'))()
+end)
+
+aim:Button("puppy ware",function(value)
+ loadstring(game:HttpGet('https://pastebin.com/raw/M5h2v7V0'))()
+end)
+
+aim:Button("Xware",function(value)
+loadstring(game:HttpGet("https://pastebin.com/raw/chPzqgtN"))()
+end)
+
+aim:Button("x15",function(value)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/66GdaGod/15X-CRACKED/main/EZ%20CRACKED%20BY%20MIN%20X%20ZORDO"))()
+end)
+
+aim:Label("silent aim")
+
+aim:Button("silent (big)",function(value)
+ loadstring(game:HttpGet('https://raw.githubusercontent.com/GamerEmilianoFF/silent/main/silent%20big'))()
+end)
+
+aim:Button("silent (350)",function(value)
+ loadstring(game:HttpGet('https://pastebin.com/raw/XEdqn1Gg'))()
+end)
+
+aim:Button("silent (250)",function(value)
+ loadstring(game:HttpGet('https://pastebin.com/raw/HGQ2EnRw'))()
+end)
+
+aim:Button("silent (100)",function(value)
+ loadstring(game:HttpGet('https://raw.githubusercontent.com/GamerEmilianoFF/silent/main/silent%20100'))()
+end)
+
+aim:Button("silent (90)",function(value)
+ loadstring(game:HttpGet('https://raw.githubusercontent.com/GamerEmilianoFF/silent/main/silent%2090'))()
+end)
+
+aim:Button("silent (50)",function(value)
+ loadstring(game:HttpGet('https://raw.githubusercontent.com/GamerEmilianoFF/silent/main/silent%2050'))()
+end)
+
+aim:Button("silent (30)",function(value)
+ loadstring(game:HttpGet('https://raw.githubusercontent.com/GamerEmilianoFF/silent/main/silent%2030'))()
+end)
+
+
+local ani = Window:Tab("animation (FE)",false)
+ 
+ani:Label("animations FE")
+
+ani:Button("toy",function(value)
+ Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=782841498"
+    Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=782845736"
+    Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=782843345"
+    Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=782842708"
+    Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=782847020"
+    Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=782843869"
+    Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=782846423"
+    game.Players.LocalPlayer.Character.Humanoid.Jump = true
+end)
+
+ani:Button("super hero",function(value)
+Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=616111295"
+Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=616113536"
+Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=616122287"
+Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=616117076"
+Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=616115533"
+Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=616104706"
+Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=616108001"
+game.Players.LocalPlayer.Character.Humanoid.Jump = true
+end)
+
+ani:Button("stylish",function(value)
+  Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=616136790"
+    Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=616138447"
+    Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=616146177"
+    Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=616140816"
+    Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=616139451"
+    Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=616133594"
+    Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=616134815"
+    game.Players.LocalPlayer.Character.Humanoid.Jump = true
+end)
+
+ani:Button("robot",function(value)
+ Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=616088211"
+    Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=616089559"
+    Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=616095330"
+    Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=616091570"
+    Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=616090535"
+    Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=616086039"
+    Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=616087089"
+    game.Players.LocalPlayer.Character.Humanoid.Jump = true
+end)
+
+ani:Button("pirate",function(value)
+    local Animate = game.Players.LocalPlayer.Character.Animate
+    Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=616006778"
+    Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=616008087"
+    Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=616013216"
+    Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=616013216"
+    Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=616008936"
+    Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=616005863"
+    Animate.swimidle.SwimIdle.AnimationId = "http://www.roblox.com/asset/?id=616012453"
+    Animate.swim.Swim.AnimationId = "http://www.roblox.com/asset/?id=616011509"
+        game.Players.LocalPlayer.Character.Humanoid.Jump = true
+end)
+
+ani:Button("ninja",function(value)
+local Animate = game.Players.LocalPlayer.Character.Animate
+    Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=656117400"
+    Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=656118341"
+    Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=656121766"
+    Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=656118852"
+    Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=656117878"
+    Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=656114359"
+    Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=656115606"
+end)
+
+ani:Button("levitation",function(value)
+ loadstring(game:HttpGet('https://pastebin.com/raw/AryTwN4z'))()
+end)
+
+ani:Button("elder",function(value)
+Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=845397899"
+Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=845400520"
+Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=845403856"
+Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=845386501"
+Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=845398858"
+Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=845392038"
+Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=845396048"
+game.Players.LocalPlayer.Character.Humanoid.Jump = true
+end)
+
+ani:Button("buddly",function(value)
+local Animate = game.Players.LocalPlayer.Character.Animate
+Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=910004836"
+Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=910009958"
+Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=910034870"
+Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=910025107"
+Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=910016857"
+Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=910001910"
+Animate.swimidle.SwimIdle.AnimationId = "http://www.roblox.com/asset/?id=910030921"
+Animate.swim.Swim.AnimationId = "http://www.roblox.com/asset/?id=910028158"
+    game.Players.LocalPlayer.Character.Humanoid.Jump = true
+end)
+
+ani:Button("astronaut",function(value)
+local Animate = game.Players.LocalPlayer.Character.Animate
+Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=891621366"
+Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=891633237"
+Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=891667138"
+Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=891636393"
+Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=891627522"
+Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=891609353"
+Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=891617961"
+    game.Players.LocalPlayer.Character.Humanoid.Jump = true
+end)
+
+ani:Button("princess",function(value)
+local Animate = game.Players.LocalPlayer.Character.Animate
+Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=941003647"
+Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=941013098"
+Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=941028902"
+Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=941015281"
+Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=941008832"
+Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=940996062"
+Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=941000007"
+    game.Players.LocalPlayer.Character.Humanoid.Jump = true
+end)
+
+ani:Button("zombie",function(value)
+ local Animate = game.Players.LocalPlayer.Character.Animate
+    Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=616158929"
+    Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=616160636"
+    Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=616168032"
+    Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=616163682"
+    Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=616161997"
+    Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=616156119"
+    Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=616157476"
+end)
+
+
+local lag = Window:Tab("anti lag",false)
+ 
+lag:Label("anti lag")
+
+lag:Button("anti lag (recommended)",function(value)
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/anti-lag-v2-fps/main/Dhm",true))()
+end)
+
+lag:Button("anti lag v2",function(value)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/anti_lag_v3/main/Dont",true))()
+end)
+
+lag:Button("anti lag (dont face)",function(value)
+ loadstring(game:HttpGet("https://pastebin.com/raw/YBD6W1Hn",true))()
+end)
+
+lag:Button("anti lag (dont shirt)",function(value)
+loadstring(game:HttpGet("https://pastebin.com/raw/gp1zFQak",true))()
+end)
+
+lag:Label("fps booster")
+
+
+lag:Button("booster",function(value)
+  loadstring(game:HttpGet("https://pastebin.com/raw/jEVLjZ5a",true))()
+end)
+
+
+local ui = Window:Tab("settings UI",false)
+ 
+ui:Label("close UI")
+
+ui:Keybind("Toggle",Enum.KeyCode.Y,function()
+    Library:Toggle()
+end)
+
+game:GetService("StarterGui"):SetCore("SendNotification", {
+	Title = "Trip Hub";
+	Text = "thx for using Trip Hub Premiun!";
+	Icon = "http://www.roblox.com/asset/?id=10034853671";
+	Duration = "4";
+})
+
