@@ -6,6 +6,8 @@ local Window = Library.CreateLib("Trip Hub Premiun", "Sentinel")
 --checker user
 loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
  
+loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/scripts/main/more%20UI"))()
+ 
 local Tab = Window:NewTab("Scripts basic")
 local Section = Tab:NewSection("speed bypass script")
 
