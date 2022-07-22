@@ -1,0 +1,13 @@
+if game.PlaceId == 5602055394 then
+ print("hood moddded")
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/scripts/main/delta%20UI%20(dhm)"))()
+        elseif  game.PlaceId == 9183932460 then
+ print("Untitled Hood")
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/scripts/main/delta%20UI%20(Untitled%20Hood)"))()
+        else
+game:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = "Trip Hub";
+    Text = "For your safety, trip hub does not work in this game";
+    Icon = "http://www.roblox.com/asset/?id=10034851185";
+    Duration = "4";
+})end
