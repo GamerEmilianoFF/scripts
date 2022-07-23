@@ -1,0 +1,141 @@
+local dont = Instance.new("ScreenGui")
+local _1Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local UICorner_2 = Instance.new("UICorner")
+local danger = Instance.new("ImageLabel")
+local fox = Instance.new("ImageLabel")
+local ok = Instance.new("TextButton")
+local _2Frame = Instance.new("Frame")
+local UICorner_3 = Instance.new("UICorner")
+local TextLabel_2 = Instance.new("TextLabel")
+local no = Instance.new("TextButton")
+local yes = Instance.new("TextButton")
+
+--Properties:
+
+dont.Name = "dont"
+dont.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+dont.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+_1Frame.Name = "1Frame"
+_1Frame.Parent = dont
+_1Frame.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+_1Frame.BorderColor3 = Color3.fromRGB(35, 35, 35)
+_1Frame.Position = UDim2.new(0.0653495193, 0, 0.166872665, 0)
+_1Frame.Size = UDim2.new(0, 435, 0, 145)
+_1Frame.Active = true
+_1Frame.Draggable = true
+
+
+UICorner.CornerRadius = UDim.new(0, 13)
+UICorner.Parent = _1Frame
+
+TextLabel.Parent = _1Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 5.000
+TextLabel.Position = UDim2.new(0.226170957, 0, -0.00522466004, 0)
+TextLabel.Size = UDim2.new(0, 331, 0, 101)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Be careful with the scripts you use, they can cause bans"
+TextLabel.TextColor3 = Color3.fromRGB(200, 200, 200)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+UICorner_2.CornerRadius = UDim.new(0, 13)
+UICorner_2.Parent = TextLabel
+
+danger.Name = "danger"
+danger.Parent = _1Frame
+danger.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+danger.BackgroundTransparency = 4.000
+danger.Position = UDim2.new(-0.00278154574, 0, 0.000835940242, 0)
+danger.Size = UDim2.new(0, 100, 0, 100)
+danger.Image = "http://www.roblox.com/asset/?id=8489474722"
+
+fox.Name = "fox"
+fox.Parent = _1Frame
+fox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+fox.BackgroundTransparency = 4.000
+fox.Position = UDim2.new(0.912160993, 0, 0.780146301, 0)
+fox.Size = UDim2.new(0, 33, 0, 31)
+fox.Image = "http://www.roblox.com/asset/?id=9664958625"
+
+ok.Name = "ok"
+ok.Parent = _1Frame
+ok.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ok.BackgroundTransparency = 4.000
+ok.Position = UDim2.new(0.225287363, 0, 0.689655185, 0)
+ok.Size = UDim2.new(0, 261, 0, 40)
+ok.Font = Enum.Font.SourceSans
+ok.Text = "ok!"
+ok.TextColor3 = Color3.fromRGB(255, 255, 255)
+ok.TextScaled = true
+ok.TextSize = 14.000
+ok.TextWrapped = true
+ok.MouseButton1Down:Connect(function()
+	_2Frame.Visible = true
+	_1Frame:Destroy()
+end)
+
+
+_2Frame.Name = "2Frame"
+_2Frame.Parent = dont
+_2Frame.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+_2Frame.BorderColor3 = Color3.fromRGB(35, 35, 35)
+_2Frame.Position = UDim2.new(0.0972644389, 0, 0.16687271, 0)
+_2Frame.Size = UDim2.new(0, 372, 0, 147)
+_2Frame.Visible = false
+_2Frame.Active = true
+_2Frame.Draggable = true
+
+
+UICorner_3.CornerRadius = UDim.new(0, 13)
+UICorner_3.Parent = _2Frame
+
+TextLabel_2.Parent = _2Frame
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 4.000
+TextLabel_2.Position = UDim2.new(0.0323451869, 0, 0.0582379177, 0)
+TextLabel_2.Size = UDim2.new(0, 347, 0, 74)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = "Are you sure you want to charge Trip Hub?"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextWrapped = true
+
+no.Name = "no"
+no.Parent = _2Frame
+no.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+no.BackgroundTransparency = 4.000
+no.Position = UDim2.new(0.548387051, 0, 0.564625621, 0)
+no.Size = UDim2.new(0, 153, 0, 50)
+no.Font = Enum.Font.SourceSans
+no.Text = "no"
+no.TextColor3 = Color3.fromRGB(0, 255, 0)
+no.TextScaled = true
+no.TextSize = 14.000
+no.TextWrapped = true
+no.MouseButton1Down:Connect(function()
+	dont:Destroy()
+end)
+
+
+yes.Name = "yes"
+yes.Parent = _2Frame
+yes.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+yes.BackgroundTransparency = 4.000
+yes.Position = UDim2.new(0.0268817209, 0, 0.564625621, 0)
+yes.Size = UDim2.new(0, 170, 0, 50)
+yes.Font = Enum.Font.SourceSans
+yes.Text = "yes"
+yes.TextColor3 = Color3.fromRGB(255, 0, 0)
+yes.TextScaled = true
+yes.TextSize = 14.000
+yes.TextWrapped = true
+yes.MouseButton1Down:Connect(function()
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/scripts/main/new%20trip%20pre"))()
+	dont:Destroy()
+end)
