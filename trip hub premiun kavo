@@ -6,3 +6,4 @@ if game.PlaceId == 5602055394 then
  loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/scripts/main/new%20trip%20pre"))()
         else
 loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/scripts/main/warni"))()
+end
