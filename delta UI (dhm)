@@ -1,6 +1,5 @@
 local Library = loadstring(game:HttpGet("https://pastebin.com/raw/jybNtPCD"))()
  
---checker user
 loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
  
 local Window = Library:Create("trip hub","hood modded")
@@ -398,6 +397,522 @@ cursor:Button("destroy",function(value)
 end)
 
 
+local tp = Window:Tab("teleport",false)
+ 
+tp:Label("important weapones")
+
+
+tp:Button("[Revolver] - $1600",function(value)
+local new = game:GetService("Workspace").Ignored.Shop.Guns["[Revolver] - $1600"].Head.CFrame
+
+local ts = game:GetService("TweenService")
+local char = game.Players.LocalPlayer.Character
+
+local part = char.HumanoidRootPart
+local ti = TweenInfo.new(8, Enum.EasingStyle.Linear)
+local tp = {CFrame = new}
+ts:Create(part, ti, tp):Play()
+end)
+
+tp:Button("[Double Barrel SG] - $800",function(value)
+local new = game:GetService("Workspace").Ignored.Shop.Guns["[Double Barrel SG] - $800"].Head.CFrame
+
+local ts = game:GetService("TweenService")
+local char = game.Players.LocalPlayer.Character
+
+local part = char.HumanoidRootPart
+local ti = TweenInfo.new(8, Enum.EasingStyle.Linear)
+local tp = {CFrame = new}
+ts:Create(part, ti, tp):Play()
+end)
+
+tp:Button("[Shotgun] - $1250",function(value)
+local new = game:GetService("Workspace").Ignored.Shop.Guns["[Shotgun] - $1250"].Head.CFrame
+
+local ts = game:GetService("TweenService")
+local char = game.Players.LocalPlayer.Character
+
+local part = char.HumanoidRootPart
+local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+local tp = {CFrame = new}
+ts:Create(part, ti, tp):Play()
+end)
+
+tp:Button("[Grenade Launcher] - $10000",function(value)
+local new = game:GetService("Workspace").Ignored.Shop.Guns["[Grenade Launcher] - $10000"].Head.CFrame
+
+local ts = game:GetService("TweenService")
+local char = game.Players.LocalPlayer.Character
+
+local part = char.HumanoidRootPart
+local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+local tp = {CFrame = new}
+ts:Create(part, ti, tp):Play()
+end)
+
+tp:Button("[Golden AK-47] - $5250",function(value)
+local new = game:GetService("Workspace").Ignored.Shop.Guns["[Golden AK-47] - $5250"].Head.CFrame
+
+local ts = game:GetService("TweenService")
+local char = game.Players.LocalPlayer.Character
+
+local part = char.HumanoidRootPart
+local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+local tp = {CFrame = new}
+ts:Create(part, ti, tp):Play()
+end)
+
+tp:Label("normal weapon")
+
+
+tp:Button("[Railgun] - $4450",function(value)
+local new = game:GetService("Workspace").Ignored.Shop.Guns["[Railgun] - $4450"].Head.CFrame
+
+local ts = game:GetService("TweenService")
+local char = game.Players.LocalPlayer.Character
+
+local part = char.HumanoidRootPart
+local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+local tp = {CFrame = new}
+ts:Create(part, ti, tp):Play()
+end)
+
+tp:Button("[AR] - $1350",function(value)
+local new = game:GetService("Workspace").Ignored.Shop.Guns["[AR] - $1350"].Head.CFrame
+
+local ts = game:GetService("TweenService")
+local char = game.Players.LocalPlayer.Character
+
+local part = char.HumanoidRootPart
+local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+local tp = {CFrame = new}
+ts:Create(part, ti, tp):Play()
+end)
+
+tp:Button("[AUG] - $1550",function(value)
+local new = game:GetService("Workspace").Ignored.Shop.Guns["[AUG] - $1550"].Head.CFrame
+
+local ts = game:GetService("TweenService")
+local char = game.Players.LocalPlayer.Character
+
+local part = char.HumanoidRootPart
+local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+local tp = {CFrame = new}
+ts:Create(part, ti, tp):Play()
+end)
+
+tp:Button("[Deagle] - $750",function(value)
+local new = game:GetService("Workspace").Ignored.Shop.Guns["[Deagle] - $750"].Head.CFrame
+
+local ts = game:GetService("TweenService")
+local char = game.Players.LocalPlayer.Character
+
+local part = char.HumanoidRootPart
+local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+local tp = {CFrame = new}
+ts:Create(part, ti, tp):Play()
+end)
+
+tp:Button("[Double Barrel SG] - $800",function(value)
+local new = game:GetService("Workspace").Ignored.Shop.Guns["[Double Barrel SG] - $800"].Head.CFrame
+
+local ts = game:GetService("TweenService")
+local char = game.Players.LocalPlayer.Character
+
+local part = char.HumanoidRootPart
+local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+local tp = {CFrame = new}
+ts:Create(part, ti, tp):Play()
+end)
+
+tp:Button("[DrumGun] - $1350",function(value)
+local new = game:GetService("Workspace").Ignored.Shop.Guns["[DrumGun] - $1350"].Head.CFrame
+
+local ts = game:GetService("TweenService")
+local char = game.Players.LocalPlayer.Character
+
+local part = char.HumanoidRootPart
+local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+local tp = {CFrame = new}
+ts:Create(part, ti, tp):Play()
+end)
+
+tp:Button("[Flamethrower] - $7550",function(value)
+local new = game:GetService("Workspace").Ignored.Shop.Guns["[Flamethrower] - $7550"].Head.CFrame
+
+local ts = game:GetService("TweenService")
+local char = game.Players.LocalPlayer.Character
+
+local part = char.HumanoidRootPart
+local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+local tp = {CFrame = new}
+ts:Create(part, ti, tp):Play()
+end)
+
+tp:Button("[Vector] - $1550",function(value)
+local new = game:GetService("Workspace").Ignored.Shop.Guns["[Vector] - $1550"].Head.CFrame
+
+local ts = game:GetService("TweenService")
+local char = game.Players.LocalPlayer.Character
+
+local part = char.HumanoidRootPart
+local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+local tp = {CFrame = new}
+ts:Create(part, ti, tp):Play()
+end)
+
+tp:Button("[Golden AK-47] - $5250",function(value)
+local new = game:GetService("Workspace").Ignored.Shop.Guns["[Golden AK-47] - $5250"].Head.CFrame
+
+local ts = game:GetService("TweenService")
+local char = game.Players.LocalPlayer.Character
+
+local part = char.HumanoidRootPart
+local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+local tp = {CFrame = new}
+ts:Create(part, ti, tp):Play()
+end)
+
+tp:Button("[LMG] - $4250",function(value)
+local new = game:GetService("Workspace").Ignored.Shop.Guns["[LMG] - $4250"].Head.CFrame
+
+local ts = game:GetService("TweenService")
+local char = game.Players.LocalPlayer.Character
+
+local part = char.HumanoidRootPart
+local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+local tp = {CFrame = new}
+ts:Create(part, ti, tp):Play()
+end)
+
+tp:Button("[P90] - $1000",function(value)
+local new = game:GetService("Workspace").Ignored.Shop.Guns["[P90] - $1000"].Head.CFrame
+
+local ts = game:GetService("TweenService")
+local char = game.Players.LocalPlayer.Character
+
+local part = char.HumanoidRootPart
+local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+local tp = {CFrame = new}
+ts:Create(part, ti, tp):Play()
+end)
+
+tp:Button("[PlasmaRifle] - $12500",function(value)
+local new = game:GetService("Workspace").Ignored.Shop.Guns["[PlasmaRifle] - $12500"].Head.CFrame
+
+local ts = game:GetService("TweenService")
+local char = game.Players.LocalPlayer.Character
+
+local part = char.HumanoidRootPart
+local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+local tp = {CFrame = new}
+ts:Create(part, ti, tp):Play()
+end)
+
+tp:Button("[RPG] - $6000",function(value)
+local new = game:GetService("Workspace").Ignored.Shop.Guns["[RPG] - $6000"].Head.CFrame
+
+local ts = game:GetService("TweenService")
+local char = game.Players.LocalPlayer.Character
+
+local part = char.HumanoidRootPart
+local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+local tp = {CFrame = new}
+ts:Create(part, ti, tp):Play()
+end)
+
+tp:Button("[Homing Launcher] - $12000",function(value)
+local new = game:GetService("Workspace").Ignored.Shop.Guns["[Homing Launcher] - $12000"].Head.CFrame
+
+local ts = game:GetService("TweenService")
+local char = game.Players.LocalPlayer.Character
+
+local part = char.HumanoidRootPart
+local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+local tp = {CFrame = new}
+ts:Create(part, ti, tp):Play()
+end)
+
+tp:Button("[Revolver] - $1600",function(value)
+local new = game:GetService("Workspace").Ignored.Shop.Guns["[Revolver] - $1600"].Head.CFrame
+
+local ts = game:GetService("TweenService")
+local char = game.Players.LocalPlayer.Character
+
+local part = char.HumanoidRootPart
+local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+local tp = {CFrame = new}
+ts:Create(part, ti, tp):Play()
+end)
+
+tp:Button("[Shotgun] - $1250",function(value)
+local new = game:GetService("Workspace").Ignored.Shop.Guns["[Shotgun] - $1250"].Head.CFrame
+
+local ts = game:GetService("TweenService")
+local char = game.Players.LocalPlayer.Character
+
+local part = char.HumanoidRootPart
+local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+local tp = {CFrame = new}
+ts:Create(part, ti, tp):Play()
+end)
+
+tp:Button("[SilencerAR] - $1550",function(value)
+local new = game:GetService("Workspace").Ignored.Shop.Guns["[SilencerAR] - $1550"].Head.CFrame
+
+local ts = game:GetService("TweenService")
+local char = game.Players.LocalPlayer.Character
+
+local part = char.HumanoidRootPart
+local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+local tp = {CFrame = new}
+ts:Create(part, ti, tp):Play()
+end)
+
+tp:Button("[Silencer] - $550",function(value)
+local new = game:GetService("Workspace").Ignored.Shop.Guns["[Silencer] - $550"].Head.CFrame
+
+local ts = game:GetService("TweenService")
+local char = game.Players.LocalPlayer.Character
+
+local part = char.HumanoidRootPart
+local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+local tp = {CFrame = new}
+ts:Create(part, ti, tp):Play()
+end)
+
+tp:Button("[Sniper] - $2000",function(value)
+local new = game:GetService("Workspace").Ignored.Shop.Guns["[Sniper] - $2000"].Head.CFrame
+
+local ts = game:GetService("TweenService")
+local char = game.Players.LocalPlayer.Character
+
+local part = char.HumanoidRootPart
+local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+local tp = {CFrame = new}
+ts:Create(part, ti, tp):Play()
+end)
+
+tp:Button("[TacticalShotgun] - $1550",function(value)
+local new = game:GetService("Workspace").Ignored.Shop.Guns["[TacticalShotgun] - $1550"].Head.CFrame
+
+local ts = game:GetService("TweenService")
+local char = game.Players.LocalPlayer.Character
+
+local part = char.HumanoidRootPart
+local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+local tp = {CFrame = new}
+ts:Create(part, ti, tp):Play()
+end)
+
+tp:Button("[UMP] - $1100",function(value)
+local new = game:GetService("Workspace").Ignored.Shop.Guns["[UMP] - $1100"].Head.CFrame
+
+local ts = game:GetService("TweenService")
+local char = game.Players.LocalPlayer.Character
+
+local part = char.HumanoidRootPart
+local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+local tp = {CFrame = new}
+ts:Create(part, ti, tp):Play()
+end)
+
+tp:Button("[AK-47] - $2250",function(value)
+local new = game:GetService("Workspace").Ignored.Shop.Guns["[AK-47] - $2250"].Head.CFrame
+
+local ts = game:GetService("TweenService")
+local char = game.Players.LocalPlayer.Character
+
+local part = char.HumanoidRootPart
+local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+local tp = {CFrame = new}
+ts:Create(part, ti, tp):Play()
+end)
+
+tp:Button("[Grenade Launcher] - $10000",function(value)
+local new = game:GetService("Workspace").Ignored.Shop.Guns["[Grenade Launcher] - $10000"].Head.CFrame
+
+local ts = game:GetService("TweenService")
+local char = game.Players.LocalPlayer.Character
+
+local part = char.HumanoidRootPart
+local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+local tp = {CFrame = new}
+ts:Create(part, ti, tp):Play()
+end)
+
+tp:Button("[AA12] - $2650",function(value)
+local new = game:GetService("Workspace").Ignored.Shop.Guns["[AA12] - $2650"].Head.CFrame
+
+local ts = game:GetService("TweenService")
+local char = game.Players.LocalPlayer.Character
+
+local part = char.HumanoidRootPart
+local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+local tp = {CFrame = new}
+ts:Create(part, ti, tp):Play()
+end)
+
+tp:Button("[XM8] - $5550",function(value)
+local new = game:GetService("Workspace").Ignored.Shop.Guns["[XM8] - $5550"].Head.CFrame
+
+local ts = game:GetService("TweenService")
+local char = game.Players.LocalPlayer.Character
+
+local part = char.HumanoidRootPart
+local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+local tp = {CFrame = new}
+ts:Create(part, ti, tp):Play()
+end)
+
+tp:Button("[SMG] - $700",function(value)
+local new = game:GetService("Workspace").Ignored.Shop.Guns["[SMG] - $700"].Head.CFrame
+
+local ts = game:GetService("TweenService")
+local char = game.Players.LocalPlayer.Character
+
+local part = char.HumanoidRootPart
+local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+local tp = {CFrame = new}
+ts:Create(part, ti, tp):Play()
+end)
+
+tp:Button("[HMinigun] - $68500",function(value)
+local new = game:GetService("Workspace").Ignored.Shop.Guns["[HMinigun] - $68500"].Head.CFrame
+
+local ts = game:GetService("TweenService")
+local char = game.Players.LocalPlayer.Character
+
+local part = char.HumanoidRootPart
+local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+local tp = {CFrame = new}
+ts:Create(part, ti, tp):Play()
+end)
+
+tp:Button("[R8] - $2800",function(value)
+local new = game:GetService("Workspace").Ignored.Shop.Guns["[R8] - $2800"].Head.CFrame
+
+local ts = game:GetService("TweenService")
+local char = game.Players.LocalPlayer.Character
+
+local part = char.HumanoidRootPart
+local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+local tp = {CFrame = new}
+ts:Create(part, ti, tp):Play()
+end)
+
+tp:Button("[Famas] - $3800",function(value)
+local new = game:GetService("Workspace").Ignored.Shop.Guns["[Famas] - $3800"].Head.CFrame
+
+local ts = game:GetService("TweenService")
+local char = game.Players.LocalPlayer.Character
+
+local part = char.HumanoidRootPart
+local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+local tp = {CFrame = new}
+ts:Create(part, ti, tp):Play()
+end)
+
+tp:Button("[SCAR-H] - $2850",function(value)
+local new = game:GetService("Workspace").Ignored.Shop.Guns["[SCAR-H] - $2850"].Head.CFrame
+
+local ts = game:GetService("TweenService")
+local char = game.Players.LocalPlayer.Character
+
+local part = char.HumanoidRootPart
+local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+local tp = {CFrame = new}
+ts:Create(part, ti, tp):Play()
+end)
+
+tp:Button("[Ray Gun] - $9500",function(value)
+local new = game:GetService("Workspace").Ignored.Shop.Guns["[Ray Gun] - $9500"].Head.CFrame
+
+local ts = game:GetService("TweenService")
+local char = game.Players.LocalPlayer.Character
+
+local part = char.HumanoidRootPart
+local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+local tp = {CFrame = new}
+ts:Create(part, ti, tp):Play()
+end)
+
+tp:Button("[Glock] - $350",function(value)
+local new = game:GetService("Workspace").Ignored.Shop.Guns["[Glock] - $350"].Head.CFrame
+
+local ts = game:GetService("TweenService")
+local char = game.Players.LocalPlayer.Character
+
+local part = char.HumanoidRootPart
+local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+local tp = {CFrame = new}
+ts:Create(part, ti, tp):Play()
+end)
+
+tp:Button("[LMinigun] - $100000",function(value)
+local new = game:GetService("Workspace").Ignored.Shop.Guns["[LMinigun] - $100000"].Head.CFrame
+
+local ts = game:GetService("TweenService")
+local char = game.Players.LocalPlayer.Character
+
+local part = char.HumanoidRootPart
+local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+local tp = {CFrame = new}
+ts:Create(part, ti, tp):Play()
+end)
+
+tp:Button("[Tec-9] - $1575",function(value)
+local new = game:GetService("Workspace").Ignored.Shop.Guns["[Tec-9] - $1575"].Head.CFrame
+
+local ts = game:GetService("TweenService")
+local char = game.Players.LocalPlayer.Character
+
+local part = char.HumanoidRootPart
+local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+local tp = {CFrame = new}
+ts:Create(part, ti, tp):Play()
+end)
+
+tp:Button("[Akimbo SMG] - $2675",function(value)
+local new = game:GetService("Workspace").Ignored.Shop.Guns["[Akimbo SMG] - $2675"].Head.CFrame
+
+local ts = game:GetService("TweenService")
+local char = game.Players.LocalPlayer.Character
+
+local part = char.HumanoidRootPart
+local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+local tp = {CFrame = new}
+ts:Create(part, ti, tp):Play()
+end)
+
+tp:Label("armor")
+
+tp:Button("[High-Medium Armor] - $550",function(value)
+local new = game:GetService("Workspace").Ignored.Shop.Armor["[High-Medium Armor] - $550"].Head.CFrame
+
+local ts = game:GetService("TweenService")
+local char = game.Players.LocalPlayer.Character
+
+local part = char.HumanoidRootPart
+local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+local tp = {CFrame = new}
+ts:Create(part, ti, tp):Play()
+end)
+
+tp:Button("[High Armor] - $550",function(value)
+local new = game:GetService("Workspace").Ignored.Shop.Armor["[High Armor] - $550"].Head.CFrame
+
+local ts = game:GetService("TweenService")
+local char = game.Players.LocalPlayer.Character
+
+local part = char.HumanoidRootPart
+local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+local tp = {CFrame = new}
+ts:Create(part, ti, tp):Play()
+end)
+
+
+
 local esp = Window:Tab("esp",false)
  
 esp:Label("esp")
@@ -687,14 +1202,12 @@ lag:Button("booster",function(value)
   loadstring(game:HttpGet("https://pastebin.com/raw/jEVLjZ5a",true))()
 end)
 
+lag:Label("UI")
 
-local ui = Window:Tab("settings UI",false)
- 
-ui:Label("close UI")
-
-ui:Keybind("Toggle",Enum.KeyCode.Y,function()
+lag:Keybind("Toggle",Enum.KeyCode.Y,function()
     Library:Toggle()
 end)
+
 
 game:GetService("StarterGui"):SetCore("SendNotification", {
 	Title = "Trip Hub";
@@ -702,4 +1215,3 @@ game:GetService("StarterGui"):SetCore("SendNotification", {
 	Icon = "http://www.roblox.com/asset/?id=10034853671";
 	Duration = "4";
 })
-
