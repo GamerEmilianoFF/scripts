@@ -4,6 +4,9 @@ if game.PlaceId == 5602055394 then
         elseif  game.PlaceId == 9183932460 then
  print("Untitled Hood")
  loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/scripts/main/delta%20UI%20(Untitled%20Hood)"))()
+     elseif  game.PlaceId == 2788229376 then
+ print("da Hood")
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/scripts/main/trip%20hub%20dh"))()
         else
 game:GetService("StarterGui"):SetCore("SendNotification", {
     Title = "Trip Hub";
