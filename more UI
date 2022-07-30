@@ -80,7 +80,7 @@ ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ImageLabel.BackgroundTransparency = 4.000
 ImageLabel.Position = UDim2.new(0.012956419, 0, 0.0347394533, 0)
 ImageLabel.Size = UDim2.new(0, 502, 0, 370)
-ImageLabel.Image = "http://www.roblox.com/asset/?id=10322158243"
+ImageLabel.Image = "http://www.roblox.com/asset/?id=10418617514"
 
 run.Name = "run"
 run.Parent = moreFrame
@@ -89,13 +89,14 @@ run.BackgroundTransparency = 5.000
 run.Position = UDim2.new(0.633686721, 0, 0.759305239, 0)
 run.Size = UDim2.new(0, 290, 0, 53)
 run.Font = Enum.Font.SourceSans
-run.Text = "run delta UI"
+run.Text = "run Luxware UI"
 run.TextColor3 = Color3.fromRGB(200, 200, 200)
 run.TextScaled = true
 run.TextSize = 14.000
 run.TextWrapped = true
 run.MouseButton1Down:Connect(function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/scripts/main/game"))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/scripts/main/Luxware%20UI"))()
+	Notification:Destroy()
 end)
 
 txt.Name = "txt"
@@ -105,7 +106,7 @@ txt.BackgroundTransparency = 5.000
 txt.Position = UDim2.new(0.617196679, 0, 0.0744416863, 0)
 txt.Size = UDim2.new(0, 319, 0, 207)
 txt.Font = Enum.Font.SourceSans
-txt.Text = "Delta UI has the same scripts as Kavo but with a different interface mechanism"
+txt.Text = "Luxware UI has the same scripts as Kavo but with a different interface mechanism"
 txt.TextColor3 = Color3.fromRGB(255, 255, 255)
 txt.TextScaled = true
 txt.TextSize = 14.000
