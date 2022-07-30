@@ -197,7 +197,7 @@ stomp:Button("anti stomp (K)", function()
     game.Players.LocalPlayer.Character.RightLowerArm:Destroy()
          end
 end)
-
+end)
 
 stomp:Button("anti stomp Button", function()
    loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/scripts/main/anti%20stomp%20button",true))()
@@ -1086,15 +1086,4 @@ end)
 anti:Button("anti lag (dont shirt)", function()
    loadstring(game:HttpGet("https://pastebin.com/raw/gp1zFQak",true))()
 end)
-
-
-local cre = Luxt:Tab("credits")
-
-local credi = cre:Section("credits")
-
-credi:Label("Space#0234")
-
-credi:Label("https://discord.gg/79fKXVuJfr")
-
-credi:Label("https://www.roblox.com/users/2205701910/profile")
 
