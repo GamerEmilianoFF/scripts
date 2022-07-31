@@ -1060,6 +1060,10 @@ local ani = Window:Tab("animation (FE)",false)
  
 ani:Label("animations FE")
 
+ani:Button("animation changer",function(value)
+ loadstring(game:HttpGet('https://pastebin.com/raw/fXvQVQb9'))()
+end)
+
 ani:Button("toy",function(value)
  Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=782841498"
     Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=782845736"
