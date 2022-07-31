@@ -294,13 +294,6 @@ scri:Slider("kill streak",0,99999,function(value)
  game.Players.LocalPlayer.Information.Streaks.Value = value
 end)
 
-scri:Label("armor")
-
-scri:Slider("armor",0,650,function(value)
- game.Players.LocalPlayer.Information.Armor.Value = value
-end)
-
-scri:Label("scripts")
 
 scri:Button("headless",function(value)
    loadstring(game:HttpGet("https://raw.githubusercontent.com/Invooker11/Koblox-and-Headless/main/Headless"))()
@@ -310,24 +303,13 @@ scri:Button("korblox left",function(value)
  loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/korblox-left/main/xd",true))()
 end)
 
-scri:Button("korblox right (client)",function(value)
- loadstring(game:HttpGet("https://raw.githubusercontent.com/Invooker11/Koblox-and-Headless/main/Right%20Leg",true))()
-
-end)
-
 scri:Button("korblox right (FE)",function(value)
   game.Players.LocalPlayer.Character.RightUpperLeg:Destroy()
 end)
 
-scri:Button("korblox left and right",function(value)
- loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/korbloxpermant/main/xd",true))()
+scri:Button("korblox right (client)",function(value)
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/Invooker11/Koblox-and-Headless/main/Right%20Leg",true))()
 end)
-
-scri:Button("face changer",function(value)
-  loadstring(game:HttpGet("https://pastebin.com/raw/VcDwuMDD",true))()
-end)
-
-
 
 
 local cursor = Window:Tab("cursor custom",false)
@@ -939,6 +921,14 @@ esp:Button("esp (pro)",function(value)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ic3w0lf22/Unnamed-ESP/master/UnnamedESP.lua"))()
 end)
 
+esp:Button("bliss esp",function(value)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Cornyllius/ESPs/main/BlissESP.lua", true))()
+end)
+
+esp:Button("fates esp and aimlock",function(value)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-esp/main/main.lua"))()
+end)
+
 esp:Button("View player TextBox",function(value)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/scripts/main/view%20scripts"))()
 end)
@@ -1025,7 +1015,22 @@ aim:Button("x15",function(value)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/66GdaGod/15X-CRACKED/main/EZ%20CRACKED%20BY%20MIN%20X%20ZORDO"))()
 end)
 
+aim:Button("kitten legit",function(value)
+loadstring(game:HttpGet("https://pastebin.com/raw/Tfey2JbA"))()
+end)
+
+aim:Button("Temporal X v2.0.3",function(value)
+loadstring(game:HttpGet("https://pastebin.com/raw/w2S8YyDt", true))()
+end)
+
+
 aim:Label("silent aim")
+
+
+
+aim:Button("Rainbow Lock and esp",function(value)
+loadstring(game:HttpGet("https://pastebin.com/raw/SgTvDfd9"))()
+end)
 
 aim:Button("silent (big)",function(value)
  loadstring(game:HttpGet('https://raw.githubusercontent.com/GamerEmilianoFF/silent/main/silent%20big'))()
