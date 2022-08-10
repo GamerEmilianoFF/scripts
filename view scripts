@@ -13,6 +13,8 @@ local X = Instance.new("TextButton")
 ViewGui.Name = "ViewGui"
 ViewGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ViewGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ViewGui.ResetOnSpawn = false 
+
 
 Frame.Parent = ViewGui
 Frame.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
