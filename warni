@@ -17,6 +17,8 @@ local yes = Instance.new("TextButton")
 dont.Name = "dont"
 dont.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 dont.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+dont.ResetOnSpawn = false 
+
 
 _1Frame.Name = "1Frame"
 _1Frame.Parent = dont
