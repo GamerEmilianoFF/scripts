@@ -1,6 +1,6 @@
 if game.PlaceId == 5602055394 then
  print("hood moddded")
- loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/scripts/main/delta%20UI%20(dhm)"))()
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/scripts/main/new%20trip%20pre"))()
         elseif  game.PlaceId == 9183932460 then
  print("Untitled Hood")
  loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/scripts/main/delta%20UI%20(Untitled%20Hood)"))()
