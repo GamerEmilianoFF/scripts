@@ -985,6 +985,10 @@ fov:Button("fov 120",function(value)
     game.Workspace.Camera.FieldOfView = FOV
 end)
 
+fov:Button("fov changer",function(value)
+loadstring(game:HttpGet("https://pastebin.com/raw/wC4V0q1S", true))()
+end)
+
 fov:Slider("fov",0,120,function(value)
  local FOV = value
 game.Workspace.Camera.FieldOfView = FOV
