@@ -1229,7 +1229,18 @@ lag:Label("fps booster")
 
 
 lag:Button("booster",function(value)
-  loadstring(game:HttpGet("https://pastebin.com/raw/jEVLjZ5a",true))()
+local timeBegan = tick()
+for i,v in ipairs(workspace:GetDescendants()) do
+    if v:IsA("BasePart") then 
+        v.Material = "SmoothPlastic"
+    end
+end
+for i,v in ipairs(game:GetService("Lighting"):GetChildren()) do
+    v:Destroy()
+end
+local timeEnd = tick() - timeBegan
+local timeMS = math.floor(timeEnd*1000)
+print("SmoothFPS loaded successfully in " .. timeMS .. "ms")
 end)
 
 lag:Label("UI")
