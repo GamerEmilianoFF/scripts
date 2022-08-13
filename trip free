@@ -1,38 +1,16 @@
-local Library = loadstring(game:HttpGet("https://pastebin.com/raw/jybNtPCD"))()
- 
-loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
- 
-local Window = Library:Create("trip hub","hood modded")
+--ur mom--
 
-local scri = Window:Tab("Main",true)
- 
-scri:Label("speed bypass")
- 
-scri:Button("speed script (c)",function(value)
- plr = game:GetService('Players').LocalPlayer
-    down = true
-    function onButton1Down(mouse)
-        down = true
-        while down do
-            if not down then break end
-            local char = plr.Character
-            char.HumanoidRootPart.Velocity = char.HumanoidRootPart.CFrame.lookVector * 230
-            wait()
-        end
-    end
-    function onButton1Up(mouse)
-        down = false
-    end
-    function onSelected(mouse)
-        mouse.KeyDown:connect(function(c) if c:lower()=="c"then onButton1Down(mouse)end end)
-        mouse.KeyUp:connect(function(c) if c:lower()=="c"then onButton1Up(mouse)end end)
-    end
-    onSelected(game.Players.LocalPlayer:GetMouse())
-    
---end
-end)
+local Library = loadstring(game:HttpGet("https://pastebin.com/raw/4pBajfB6"))()
 
-scri:Button("speed script (f)",function(value)
+local Window = Library.CreateLib("Trip Hub", "Midnight")
+
+local Tab = Window:NewTab("Main")
+--18 buttons
+--2 sliders
+local Section = Tab:NewSection("Speed Bypass")
+
+Section:NewButton("Speed KeyBind (F)", "Key (F)", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
     plr = game:GetService('Players').LocalPlayer
     down = true
     function onButton1Down(mouse)
@@ -55,110 +33,145 @@ scri:Button("speed script (f)",function(value)
 --end
 end)
 
-scri:Slider("speed slider",0,400,function(value)
-plr = game:GetService('Players').LocalPlayer
- 
-down = true
- 
-function onButton1Down(mouse)
+Section:NewButton("Speed KeyBind (C)", "Key (C)", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+        plr = game:GetService('Players').LocalPlayer
+           down = true
+           function onButton1Down(mouse)
+               down = true
+               while down do
+                   if not down then break end
+                   local char = plr.Character
+                   char.HumanoidRootPart.Velocity = char.HumanoidRootPart.CFrame.lookVector * 230
+                   wait()
+               end
+           end
+           function onButton1Up(mouse)
+               down = false
+           end
+           function onSelected(mouse)
+               mouse.KeyDown:connect(function(c) if c:lower()=="c"then onButton1Down(mouse)end end)
+               mouse.KeyUp:connect(function(c) if c:lower()=="c"then onButton1Up(mouse)end end)
+           end
+           onSelected(game.Players.LocalPlayer:GetMouse())
+           
+       --end
+end)
+
+Section:NewSlider("Speed Slider", "Speed Slider", 400, 0, function(value) 
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    plr = game:GetService('Players').LocalPlayer
  
     down = true
- 
-    while down do
- 
-        if not down then break end
- 
-        local char = plr.Character
- 
-        char.HumanoidRootPart.Velocity = char.HumanoidRootPart.CFrame.lookVector * value
- 
-        wait()
- 
-    end
- 
-end
- 
-function onButton1Up(mouse)
- 
-    down = false
- 
-end
- 
-function onSelected(mouse)
- 
-    mouse.KeyDown:connect(function(c) if c:lower()=="c"then onButton1Down(mouse)end end)
- 
-    mouse.KeyUp:connect(function(c) if c:lower()=="c"then onButton1Up(mouse)end end)
- 
-end
- 
-onSelected(game.Players.LocalPlayer:GetMouse())
---end
-end)
-
-scri:Button("speed script button",function(value)
-loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/madebyemiliano/main/Speed%20bypass",true))()
-end)
-
-scri:Button("speed script toggle",function(value)
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/toggles_speed/main/Speed",true))()
-end)
-
-scri:Label("server")
-
-scri:Button("server finder hub",function(value)
-  loadstring(game:HttpGet("https://www.scriptblox.com/raw/Server-Browser_80", true))();
-end)
-
-scri:Button("enter server fast",function(value)
-local Http = game:GetService("HttpService")
-    local TPS = game:GetService("TeleportService")
-    local Api = "https://games.roblox.com/v1/games/"
      
-    local _place = game.PlaceId
-    local _servers = Api.._place.."/servers/Public?sortOrder=Asc&limit=100"
-    function ListServers(cursor)
-       local Raw = game:HttpGet(_servers .. ((cursor and "&cursor="..cursor) or ""))
-       return Http:JSONDecode(Raw)
+    function onButton1Down(mouse)
+     
+        down = true
+     
+        while down do
+     
+            if not down then break end
+     
+            local char = plr.Character
+     
+            char.HumanoidRootPart.Velocity = char.HumanoidRootPart.CFrame.lookVector * value
+     
+            wait()
+     
+        end
+     
     end
      
-    local Server, Next; repeat
-       local Servers = ListServers(Next)
-       Server = Servers.data[1]
-       Next = Servers.nextPageCursor
-    until Server
+    function onButton1Up(mouse)
      
-    TPS:TeleportToPlaceInstance(_place,Server.id,game.Players.LocalPlayer)
+        down = false
+     
+    end
+     
+    function onSelected(mouse)
+     
+        mouse.KeyDown:connect(function(c) if c:lower()=="c"then onButton1Down(mouse)end end)
+     
+        mouse.KeyUp:connect(function(c) if c:lower()=="c"then onButton1Up(mouse)end end)
+     
+    end
+     
+    onSelected(game.Players.LocalPlayer:GetMouse())
+    --end
 end)
 
-scri:Button("rejoin",function(value)
-  loadstring(game:HttpGet("https://pastebin.com/raw/hAaXGTdq",true))()
+Section:NewButton("Speed Button", "for Mob", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/madebyemiliano/main/Speed%20bypass",true))()
+
 end)
 
-scri:Label("chat scripts")
+Section:NewButton("Speed Toggle", "for Mob", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/toggles_speed/main/Speed",true))()
 
-scri:Button("chat spy v1",function(value)
-loadstring(game:HttpGet('https://pastebin.com/raw/TBRu2TW5'))()
 end)
 
-scri:Button("chat spy v2",function(value)
-loadstring(game:HttpGet('https://pastebin.com/raw/7MYwu6cD'))()
+local Section = Tab:NewSection("Server Sided")
+
+
+Section:NewButton("Server Finder Hub", "search server", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    loadstring(game:HttpGet("https://www.scriptblox.com/raw/Server-Browser_80", true))();
+
 end)
 
 
-scri:Button("trash talk button",function(value)
- loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/GamerEmilianoFF/main/trash%20gui",true))()
+Section:NewButton("Rejoin", "Rejoin", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    loadstring(game:HttpGet("https://pastebin.com/raw/hAaXGTdq",true))()
+
 end)
 
-scri:Label("jumps scripts")
+local Section = Tab:NewSection("Anti Stomp")
 
-scri:Button("no jumps limits",function(value)
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/infinite_jumps/main/Jumps",true))()
+
+Section:NewButton("Anti Stomp Button", "For Mob", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/scripts/main/anti%20stomp%20button",true))()
+
 end)
 
-scri:Button("inf jumps",function(value)
-  loadstring(game:HttpGet("https://pastebin.com/raw/jEVLjZ5a",true))()
- 
+
+local Section = Tab:NewSection("Chat Mods")
+
+
+Section:NewButton("Chat Spy v1", "v1", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    loadstring(game:HttpGet('https://pastebin.com/raw/TBRu2TW5'))()
+
+end)
+
+Section:NewButton("Chat Spy v2", "v2", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    loadstring(game:HttpGet('https://pastebin.com/raw/7MYwu6cD'))()
+
+end)
+
+Section:NewButton("Trash Talk Button", "For Mob", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/GamerEmilianoFF/main/trash%20gui",true))()
+
+end)
+
+
+local Section = Tab:NewSection("Jumps Mods")
+
+
+Section:NewButton("No Limits Jumps", "Destroy 3 Jumps Limits", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/infinite_jumps/main/Jumps",true))()
+
+end)
+
+Section:NewButton("Inf Jumps", "Jump for fly", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+
     local InfiniteJumpEnabled = true
      
     game:GetService("UserInputService").JumpRequest:connect(function()
@@ -173,63 +186,624 @@ scri:Button("inf jumps",function(value)
     loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/infinite_jumps/main/Jumps",true))()
 end)
 
-scri:Label("anti stomp")
+
+local Section = Tab:NewSection("Other Mods")
 
 
-scri:Button("anti stomp button",function(value)
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/scripts/main/anti%20stomp%20button",true))()
-end)
-
-scri:Label("other scripts")
-
-scri:Button("noclip toggle",function(value)
+Section:NewButton("No-Clip Toggle", "No-Clip", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
   loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/scripts/main/noclip", true))()
+
 end)
 
-scri:Button("kick me button",function(value)
-  loadstring(game:HttpGet("https://pastebin.com/raw/x6pKVqxw", true))()
-end)
+Section:NewButton("Kick Me Button", "Kick me", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    loadstring(game:HttpGet("https://pastebin.com/raw/x6pKVqxw", true))()
 
-scri:Slider("Light",0,250,function(value)
- game:GetService("Lighting").GlobalShadows = false
-game:GetService("Lighting").ShadowSoftness = 0
-game:GetService("Lighting").Brightness = value
-game:GetService("Lighting").FogEnd = 9e9
-game:GetService("Lighting").FogStart = 9e9
 end)
 
 
-scri:Button("no fog",function(value)
-loadstring(game:HttpGet("https://pastebin.com/raw/06iG6YkU", true))()
+Section:NewSlider("Light", "Light Slider", 250, 0, function(value)
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    game:GetService("Lighting").GlobalShadows = false
+    game:GetService("Lighting").ShadowSoftness = 0
+    game:GetService("Lighting").Brightness = value
+    game:GetService("Lighting").FogEnd = 9e9
+    game:GetService("Lighting").FogStart = 9e9
+end)
+
+Section:NewButton("No Fog", "No Fog", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    loadstring(game:HttpGet("https://pastebin.com/raw/06iG6YkU", true))()
+
+end)
+
+Section:NewButton("Korblox (Right)", "Client", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Invooker11/Koblox-and-Headless/main/Right%20Leg",true))()
+
+end)
+
+Section:NewButton("Korblox (Left)", "Client", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/korblox-left/main/xd",true))()
+
+end)
+
+Section:NewButton("Headless", "Client", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Invooker11/Koblox-and-Headless/main/Headless"))()
+
 end)
 
 
 
-scri:Label("mod")
+
+local Tab = Window:NewTab("Teleport")
+--42 buttons
+
+local Section = Tab:NewSection("Important weapones")
 
 
+Section:NewButton("[Revolver] - $1600", "[Revolver] - $1600", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    local new = game:GetService("Workspace").Ignored.Shop.Guns["[Revolver] - $1600"].Head.CFrame
 
-
-scri:Button("headless",function(value)
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/Invooker11/Koblox-and-Headless/main/Headless"))()
+    local ts = game:GetService("TweenService")
+    local char = game.Players.LocalPlayer.Character
+    
+    local part = char.HumanoidRootPart
+    local ti = TweenInfo.new(8, Enum.EasingStyle.Linear)
+    local tp = {CFrame = new}
+    ts:Create(part, ti, tp):Play()
 end)
 
-scri:Button("korblox left",function(value)
- loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/korblox-left/main/xd",true))()
+Section:NewButton("[Double Barrel SG] - $800", "[Double Barrel SG] - $800", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    local new = game:GetService("Workspace").Ignored.Shop.Guns["[Double Barrel SG] - $800"].Head.CFrame
+
+    local ts = game:GetService("TweenService")
+    local char = game.Players.LocalPlayer.Character
+    
+    local part = char.HumanoidRootPart
+    local ti = TweenInfo.new(8, Enum.EasingStyle.Linear)
+    local tp = {CFrame = new}
+    ts:Create(part, ti, tp):Play()
+end)
+
+Section:NewButton("[Shotgun] - $1250", "[Shotgun] - $1250", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    local new = game:GetService("Workspace").Ignored.Shop.Guns["[Shotgun] - $1250"].Head.CFrame
+
+    local ts = game:GetService("TweenService")
+    local char = game.Players.LocalPlayer.Character
+    
+    local part = char.HumanoidRootPart
+    local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+    local tp = {CFrame = new}
+    ts:Create(part, ti, tp):Play()
+end)
+
+Section:NewButton("[Grenade Launcher] - $10000", "[Grenade Launcher] - $10000", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    local new = game:GetService("Workspace").Ignored.Shop.Guns["[Grenade Launcher] - $10000"].Head.CFrame
+
+    local ts = game:GetService("TweenService")
+    local char = game.Players.LocalPlayer.Character
+    
+    local part = char.HumanoidRootPart
+    local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+    local tp = {CFrame = new}
+    ts:Create(part, ti, tp):Play()
+end)
+
+Section:NewButton("[Golden AK-47] - $5250", "[Golden AK-47] - $5250", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    local new = game:GetService("Workspace").Ignored.Shop.Guns["[Golden AK-47] - $5250"].Head.CFrame
+
+    local ts = game:GetService("TweenService")
+    local char = game.Players.LocalPlayer.Character
+    
+    local part = char.HumanoidRootPart
+    local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+    local tp = {CFrame = new}
+    ts:Create(part, ti, tp):Play()
+end)
+
+local Section = Tab:NewSection("All Weapones")
+
+
+Section:NewButton("[Railgun] - $4450", "[Railgun] - $4450", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    local new = game:GetService("Workspace").Ignored.Shop.Guns["[Railgun] - $4450"].Head.CFrame
+
+    local ts = game:GetService("TweenService")
+    local char = game.Players.LocalPlayer.Character
+    
+    local part = char.HumanoidRootPart
+    local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+    local tp = {CFrame = new}
+    ts:Create(part, ti, tp):Play()
+end)
+
+Section:NewButton("[AR] - $1350", "[AR] - $1350", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    local new = game:GetService("Workspace").Ignored.Shop.Guns["[AR] - $1350"].Head.CFrame
+
+    local ts = game:GetService("TweenService")
+    local char = game.Players.LocalPlayer.Character
+    
+    local part = char.HumanoidRootPart
+    local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+    local tp = {CFrame = new}
+    ts:Create(part, ti, tp):Play()
+end)
+
+Section:NewButton("[AUG] - $1550", "[AUG] - $1550", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    local new = game:GetService("Workspace").Ignored.Shop.Guns["[AUG] - $1550"].Head.CFrame
+
+    local ts = game:GetService("TweenService")
+    local char = game.Players.LocalPlayer.Character
+    
+    local part = char.HumanoidRootPart
+    local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+    local tp = {CFrame = new}
+    ts:Create(part, ti, tp):Play()
+end)
+
+Section:NewButton("[Deagle] - $750", "[Deagle] - $750", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    local new = game:GetService("Workspace").Ignored.Shop.Guns["[Deagle] - $750"].Head.CFrame
+
+    local ts = game:GetService("TweenService")
+    local char = game.Players.LocalPlayer.Character
+    
+    local part = char.HumanoidRootPart
+    local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+    local tp = {CFrame = new}
+    ts:Create(part, ti, tp):Play()
+end)
+
+Section:NewButton("[Double Barrel SG] - $800", "[Double Barrel SG] - $800", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    local new = game:GetService("Workspace").Ignored.Shop.Guns["[Double Barrel SG] - $800"].Head.CFrame
+
+    local ts = game:GetService("TweenService")
+    local char = game.Players.LocalPlayer.Character
+    
+    local part = char.HumanoidRootPart
+    local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+    local tp = {CFrame = new}
+    ts:Create(part, ti, tp):Play()
+end)
+
+Section:NewButton("[DrumGun] - $1350", "[DrumGun] - $1350", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    local new = game:GetService("Workspace").Ignored.Shop.Guns["[DrumGun] - $1350"].Head.CFrame
+
+    local ts = game:GetService("TweenService")
+    local char = game.Players.LocalPlayer.Character
+    
+    local part = char.HumanoidRootPart
+    local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+    local tp = {CFrame = new}
+    ts:Create(part, ti, tp):Play()
+end)
+
+Section:NewButton("[Flamethrower] - $7550", "[Flamethrower] - $7550", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    local new = game:GetService("Workspace").Ignored.Shop.Guns["[Flamethrower] - $7550"].Head.CFrame
+
+    local ts = game:GetService("TweenService")
+    local char = game.Players.LocalPlayer.Character
+    
+    local part = char.HumanoidRootPart
+    local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+    local tp = {CFrame = new}
+    ts:Create(part, ti, tp):Play()
+end)
+
+Section:NewButton("[Vector] - $1550", "[Vector] - $1550", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    local new = game:GetService("Workspace").Ignored.Shop.Guns["[Vector] - $1550"].Head.CFrame
+
+    local ts = game:GetService("TweenService")
+    local char = game.Players.LocalPlayer.Character
+    
+    local part = char.HumanoidRootPart
+    local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+    local tp = {CFrame = new}
+    ts:Create(part, ti, tp):Play()
+end)
+
+Section:NewButton("[Golden AK-47] - $5250", "[Golden AK-47] - $5250", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    local new = game:GetService("Workspace").Ignored.Shop.Guns["[Golden AK-47] - $5250"].Head.CFrame
+
+    local ts = game:GetService("TweenService")
+    local char = game.Players.LocalPlayer.Character
+    
+    local part = char.HumanoidRootPart
+    local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+    local tp = {CFrame = new}
+    ts:Create(part, ti, tp):Play()
+end)
+
+Section:NewButton("[LMG] - $4250", "[LMG] - $4250", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    local new = game:GetService("Workspace").Ignored.Shop.Guns["[LMG] - $4250"].Head.CFrame
+
+    local ts = game:GetService("TweenService")
+    local char = game.Players.LocalPlayer.Character
+    
+    local part = char.HumanoidRootPart
+    local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+    local tp = {CFrame = new}
+    ts:Create(part, ti, tp):Play()
+end)
+
+Section:NewButton("[P90] - $1000", "[P90] - $1000", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    local new = game:GetService("Workspace").Ignored.Shop.Guns["[P90] - $1000"].Head.CFrame
+
+    local ts = game:GetService("TweenService")
+    local char = game.Players.LocalPlayer.Character
+    
+    local part = char.HumanoidRootPart
+    local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+    local tp = {CFrame = new}
+    ts:Create(part, ti, tp):Play()
+end)
+
+Section:NewButton("[PlasmaRifle] - $12500", "[PlasmaRifle] - $12500", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    local new = game:GetService("Workspace").Ignored.Shop.Guns["[PlasmaRifle] - $12500"].Head.CFrame
+
+    local ts = game:GetService("TweenService")
+    local char = game.Players.LocalPlayer.Character
+    
+    local part = char.HumanoidRootPart
+    local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+    local tp = {CFrame = new}
+    ts:Create(part, ti, tp):Play()
+end)
+
+Section:NewButton("[RPG] - $6000", "[RPG] - $6000", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    local new = game:GetService("Workspace").Ignored.Shop.Guns["[RPG] - $6000"].Head.CFrame
+
+    local ts = game:GetService("TweenService")
+    local char = game.Players.LocalPlayer.Character
+    
+    local part = char.HumanoidRootPart
+    local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+    local tp = {CFrame = new}
+    ts:Create(part, ti, tp):Play()
+end)
+
+Section:NewButton("[Homing Launcher] - $12000", "[Homing Launcher] - $12000", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    local new = game:GetService("Workspace").Ignored.Shop.Guns["[Homing Launcher] - $12000"].Head.CFrame
+
+    local ts = game:GetService("TweenService")
+    local char = game.Players.LocalPlayer.Character
+    
+    local part = char.HumanoidRootPart
+    local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+    local tp = {CFrame = new}
+    ts:Create(part, ti, tp):Play()
+end)
+
+Section:NewButton("[Revolver] - $1600", "[Revolver] - $1600", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    local new = game:GetService("Workspace").Ignored.Shop.Guns["[Revolver] - $1600"].Head.CFrame
+
+    local ts = game:GetService("TweenService")
+    local char = game.Players.LocalPlayer.Character
+    
+    local part = char.HumanoidRootPart
+    local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+    local tp = {CFrame = new}
+    ts:Create(part, ti, tp):Play()
+end)
+
+Section:NewButton("[Shotgun] - $1250", "[Shotgun] - $1250", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    local new = game:GetService("Workspace").Ignored.Shop.Guns["[Shotgun] - $1250"].Head.CFrame
+
+    local ts = game:GetService("TweenService")
+    local char = game.Players.LocalPlayer.Character
+    
+    local part = char.HumanoidRootPart
+    local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+    local tp = {CFrame = new}
+    ts:Create(part, ti, tp):Play()
+end)
+
+Section:NewButton("[SilencerAR] - $1550", "[SilencerAR] - $1550", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    local new = game:GetService("Workspace").Ignored.Shop.Guns["[SilencerAR] - $1550"].Head.CFrame
+
+    local ts = game:GetService("TweenService")
+    local char = game.Players.LocalPlayer.Character
+    
+    local part = char.HumanoidRootPart
+    local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+    local tp = {CFrame = new}
+    ts:Create(part, ti, tp):Play()
+end)
+
+Section:NewButton("[Silencer] - $550", "[Silencer] - $550", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    local new = game:GetService("Workspace").Ignored.Shop.Guns["[Silencer] - $550"].Head.CFrame
+
+    local ts = game:GetService("TweenService")
+    local char = game.Players.LocalPlayer.Character
+    
+    local part = char.HumanoidRootPart
+    local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+    local tp = {CFrame = new}
+    ts:Create(part, ti, tp):Play()
+end)
+
+Section:NewButton("[Sniper] - $2000", "[Sniper] - $2000", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    local new = game:GetService("Workspace").Ignored.Shop.Guns["[Sniper] - $2000"].Head.CFrame
+
+    local ts = game:GetService("TweenService")
+    local char = game.Players.LocalPlayer.Character
+    
+    local part = char.HumanoidRootPart
+    local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+    local tp = {CFrame = new}
+    ts:Create(part, ti, tp):Play()
+end)
+
+Section:NewButton("[TacticalShotgun] - $1550", "[TacticalShotgun] - $1550", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    local new = game:GetService("Workspace").Ignored.Shop.Guns["[TacticalShotgun] - $1550"].Head.CFrame
+
+    local ts = game:GetService("TweenService")
+    local char = game.Players.LocalPlayer.Character
+    
+    local part = char.HumanoidRootPart
+    local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+    local tp = {CFrame = new}
+    ts:Create(part, ti, tp):Play()
+end)
+
+Section:NewButton("[UMP] - $1100", "[UMP] - $1100", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    local new = game:GetService("Workspace").Ignored.Shop.Guns["[UMP] - $1100"].Head.CFrame
+
+    local ts = game:GetService("TweenService")
+    local char = game.Players.LocalPlayer.Character
+    
+    local part = char.HumanoidRootPart
+    local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+    local tp = {CFrame = new}
+    ts:Create(part, ti, tp):Play()
+end)
+
+Section:NewButton("[AK-47] - $2250", "[AK-47] - $2250", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    local new = game:GetService("Workspace").Ignored.Shop.Guns["[AK-47] - $2250"].Head.CFrame
+
+    local ts = game:GetService("TweenService")
+    local char = game.Players.LocalPlayer.Character
+    
+    local part = char.HumanoidRootPart
+    local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+    local tp = {CFrame = new}
+    ts:Create(part, ti, tp):Play()
+end)
+
+Section:NewButton("[Grenade Launcher] - $10000", "[Grenade Launcher] - $10000", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    local new = game:GetService("Workspace").Ignored.Shop.Guns["[Grenade Launcher] - $10000"].Head.CFrame
+
+    local ts = game:GetService("TweenService")
+    local char = game.Players.LocalPlayer.Character
+    
+    local part = char.HumanoidRootPart
+    local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+    local tp = {CFrame = new}
+    ts:Create(part, ti, tp):Play()
+end)
+
+Section:NewButton("[AA12] - $2650", "[AA12] - $2650", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    local new = game:GetService("Workspace").Ignored.Shop.Guns["[AA12] - $2650"].Head.CFrame
+
+    local ts = game:GetService("TweenService")
+    local char = game.Players.LocalPlayer.Character
+    
+    local part = char.HumanoidRootPart
+    local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+    local tp = {CFrame = new}
+    ts:Create(part, ti, tp):Play()
+end)
+
+Section:NewButton("[XM8] - $5550", "[XM8] - $5550", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    local new = game:GetService("Workspace").Ignored.Shop.Guns["[XM8] - $5550"].Head.CFrame
+
+    local ts = game:GetService("TweenService")
+    local char = game.Players.LocalPlayer.Character
+    
+    local part = char.HumanoidRootPart
+    local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+    local tp = {CFrame = new}
+    ts:Create(part, ti, tp):Play()
+end)
+
+Section:NewButton("[SMG] - $700", "[SMG] - $700", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    local new = game:GetService("Workspace").Ignored.Shop.Guns["[SMG] - $700"].Head.CFrame
+
+    local ts = game:GetService("TweenService")
+    local char = game.Players.LocalPlayer.Character
+    
+    local part = char.HumanoidRootPart
+    local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+    local tp = {CFrame = new}
+    ts:Create(part, ti, tp):Play()
+end)
+
+Section:NewButton("[HMinigun] - $68500", "[HMinigun] - $68500", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    local new = game:GetService("Workspace").Ignored.Shop.Guns["[HMinigun] - $68500"].Head.CFrame
+
+    local ts = game:GetService("TweenService")
+    local char = game.Players.LocalPlayer.Character
+    
+    local part = char.HumanoidRootPart
+    local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+    local tp = {CFrame = new}
+    ts:Create(part, ti, tp):Play()
+end)
+
+Section:NewButton("[R8] - $2800", "[R8] - $2800", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    local new = game:GetService("Workspace").Ignored.Shop.Guns["[R8] - $2800"].Head.CFrame
+
+    local ts = game:GetService("TweenService")
+    local char = game.Players.LocalPlayer.Character
+    
+    local part = char.HumanoidRootPart
+    local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+    local tp = {CFrame = new}
+    ts:Create(part, ti, tp):Play()
+end)
+
+Section:NewButton("[Famas] - $3800", "[Famas] - $3800", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    local new = game:GetService("Workspace").Ignored.Shop.Guns["[Famas] - $3800"].Head.CFrame
+
+    local ts = game:GetService("TweenService")
+    local char = game.Players.LocalPlayer.Character
+    
+    local part = char.HumanoidRootPart
+    local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+    local tp = {CFrame = new}
+    ts:Create(part, ti, tp):Play()
+end)
+
+Section:NewButton("[SCAR-H] - $2850", "[SCAR-H] - $2850", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    local new = game:GetService("Workspace").Ignored.Shop.Guns["[SCAR-H] - $2850"].Head.CFrame
+
+    local ts = game:GetService("TweenService")
+    local char = game.Players.LocalPlayer.Character
+    
+    local part = char.HumanoidRootPart
+    local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+    local tp = {CFrame = new}
+    ts:Create(part, ti, tp):Play()
+end)
+
+Section:NewButton("[Ray Gun] - $9500", "[Ray Gun] - $9500", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    local new = game:GetService("Workspace").Ignored.Shop.Guns["[Ray Gun] - $9500"].Head.CFrame
+
+    local ts = game:GetService("TweenService")
+    local char = game.Players.LocalPlayer.Character
+    
+    local part = char.HumanoidRootPart
+    local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+    local tp = {CFrame = new}
+    ts:Create(part, ti, tp):Play()
+end)
+
+Section:NewButton("[Glock] - $350", "[Glock] - $350", function()
+    local new = game:GetService("Workspace").Ignored.Shop.Guns["[Glock] - $350"].Head.CFrame
+
+    local ts = game:GetService("TweenService")
+    local char = game.Players.LocalPlayer.Character
+    
+    local part = char.HumanoidRootPart
+    local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+    local tp = {CFrame = new}
+    ts:Create(part, ti, tp):Play()
+end)
+
+Section:NewButton("[LMinigun] - $100000", "[LMinigun] - $100000", function()
+    local new = game:GetService("Workspace").Ignored.Shop.Guns["[LMinigun] - $100000"].Head.CFrame
+
+    local ts = game:GetService("TweenService")
+    local char = game.Players.LocalPlayer.Character
+    
+    local part = char.HumanoidRootPart
+    local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+    local tp = {CFrame = new}
+    ts:Create(part, ti, tp):Play()
+end)
+
+Section:NewButton("[Tec-9] - $1575", "[Tec-9] - $1575", function()
+    local new = game:GetService("Workspace").Ignored.Shop.Guns["[Tec-9] - $1575"].Head.CFrame
+
+    local ts = game:GetService("TweenService")
+    local char = game.Players.LocalPlayer.Character
+    
+    local part = char.HumanoidRootPart
+    local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+    local tp = {CFrame = new}
+    ts:Create(part, ti, tp):Play()
+end)
+
+Section:NewButton("[Akimbo SMG] - $2675", "[Akimbo SMG] - $2675", function()
+    local new = game:GetService("Workspace").Ignored.Shop.Guns["[Akimbo SMG] - $2675"].Head.CFrame
+
+    local ts = game:GetService("TweenService")
+    local char = game.Players.LocalPlayer.Character
+    
+    local part = char.HumanoidRootPart
+    local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+    local tp = {CFrame = new}
+    ts:Create(part, ti, tp):Play()
+    
+end)
+
+local Section = Tab:NewSection("Armor")
+
+Section:NewButton("[High-Medium Armor] - $550", "[High-Medium Armor] - $550", function()
+    local new = game:GetService("Workspace").Ignored.Shop.Armor["[High-Medium Armor] - $550"].Head.CFrame
+
+    local ts = game:GetService("TweenService")
+    local char = game.Players.LocalPlayer.Character
+    
+    local part = char.HumanoidRootPart
+    local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+    local tp = {CFrame = new}
+    ts:Create(part, ti, tp):Play()
+end)
+
+Section:NewButton("[High Armor] - $550", "[High Armor] - $550", function()
+    local new = game:GetService("Workspace").Ignored.Shop.Armor["[High Armor] - $550"].Head.CFrame
+
+    local ts = game:GetService("TweenService")
+    local char = game.Players.LocalPlayer.Character
+    
+    local part = char.HumanoidRootPart
+    local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
+    local tp = {CFrame = new}
+    ts:Create(part, ti, tp):Play()
 end)
 
 
-scri:Button("korblox right ",function(value)
- loadstring(game:HttpGet("https://raw.githubusercontent.com/Invooker11/Koblox-and-Headless/main/Right%20Leg",true))()
-end)
 
 
-local cursor = Window:Tab("cursor custom",false)
- 
-cursor:Label("cursors")
 
-cursor:Button("cursor red circle",function(value)
- local IAPortable = Instance.new("ScreenGui")
+
+local Tab = Window:NewTab("Cursor custom")
+local Section = Tab:NewSection("Cursors")
+
+
+Section:NewButton("Cursor Red Circle", "Cursor Red Circle", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    local IAPortable = Instance.new("ScreenGui")
     local Cursor = Instance.new("ImageLabel")
     local Hitmarker = Instance.new("ImageLabel")
     IAPortable.Name = "IAPortable"
@@ -246,8 +820,9 @@ cursor:Button("cursor red circle",function(value)
     Cursor.Position = UDim2.new(0.5, 0, 0.46, 0)
 end)
 
-cursor:Button("cursor white (+)",function(value)
-local IAPortable = Instance.new("ScreenGui")
+Section:NewButton("Cursor White (+)", "(+)", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    local IAPortable = Instance.new("ScreenGui")
     local Cursor = Instance.new("ImageLabel")
     local Hitmarker = Instance.new("ImageLabel")
     IAPortable.Name = "IAPortable"
@@ -264,8 +839,9 @@ local IAPortable = Instance.new("ScreenGui")
     Cursor.Position = UDim2.new(0.5, 0, 0.5, 0)
 end)
 
-cursor:Button("cursor white circle",function(value)
- local IAPortable = Instance.new("ScreenGui")
+Section:NewButton("Cursor white Circle", "Circle", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    local IAPortable = Instance.new("ScreenGui")
     local Cursor = Instance.new("ImageLabel")
     local Hitmarker = Instance.new("ImageLabel")
     IAPortable.Name = "IAPortable"
@@ -282,10 +858,11 @@ cursor:Button("cursor white circle",function(value)
     Cursor.Position = UDim2.new(0.5, 0, 0.5, 0)
 end)
 
-cursor:Label("destroy cursors")
+Section:NewLabel("Destroy Cursor")
 
-cursor:Button("destroy",function(value)
-  game.CoreGui.IAPortable:Destroy()
+
+Section:NewButton("Destroy", "Destroy", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
     game.CoreGui.IAPortable:Destroy()
     game.CoreGui.IAPortable:Destroy()
     game.CoreGui.IAPortable:Destroy()
@@ -297,552 +874,90 @@ cursor:Button("destroy",function(value)
     game.CoreGui.IAPortable:Destroy()
     game.CoreGui.IAPortable:Destroy()
     game.CoreGui.IAPortable:Destroy()
-end)
-
-
-local tp = Window:Tab("teleport",false)
- 
-tp:Label("important weapones")
-
-
-tp:Button("[Revolver] - $1600",function(value)
-local new = game:GetService("Workspace").Ignored.Shop.Guns["[Revolver] - $1600"].Head.CFrame
-
-local ts = game:GetService("TweenService")
-local char = game.Players.LocalPlayer.Character
-
-local part = char.HumanoidRootPart
-local ti = TweenInfo.new(8, Enum.EasingStyle.Linear)
-local tp = {CFrame = new}
-ts:Create(part, ti, tp):Play()
-end)
-
-tp:Button("[Double Barrel SG] - $800",function(value)
-local new = game:GetService("Workspace").Ignored.Shop.Guns["[Double Barrel SG] - $800"].Head.CFrame
-
-local ts = game:GetService("TweenService")
-local char = game.Players.LocalPlayer.Character
-
-local part = char.HumanoidRootPart
-local ti = TweenInfo.new(8, Enum.EasingStyle.Linear)
-local tp = {CFrame = new}
-ts:Create(part, ti, tp):Play()
-end)
-
-tp:Button("[Shotgun] - $1250",function(value)
-local new = game:GetService("Workspace").Ignored.Shop.Guns["[Shotgun] - $1250"].Head.CFrame
-
-local ts = game:GetService("TweenService")
-local char = game.Players.LocalPlayer.Character
-
-local part = char.HumanoidRootPart
-local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
-local tp = {CFrame = new}
-ts:Create(part, ti, tp):Play()
-end)
-
-tp:Button("[Grenade Launcher] - $10000",function(value)
-local new = game:GetService("Workspace").Ignored.Shop.Guns["[Grenade Launcher] - $10000"].Head.CFrame
-
-local ts = game:GetService("TweenService")
-local char = game.Players.LocalPlayer.Character
-
-local part = char.HumanoidRootPart
-local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
-local tp = {CFrame = new}
-ts:Create(part, ti, tp):Play()
-end)
-
-tp:Button("[Golden AK-47] - $5250",function(value)
-local new = game:GetService("Workspace").Ignored.Shop.Guns["[Golden AK-47] - $5250"].Head.CFrame
-
-local ts = game:GetService("TweenService")
-local char = game.Players.LocalPlayer.Character
-
-local part = char.HumanoidRootPart
-local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
-local tp = {CFrame = new}
-ts:Create(part, ti, tp):Play()
-end)
-
-tp:Label("normal weapon")
-
-
-tp:Button("[Railgun] - $4450",function(value)
-local new = game:GetService("Workspace").Ignored.Shop.Guns["[Railgun] - $4450"].Head.CFrame
-
-local ts = game:GetService("TweenService")
-local char = game.Players.LocalPlayer.Character
-
-local part = char.HumanoidRootPart
-local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
-local tp = {CFrame = new}
-ts:Create(part, ti, tp):Play()
-end)
-
-tp:Button("[AR] - $1350",function(value)
-local new = game:GetService("Workspace").Ignored.Shop.Guns["[AR] - $1350"].Head.CFrame
-
-local ts = game:GetService("TweenService")
-local char = game.Players.LocalPlayer.Character
-
-local part = char.HumanoidRootPart
-local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
-local tp = {CFrame = new}
-ts:Create(part, ti, tp):Play()
-end)
-
-tp:Button("[AUG] - $1550",function(value)
-local new = game:GetService("Workspace").Ignored.Shop.Guns["[AUG] - $1550"].Head.CFrame
-
-local ts = game:GetService("TweenService")
-local char = game.Players.LocalPlayer.Character
-
-local part = char.HumanoidRootPart
-local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
-local tp = {CFrame = new}
-ts:Create(part, ti, tp):Play()
-end)
-
-tp:Button("[Deagle] - $750",function(value)
-local new = game:GetService("Workspace").Ignored.Shop.Guns["[Deagle] - $750"].Head.CFrame
-
-local ts = game:GetService("TweenService")
-local char = game.Players.LocalPlayer.Character
-
-local part = char.HumanoidRootPart
-local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
-local tp = {CFrame = new}
-ts:Create(part, ti, tp):Play()
-end)
-
-tp:Button("[Double Barrel SG] - $800",function(value)
-local new = game:GetService("Workspace").Ignored.Shop.Guns["[Double Barrel SG] - $800"].Head.CFrame
-
-local ts = game:GetService("TweenService")
-local char = game.Players.LocalPlayer.Character
-
-local part = char.HumanoidRootPart
-local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
-local tp = {CFrame = new}
-ts:Create(part, ti, tp):Play()
-end)
-
-tp:Button("[DrumGun] - $1350",function(value)
-local new = game:GetService("Workspace").Ignored.Shop.Guns["[DrumGun] - $1350"].Head.CFrame
-
-local ts = game:GetService("TweenService")
-local char = game.Players.LocalPlayer.Character
-
-local part = char.HumanoidRootPart
-local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
-local tp = {CFrame = new}
-ts:Create(part, ti, tp):Play()
-end)
-
-tp:Button("[Flamethrower] - $7550",function(value)
-local new = game:GetService("Workspace").Ignored.Shop.Guns["[Flamethrower] - $7550"].Head.CFrame
-
-local ts = game:GetService("TweenService")
-local char = game.Players.LocalPlayer.Character
-
-local part = char.HumanoidRootPart
-local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
-local tp = {CFrame = new}
-ts:Create(part, ti, tp):Play()
-end)
-
-tp:Button("[Vector] - $1550",function(value)
-local new = game:GetService("Workspace").Ignored.Shop.Guns["[Vector] - $1550"].Head.CFrame
-
-local ts = game:GetService("TweenService")
-local char = game.Players.LocalPlayer.Character
-
-local part = char.HumanoidRootPart
-local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
-local tp = {CFrame = new}
-ts:Create(part, ti, tp):Play()
-end)
-
-tp:Button("[Golden AK-47] - $5250",function(value)
-local new = game:GetService("Workspace").Ignored.Shop.Guns["[Golden AK-47] - $5250"].Head.CFrame
-
-local ts = game:GetService("TweenService")
-local char = game.Players.LocalPlayer.Character
-
-local part = char.HumanoidRootPart
-local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
-local tp = {CFrame = new}
-ts:Create(part, ti, tp):Play()
-end)
-
-tp:Button("[LMG] - $4250",function(value)
-local new = game:GetService("Workspace").Ignored.Shop.Guns["[LMG] - $4250"].Head.CFrame
-
-local ts = game:GetService("TweenService")
-local char = game.Players.LocalPlayer.Character
-
-local part = char.HumanoidRootPart
-local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
-local tp = {CFrame = new}
-ts:Create(part, ti, tp):Play()
-end)
-
-tp:Button("[P90] - $1000",function(value)
-local new = game:GetService("Workspace").Ignored.Shop.Guns["[P90] - $1000"].Head.CFrame
-
-local ts = game:GetService("TweenService")
-local char = game.Players.LocalPlayer.Character
-
-local part = char.HumanoidRootPart
-local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
-local tp = {CFrame = new}
-ts:Create(part, ti, tp):Play()
-end)
-
-tp:Button("[PlasmaRifle] - $12500",function(value)
-local new = game:GetService("Workspace").Ignored.Shop.Guns["[PlasmaRifle] - $12500"].Head.CFrame
-
-local ts = game:GetService("TweenService")
-local char = game.Players.LocalPlayer.Character
-
-local part = char.HumanoidRootPart
-local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
-local tp = {CFrame = new}
-ts:Create(part, ti, tp):Play()
-end)
-
-tp:Button("[RPG] - $6000",function(value)
-local new = game:GetService("Workspace").Ignored.Shop.Guns["[RPG] - $6000"].Head.CFrame
-
-local ts = game:GetService("TweenService")
-local char = game.Players.LocalPlayer.Character
-
-local part = char.HumanoidRootPart
-local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
-local tp = {CFrame = new}
-ts:Create(part, ti, tp):Play()
-end)
-
-tp:Button("[Homing Launcher] - $12000",function(value)
-local new = game:GetService("Workspace").Ignored.Shop.Guns["[Homing Launcher] - $12000"].Head.CFrame
-
-local ts = game:GetService("TweenService")
-local char = game.Players.LocalPlayer.Character
-
-local part = char.HumanoidRootPart
-local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
-local tp = {CFrame = new}
-ts:Create(part, ti, tp):Play()
-end)
-
-tp:Button("[Revolver] - $1600",function(value)
-local new = game:GetService("Workspace").Ignored.Shop.Guns["[Revolver] - $1600"].Head.CFrame
-
-local ts = game:GetService("TweenService")
-local char = game.Players.LocalPlayer.Character
-
-local part = char.HumanoidRootPart
-local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
-local tp = {CFrame = new}
-ts:Create(part, ti, tp):Play()
-end)
-
-tp:Button("[Shotgun] - $1250",function(value)
-local new = game:GetService("Workspace").Ignored.Shop.Guns["[Shotgun] - $1250"].Head.CFrame
-
-local ts = game:GetService("TweenService")
-local char = game.Players.LocalPlayer.Character
-
-local part = char.HumanoidRootPart
-local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
-local tp = {CFrame = new}
-ts:Create(part, ti, tp):Play()
-end)
-
-tp:Button("[SilencerAR] - $1550",function(value)
-local new = game:GetService("Workspace").Ignored.Shop.Guns["[SilencerAR] - $1550"].Head.CFrame
-
-local ts = game:GetService("TweenService")
-local char = game.Players.LocalPlayer.Character
-
-local part = char.HumanoidRootPart
-local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
-local tp = {CFrame = new}
-ts:Create(part, ti, tp):Play()
-end)
-
-tp:Button("[Silencer] - $550",function(value)
-local new = game:GetService("Workspace").Ignored.Shop.Guns["[Silencer] - $550"].Head.CFrame
-
-local ts = game:GetService("TweenService")
-local char = game.Players.LocalPlayer.Character
-
-local part = char.HumanoidRootPart
-local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
-local tp = {CFrame = new}
-ts:Create(part, ti, tp):Play()
-end)
-
-tp:Button("[Sniper] - $2000",function(value)
-local new = game:GetService("Workspace").Ignored.Shop.Guns["[Sniper] - $2000"].Head.CFrame
-
-local ts = game:GetService("TweenService")
-local char = game.Players.LocalPlayer.Character
-
-local part = char.HumanoidRootPart
-local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
-local tp = {CFrame = new}
-ts:Create(part, ti, tp):Play()
-end)
-
-tp:Button("[TacticalShotgun] - $1550",function(value)
-local new = game:GetService("Workspace").Ignored.Shop.Guns["[TacticalShotgun] - $1550"].Head.CFrame
-
-local ts = game:GetService("TweenService")
-local char = game.Players.LocalPlayer.Character
-
-local part = char.HumanoidRootPart
-local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
-local tp = {CFrame = new}
-ts:Create(part, ti, tp):Play()
-end)
-
-tp:Button("[UMP] - $1100",function(value)
-local new = game:GetService("Workspace").Ignored.Shop.Guns["[UMP] - $1100"].Head.CFrame
-
-local ts = game:GetService("TweenService")
-local char = game.Players.LocalPlayer.Character
-
-local part = char.HumanoidRootPart
-local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
-local tp = {CFrame = new}
-ts:Create(part, ti, tp):Play()
-end)
-
-tp:Button("[AK-47] - $2250",function(value)
-local new = game:GetService("Workspace").Ignored.Shop.Guns["[AK-47] - $2250"].Head.CFrame
-
-local ts = game:GetService("TweenService")
-local char = game.Players.LocalPlayer.Character
-
-local part = char.HumanoidRootPart
-local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
-local tp = {CFrame = new}
-ts:Create(part, ti, tp):Play()
-end)
-
-tp:Button("[Grenade Launcher] - $10000",function(value)
-local new = game:GetService("Workspace").Ignored.Shop.Guns["[Grenade Launcher] - $10000"].Head.CFrame
-
-local ts = game:GetService("TweenService")
-local char = game.Players.LocalPlayer.Character
-
-local part = char.HumanoidRootPart
-local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
-local tp = {CFrame = new}
-ts:Create(part, ti, tp):Play()
-end)
-
-tp:Button("[AA12] - $2650",function(value)
-local new = game:GetService("Workspace").Ignored.Shop.Guns["[AA12] - $2650"].Head.CFrame
-
-local ts = game:GetService("TweenService")
-local char = game.Players.LocalPlayer.Character
-
-local part = char.HumanoidRootPart
-local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
-local tp = {CFrame = new}
-ts:Create(part, ti, tp):Play()
-end)
-
-tp:Button("[XM8] - $5550",function(value)
-local new = game:GetService("Workspace").Ignored.Shop.Guns["[XM8] - $5550"].Head.CFrame
-
-local ts = game:GetService("TweenService")
-local char = game.Players.LocalPlayer.Character
-
-local part = char.HumanoidRootPart
-local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
-local tp = {CFrame = new}
-ts:Create(part, ti, tp):Play()
-end)
-
-tp:Button("[SMG] - $700",function(value)
-local new = game:GetService("Workspace").Ignored.Shop.Guns["[SMG] - $700"].Head.CFrame
-
-local ts = game:GetService("TweenService")
-local char = game.Players.LocalPlayer.Character
-
-local part = char.HumanoidRootPart
-local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
-local tp = {CFrame = new}
-ts:Create(part, ti, tp):Play()
-end)
-
-tp:Button("[HMinigun] - $68500",function(value)
-local new = game:GetService("Workspace").Ignored.Shop.Guns["[HMinigun] - $68500"].Head.CFrame
-
-local ts = game:GetService("TweenService")
-local char = game.Players.LocalPlayer.Character
-
-local part = char.HumanoidRootPart
-local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
-local tp = {CFrame = new}
-ts:Create(part, ti, tp):Play()
-end)
-
-tp:Button("[R8] - $2800",function(value)
-local new = game:GetService("Workspace").Ignored.Shop.Guns["[R8] - $2800"].Head.CFrame
-
-local ts = game:GetService("TweenService")
-local char = game.Players.LocalPlayer.Character
-
-local part = char.HumanoidRootPart
-local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
-local tp = {CFrame = new}
-ts:Create(part, ti, tp):Play()
-end)
-
-tp:Button("[Famas] - $3800",function(value)
-local new = game:GetService("Workspace").Ignored.Shop.Guns["[Famas] - $3800"].Head.CFrame
-
-local ts = game:GetService("TweenService")
-local char = game.Players.LocalPlayer.Character
-
-local part = char.HumanoidRootPart
-local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
-local tp = {CFrame = new}
-ts:Create(part, ti, tp):Play()
-end)
-
-tp:Button("[SCAR-H] - $2850",function(value)
-local new = game:GetService("Workspace").Ignored.Shop.Guns["[SCAR-H] - $2850"].Head.CFrame
-
-local ts = game:GetService("TweenService")
-local char = game.Players.LocalPlayer.Character
-
-local part = char.HumanoidRootPart
-local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
-local tp = {CFrame = new}
-ts:Create(part, ti, tp):Play()
-end)
-
-tp:Button("[Ray Gun] - $9500",function(value)
-local new = game:GetService("Workspace").Ignored.Shop.Guns["[Ray Gun] - $9500"].Head.CFrame
-
-local ts = game:GetService("TweenService")
-local char = game.Players.LocalPlayer.Character
-
-local part = char.HumanoidRootPart
-local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
-local tp = {CFrame = new}
-ts:Create(part, ti, tp):Play()
-end)
-
-tp:Button("[Glock] - $350",function(value)
-local new = game:GetService("Workspace").Ignored.Shop.Guns["[Glock] - $350"].Head.CFrame
-
-local ts = game:GetService("TweenService")
-local char = game.Players.LocalPlayer.Character
-
-local part = char.HumanoidRootPart
-local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
-local tp = {CFrame = new}
-ts:Create(part, ti, tp):Play()
-end)
-
-tp:Button("[LMinigun] - $100000",function(value)
-local new = game:GetService("Workspace").Ignored.Shop.Guns["[LMinigun] - $100000"].Head.CFrame
-
-local ts = game:GetService("TweenService")
-local char = game.Players.LocalPlayer.Character
-
-local part = char.HumanoidRootPart
-local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
-local tp = {CFrame = new}
-ts:Create(part, ti, tp):Play()
-end)
-
-tp:Button("[Tec-9] - $1575",function(value)
-local new = game:GetService("Workspace").Ignored.Shop.Guns["[Tec-9] - $1575"].Head.CFrame
-
-local ts = game:GetService("TweenService")
-local char = game.Players.LocalPlayer.Character
-
-local part = char.HumanoidRootPart
-local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
-local tp = {CFrame = new}
-ts:Create(part, ti, tp):Play()
-end)
-
-tp:Button("[Akimbo SMG] - $2675",function(value)
-local new = game:GetService("Workspace").Ignored.Shop.Guns["[Akimbo SMG] - $2675"].Head.CFrame
-
-local ts = game:GetService("TweenService")
-local char = game.Players.LocalPlayer.Character
-
-local part = char.HumanoidRootPart
-local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
-local tp = {CFrame = new}
-ts:Create(part, ti, tp):Play()
-end)
-
-tp:Label("armor")
-
-tp:Button("[High-Medium Armor] - $550",function(value)
-local new = game:GetService("Workspace").Ignored.Shop.Armor["[High-Medium Armor] - $550"].Head.CFrame
-
-local ts = game:GetService("TweenService")
-local char = game.Players.LocalPlayer.Character
-
-local part = char.HumanoidRootPart
-local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
-local tp = {CFrame = new}
-ts:Create(part, ti, tp):Play()
-end)
-
-tp:Button("[High Armor] - $550",function(value)
-local new = game:GetService("Workspace").Ignored.Shop.Armor["[High Armor] - $550"].Head.CFrame
-
-local ts = game:GetService("TweenService")
-local char = game.Players.LocalPlayer.Character
-
-local part = char.HumanoidRootPart
-local ti = TweenInfo.new(9, Enum.EasingStyle.Linear)
-local tp = {CFrame = new}
-ts:Create(part, ti, tp):Play()
+    game.CoreGui.IAPortable:Destroy()
 end)
 
 
 
-local esp = Window:Tab("esp",false)
- 
-esp:Label("esp")
 
-esp:Button("esp box",function(value)
- spawn(loadstring(game:HttpGet("https://pastebin.com/raw/zKjj0TQD", true)))();
+
+local Tab = Window:NewTab("Fov")
+local Section = Tab:NewSection("Fov")
+
+Section:NewButton("fov 70", "70", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    local FOV = 70
+    game.Workspace.Camera.FieldOfView = FOV
 end)
 
-esp:Button("esp box and name",function(value)
-local ESP = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kiriot22/ESP-Lib/main/ESP.lua"))()
+Section:NewButton("fov 80", "80", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    local FOV = 80
+    game.Workspace.Camera.FieldOfView = FOV
+end)
+
+Section:NewButton("fov 90", "90", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    local FOV = 90
+    game.Workspace.Camera.FieldOfView = FOV
+end)
+
+Section:NewButton("fov 100", "100", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    local FOV = 100
+    game.Workspace.Camera.FieldOfView = FOV
+end)
+
+Section:NewButton("fov 110", "110", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    local FOV = 110
+    game.Workspace.Camera.FieldOfView = FOV
+end)
+
+Section:NewButton("fov 120", "120", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    local FOV = 120
+    game.Workspace.Camera.FieldOfView = FOV
+end)
+
+Section:NewButton("Fov Changer", "changer", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    loadstring(game:HttpGet("https://pastebin.com/raw/wC4V0q1S", true))()
+
+end)
+
+
+
+local Tab = Window:NewTab("Esp")
+local Section = Tab:NewSection("Esp")
+
+Section:NewButton("Esp Box", "Esp Box", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    spawn(loadstring(game:HttpGet("https://pastebin.com/raw/zKjj0TQD", true)))();
+
+end)
+
+Section:NewButton("Esp Box and Name", "Esp Box and Name", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    local ESP = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kiriot22/ESP-Lib/main/ESP.lua"))()
     ESP:Toggle(true)
 end)
 
-esp:Button("esp v2 (pc)",function(value)
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ic3w0lf22/Unnamed-ESP/master/UnnamedESP.lua"))()
+Section:NewButton("Esp V2 (Pc)", "For PC", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ic3w0lf22/Unnamed-ESP/master/UnnamedESP.lua"))()
+
 end)
 
-esp:Button("bliss esp",function(value)
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Cornyllius/ESPs/main/BlissESP.lua", true))()
+Section:NewButton("Bliss Hit Box (PC)", "For PC", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Cornyllius/ESPs/main/BlissESP.lua", true))()
+
 end)
 
-esp:Button("View player TextBox",function(value)
-loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/scripts/main/view%20scripts"))()
-end)
-
-esp:Button("owl hub",function(value)
-  local t = {}
+Section:NewButton("Owl Hub", "Owl Hub", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    local t = {}
     setmetatable(t, {
     __index = function(t, k)
         return function() end
@@ -858,102 +973,76 @@ esp:Button("owl hub",function(value)
     loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
 end)
 
+Section:NewButton("View Player", "View Player", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/scripts/main/view%20scripts"))()
 
-local fov = Window:Tab("fov",false)
- 
-fov:Label("fovs")
-
-fov:Button("fov 70",function(value)
-  local FOV = 70
-    game.Workspace.Camera.FieldOfView = FOV
-end)
-
-fov:Button("fov 80",function(value)
-  local FOV = 80
-    game.Workspace.Camera.FieldOfView = FOV
-end)
-
-fov:Button("fov 90",function(value)
-  local FOV = 90
-    game.Workspace.Camera.FieldOfView = FOV
-end)
-
-fov:Button("fov 100",function(value)
-  local FOV = 100
-    game.Workspace.Camera.FieldOfView = FOV
-end)
-
-fov:Button("fov 110",function(value)
-  local FOV = 110
-    game.Workspace.Camera.FieldOfView = FOV
-end)
-
-fov:Button("fov 120",function(value)
-  local FOV = 120
-    game.Workspace.Camera.FieldOfView = FOV
-end)
-
-fov:Slider("fov",0,120,function(value)
- local FOV = value
-game.Workspace.Camera.FieldOfView = FOV
-end)
-
-
-local aim = Window:Tab("aim lock",false)
- 
-aim:Label("aim locks")
-
-aim:Button("aim ware (Q)",function(value)
- loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Hyotinhofofinho/s1mple/main/LIXO"))()
-end)
-
-aim:Button("The ware",function(value)
-loadstring(game:HttpGet('https://raw.githubusercontent.com/carlcoded/Scripts/main/carltw'))()
-end)
-
-
-aim:Button("Xware",function(value)
-loadstring(game:HttpGet("https://pastebin.com/raw/chPzqgtN"))()
-end)
-
-aim:Button("x15",function(value)
-loadstring(game:HttpGet("https://raw.githubusercontent.com/66GdaGod/15X-CRACKED/main/EZ%20CRACKED%20BY%20MIN%20X%20ZORDO"))()
-end)
-
-aim:Button("kitten legit",function(value)
-loadstring(game:HttpGet("https://pastebin.com/raw/Tfey2JbA"))()
 end)
 
 
 
-aim:Label("silent aim")
+local Tab = Window:NewTab("Locks")
+local Section = Tab:NewSection("Aim lock")
 
+Section:NewButton("Aim Ware", "Aim ware", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Hyotinhofofinho/s1mple/main/LIXO"))()
 
+end)
 
-aim:Button("Rainbow Lock and esp",function(value)
-loadstring(game:HttpGet("https://pastebin.com/raw/SgTvDfd9"))()
+Section:NewButton("The Ware", "The ware", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/carlcoded/Scripts/main/carltw'))()
+
+end)
+
+Section:NewButton("Xware", "Xware", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    loadstring(game:HttpGet("https://pastebin.com/raw/chPzqgtN"))()
+
+end)
+
+Section:NewButton("x15", "x15", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/66GdaGod/15X-CRACKED/main/EZ%20CRACKED%20BY%20MIN%20X%20ZORDO"))()
+
+end)
+
+Section:NewButton("Kitten Legit", "Kitten Legit", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    loadstring(game:HttpGet("https://pastebin.com/raw/Tfey2JbA"))()
+
+end)
+
+Section:NewLabel("Silent Aim")
+
+Section:NewButton("Rainbow Lock and Esp", "", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    loadstring(game:HttpGet("https://pastebin.com/raw/SgTvDfd9"))()
+
+end)
+
+Section:NewButton("Silent (350)", "", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    loadstring(game:HttpGet('https://pastebin.com/raw/XEdqn1Gg'))()
+
 end)
 
 
-aim:Button("silent (350)",function(value)
- loadstring(game:HttpGet('https://pastebin.com/raw/XEdqn1Gg'))()
+
+
+local Tab = Window:NewTab("Animations (FE)")
+local Section = Tab:NewSection("Animations FE")
+
+Section:NewButton("Animations Changer (FE)", "animator changer", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    loadstring(game:HttpGet('https://pastebin.com/raw/fXvQVQb9'))()
+
 end)
 
-aim:Button("silent (250)",function(value)
- loadstring(game:HttpGet('https://pastebin.com/raw/HGQ2EnRw'))()
-end)
-
-
-local ani = Window:Tab("animation (FE)",false)
- 
-ani:Label("animations FE")
-
-ani:Button("animation changer",function(value)
- loadstring(game:HttpGet('https://pastebin.com/raw/fXvQVQb9'))()
-end)
-
-ani:Button("toy",function(value)
- Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=782841498"
+Section:NewButton("Toy", "Toy", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=782841498"
     Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=782845736"
     Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=782843345"
     Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=782842708"
@@ -963,19 +1052,21 @@ ani:Button("toy",function(value)
     game.Players.LocalPlayer.Character.Humanoid.Jump = true
 end)
 
-ani:Button("super hero",function(value)
-Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=616111295"
-Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=616113536"
-Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=616122287"
-Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=616117076"
-Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=616115533"
-Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=616104706"
-Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=616108001"
-game.Players.LocalPlayer.Character.Humanoid.Jump = true
+Section:NewButton("SuperHero", "SuperHero", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=616111295"
+    Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=616113536"
+    Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=616122287"
+    Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=616117076"
+    Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=616115533"
+    Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=616104706"
+    Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=616108001"
+    game.Players.LocalPlayer.Character.Humanoid.Jump = true
 end)
 
-ani:Button("stylish",function(value)
-  Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=616136790"
+Section:NewButton("Stylish", "Stylish", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=616136790"
     Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=616138447"
     Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=616146177"
     Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=616140816"
@@ -985,8 +1076,9 @@ ani:Button("stylish",function(value)
     game.Players.LocalPlayer.Character.Humanoid.Jump = true
 end)
 
-ani:Button("robot",function(value)
- Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=616088211"
+Section:NewButton("robot", "robot", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=616088211"
     Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=616089559"
     Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=616095330"
     Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=616091570"
@@ -996,7 +1088,8 @@ ani:Button("robot",function(value)
     game.Players.LocalPlayer.Character.Humanoid.Jump = true
 end)
 
-ani:Button("pirate",function(value)
+Section:NewButton("pirate", "pirate", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
     local Animate = game.Players.LocalPlayer.Character.Animate
     Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=616006778"
     Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=616008087"
@@ -1009,8 +1102,9 @@ ani:Button("pirate",function(value)
         game.Players.LocalPlayer.Character.Humanoid.Jump = true
 end)
 
-ani:Button("ninja",function(value)
-local Animate = game.Players.LocalPlayer.Character.Animate
+Section:NewButton("ninja", "ninja", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    local Animate = game.Players.LocalPlayer.Character.Animate
     Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=656117400"
     Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=656118341"
     Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=656121766"
@@ -1020,60 +1114,67 @@ local Animate = game.Players.LocalPlayer.Character.Animate
     Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=656115606"
 end)
 
-ani:Button("levitation",function(value)
- loadstring(game:HttpGet('https://pastebin.com/raw/AryTwN4z'))()
+Section:NewButton("levitation", "levitation", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    loadstring(game:HttpGet('https://pastebin.com/raw/AryTwN4z'))()
+
 end)
 
-ani:Button("elder",function(value)
-Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=845397899"
-Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=845400520"
-Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=845403856"
-Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=845386501"
-Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=845398858"
-Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=845392038"
-Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=845396048"
-game.Players.LocalPlayer.Character.Humanoid.Jump = true
-end)
-
-ani:Button("buddly",function(value)
-local Animate = game.Players.LocalPlayer.Character.Animate
-Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=910004836"
-Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=910009958"
-Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=910034870"
-Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=910025107"
-Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=910016857"
-Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=910001910"
-Animate.swimidle.SwimIdle.AnimationId = "http://www.roblox.com/asset/?id=910030921"
-Animate.swim.Swim.AnimationId = "http://www.roblox.com/asset/?id=910028158"
+Section:NewButton("elder", "elder", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=845397899"
+    Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=845400520"
+    Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=845403856"
+    Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=845386501"
+    Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=845398858"
+    Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=845392038"
+    Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=845396048"
     game.Players.LocalPlayer.Character.Humanoid.Jump = true
 end)
 
-ani:Button("astronaut",function(value)
-local Animate = game.Players.LocalPlayer.Character.Animate
-Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=891621366"
-Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=891633237"
-Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=891667138"
-Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=891636393"
-Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=891627522"
-Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=891609353"
-Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=891617961"
-    game.Players.LocalPlayer.Character.Humanoid.Jump = true
+Section:NewButton("buddly", "buddly", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    local Animate = game.Players.LocalPlayer.Character.Animate
+    Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=910004836"
+    Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=910009958"
+    Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=910034870"
+    Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=910025107"
+    Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=910016857"
+    Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=910001910"
+    Animate.swimidle.SwimIdle.AnimationId = "http://www.roblox.com/asset/?id=910030921"
+    Animate.swim.Swim.AnimationId = "http://www.roblox.com/asset/?id=910028158"
+        game.Players.LocalPlayer.Character.Humanoid.Jump = true
 end)
 
-ani:Button("princess",function(value)
-local Animate = game.Players.LocalPlayer.Character.Animate
-Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=941003647"
-Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=941013098"
-Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=941028902"
-Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=941015281"
-Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=941008832"
-Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=940996062"
-Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=941000007"
-    game.Players.LocalPlayer.Character.Humanoid.Jump = true
+Section:NewButton("astronaut", "astronaut", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    local Animate = game.Players.LocalPlayer.Character.Animate
+    Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=891621366"
+    Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=891633237"
+    Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=891667138"
+    Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=891636393"
+    Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=891627522"
+    Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=891609353"
+    Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=891617961"
+        game.Players.LocalPlayer.Character.Humanoid.Jump = true
 end)
 
-ani:Button("zombie",function(value)
- local Animate = game.Players.LocalPlayer.Character.Animate
+Section:NewButton("princess", "princess", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    local Animate = game.Players.LocalPlayer.Character.Animate
+    Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=941003647"
+    Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=941013098"
+    Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=941028902"
+    Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=941015281"
+    Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=941008832"
+    Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=940996062"
+    Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=941000007"
+        game.Players.LocalPlayer.Character.Humanoid.Jump = true
+end)
+
+Section:NewButton("zombie", "zombie", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    local Animate = game.Players.LocalPlayer.Character.Animate
     Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=616158929"
     Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=616160636"
     Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=616168032"
@@ -1084,38 +1185,62 @@ ani:Button("zombie",function(value)
 end)
 
 
-local lag = Window:Tab("anti lag",false)
- 
-lag:Label("anti lag")
 
-lag:Button("anti lag (recommended)",function(value)
- loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/anti-lag-v2-fps/main/Dhm",true))()
+
+
+
+local Tab = Window:NewTab("Anti-Lag")
+local Section = Tab:NewSection("Anti lag")
+
+Section:NewButton("Anti Lag (Recommended)", "", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/anti-lag-v2-fps/main/Dhm",true))()
+
 end)
 
-lag:Button("anti lag v2",function(value)
-loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/anti_lag_v3/main/Dont",true))()
+Section:NewButton("Anti Lag v2", "", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/anti_lag_v3/main/Dont",true))()
+
 end)
 
-lag:Button("anti lag (dont face)",function(value)
- loadstring(game:HttpGet("https://pastebin.com/raw/YBD6W1Hn",true))()
+Section:NewButton("Anti Lag (Dont Face)", "", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    loadstring(game:HttpGet("https://pastebin.com/raw/YBD6W1Hn",true))()
+
 end)
 
-lag:Button("anti lag (dont shirt)",function(value)
-loadstring(game:HttpGet("https://pastebin.com/raw/gp1zFQak",true))()
+Section:NewButton("Anti Lag (Dont shirt)", "", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    loadstring(game:HttpGet("https://pastebin.com/raw/gp1zFQak",true))()
+
 end)
 
-lag:Label("fps booster")
 
 
-lag:Button("booster",function(value)
-  loadstring(game:HttpGet("https://pastebin.com/raw/jEVLjZ5a",true))()
+local Tab = Window:NewTab("Credits")
+local Section = Tab:NewSection("Credits")
+
+
+Section:NewButton("Copy Discord link", "Discord", function()
+setclipboard("https://discord.gg/79fKXVuJfr")
 end)
 
-lag:Label("UI")
-
-lag:Keybind("Toggle",Enum.KeyCode.Y,function()
-    Library:Toggle()
+Section:NewButton("Copy Roblox link", "Roblox", function()
+setclipboard("https://www.roblox.com/users/2205701910/profile")
 end)
+
+Section:NewButton("Copy Youtube link", "Youtube", function()
+setclipboard("https://www.youtube.com/channel/UCRiszwo8e1FmlWUBhPRMUsQ")
+end)
+
+Section:NewKeybind("KeybindText", "KeybindInfo", Enum.KeyCode.Y, function()
+	Library:ToggleUI()
+end)
+
+
+
+
 
 
 game:GetService("StarterGui"):SetCore("SendNotification", {
