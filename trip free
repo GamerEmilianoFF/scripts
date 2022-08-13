@@ -1022,10 +1022,15 @@ Section:NewButton("Rainbow Lock and Esp", "", function()
 
 end)
 
-Section:NewButton("Silent (350)", "", function()
+Section:NewButton("Silent (350)", "350", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
     loadstring(game:HttpGet('https://pastebin.com/raw/XEdqn1Gg'))()
 
+end)
+
+Section:NewButton("Silent (240)", "240", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+ loadstring(game:HttpGet('https://pastebin.com/raw/HGQ2EnRw'))()
 end)
 
 
