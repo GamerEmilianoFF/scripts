@@ -1054,6 +1054,16 @@ aim:Button("Temporal X v2.0.3",function(value)
 loadstring(game:HttpGet("https://pastebin.com/raw/w2S8YyDt", true))()
 end)
 
+aim:Label("Locks By Trip Hub")
+
+aim:Button("Lock-Trip",function(value)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/aim/main/lock-trip", true))()
+end)
+
+aim:Button("Aimbot-Trip",function(value)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/aim/main/aimbot", true))()
+
+end)
 
 aim:Label("silent aim")
 
