@@ -1056,6 +1056,10 @@ end)
 
 aim:Label("Locks By Trip Hub")
 
+aim:Button("lock dot (pc/mob)",function(value)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/aim/main/lock/lock%20circle", true))()
+end)
+
 aim:Button("Lock-Trip",function(value)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/aim/main/lock-trip", true))()
 end)
