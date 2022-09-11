@@ -6,7 +6,21 @@
 
 
 
+print[[
 
+
+ _______  _       _________ _______                _________ _______ _________ _______                        ______  
+(  ____ \( (    /|\__    _/(  ___  )|\     /|      \__   __/(  ____ )\__   __/(  ____ )    |\     /||\     /|(  ___ \ 
+| (    \/|  \  ( |   )  (  | (   ) |( \   / )         ) (   | (    )|   ) (   | (    )|    | )   ( || )   ( || (   ) )
+| (__    |   \ | |   |  |  | |   | | \ (_) /          | |   | (____)|   | |   | (____)|    | (___) || |   | || (__/ / 
+|  __)   | (\ \) |   |  |  | |   | |  \   /           | |   |     __)   | |   |  _____)    |  ___  || |   | ||  __ (  
+| (      | | \   |   |  |  | |   | |   ) (            | |   | (\ (      | |   | (          | (   ) || |   | || (  \ \ 
+| (____/\| )  \  ||\_)  )  | (___) |   | |            | |   | ) \ \_____) (___| )          | )   ( || (___) || )___) )
+(_______/|/    )_)(____/   (_______)   \_/            )_(   |/   \__/\_______/|/           |/     \|(_______)|/ \___/ 
+                                                                                                                      
+
+
+]]
 
 
 
@@ -874,6 +888,8 @@
 
 --free
 
+--free
+
 local Library = loadstring(game:HttpGet("https://pastebin.com/raw/4pBajfB6"))()
 
 local Window = Library.CreateLib("Trip Hub", "Midnight")
@@ -986,6 +1002,75 @@ Section:NewButton("Speed Toggle", "for Mob", function()
 
 end)
 
+
+local Section = Tab:NewSection("CFrame Speed")
+
+
+Section:NewButton("Cframe Speed (Z)", "", function()    
+
+loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+
+    	repeat
+		wait()
+	until game:IsLoaded()
+	local L_134_ = game:service('Players')
+	local L_135_ = L_134_.LocalPlayer
+	repeat
+		wait()
+	until L_135_.Character
+	local L_136_ = game:service('UserInputService')
+	local L_137_ = game:service('RunService')
+	getgenv().Multiplier = 0.5
+	local L_138_ = true
+	local L_139_
+	L_136_.InputBegan:connect(function(L_140_arg0)
+		if L_140_arg0.KeyCode == Enum.KeyCode.LeftBracket then
+			Multiplier = Multiplier + 0.01
+			print(Multiplier)
+			wait(0.2)
+			while L_136_:IsKeyDown(Enum.KeyCode.LeftBracket) do
+				wait()
+				Multiplier = Multiplier + 0.01
+				print(Multiplier)
+			end
+		end
+		if L_140_arg0.KeyCode == Enum.KeyCode.RightBracket then
+			Multiplier = Multiplier - 0.01
+			print(Multiplier)
+			wait(0.2)
+			while L_136_:IsKeyDown(Enum.KeyCode.RightBracket) do
+				wait()
+				Multiplier = Multiplier - 0.01
+				print(Multiplier)
+			end
+		end
+		if L_140_arg0.KeyCode == Enum.KeyCode.Z then
+			L_138_ = not L_138_
+			if L_138_ == true then
+				repeat
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.Humanoid.MoveDirection * Multiplier
+					game:GetService("RunService").Stepped:wait()
+				until L_138_ == false
+			end
+		end
+	end)
+end)
+
+
+Section:NewSlider("Cframe Speed Slider", "recommend 1-4", 6, 0, function(s)
+    getgenv().Multiplier = s
+end)
+
+
+Section:NewButton("CFrame Speed Toggle (Mobile)", "for Mob", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/scripts/main/CFrame%20toggle.lua", true))()
+
+end)
+
+
+
+
 local Section = Tab:NewSection("Server Sided")
 
 
@@ -1063,17 +1148,21 @@ end)
 
 local Section = Tab:NewSection("Other Mods")
 
-Section:NewToggle("Auto-stomp", "auto-stomp", function(state)
-    if state then
-
-_G.stompem = true
-        wait()
-        game.ReplicatedStorage.MainRemote:FireServer("Stomp")
-
-    else
-        _G.stompem = false
+Section:NewButton("Anti Ban", "Kicks you when a mod/admin/star Has Joined", function()
+local annoying = {"JokeTheFool", "Sherosama", "dtbbullet", "AStrongMuscle", "XavierWild", "NikoSenpai", "UziGarage", "iumu", "Benoxa", "Luutyy", "clubstar54", "givkitheth", "DrxcoBaby" , "DrxcoRxsh" , "ROVTAED" , "clayonADHD" , "ihatehenri" , "wDynamic" , "Dark_Legacies" , "HiurrW" , "6ugged" , "llHxtedOppll" , "DeszKAndrees" , "WWWHYYYYYYYYYYYYYY" , "DigitalAngels" , "monkey1991cool" , "IkykoI" , "shinepranked" , "eliteloopkiller" , "RestfuIly" , "Remurez" , "Craxelss" , "prokiller357089" , "Deluxura" , "Iateforever" , "romeothefathamster" , "SinisterLimitless" , "xXStrikerTentacle215" , "lmTheHxliday" , "G5OUL" , "saialt11" , "T_4Q" , "theyluvkyro" , "A3sReturn" , "B4NKFUNDS" , "YourFatherMetal" , "YourFatherGenux" , "SwagminLerk" , "MarcsRevenge" , "Leppions" , "KivieArsenal" , "WeaponMods" , "ImTheHxliday" , "0uwy" , "dtbkxng" , "saiheartshin" , "Tezza4321" , "rvkudo" , "FateIsAChimp"}
+ 
+game.Players.PlayerAdded:Connect(function(plr)
+for i, v in pairs(annoying) do
+if plr.Name == v then
+local loc = game.Players.LocalPlayer
+loc:Kick("Kicked an admin/mod/star has joined")
+end
 end
 end)
+end)
+
+
+
 
 Section:NewButton("Spin (F)","pc", function(value)
     loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
@@ -1969,7 +2058,30 @@ Section:NewButton("Silent (240)", "240", function()
  loadstring(game:HttpGet('https://pastebin.com/raw/HGQ2EnRw'))()
 end)
 
-
+Section:NewButton("Silent Aim [Big Fov]", "Silent Aim With Big Fov", function()
+loadstring(game:HttpGet(("https://pastebin.com/raw/6EVXCMaf"),true))()
+end)
+Section:NewButton("Silent Aim [200 Fov]", "Silent Aim With 200 Fov", function()
+loadstring(game:HttpGet(("https://pastebin.com/raw/EzWShU0J"),true))()
+end)
+Section:NewButton("Silent Aim [100 Fov]", "Silent Aim With 100 Fov", function()
+loadstring(game:HttpGet(("https://www.toptal.com/developers/hastebin/apexadaxav.lua"),true))()
+end)
+Section:NewButton("Silent Aim [invinsible Fov][Big Fov]", "Silent Aim invinsible Big Fov", function()
+loadstring(game:HttpGet(("https://www.toptal.com/developers/hastebin/esasilopor.lua"),true))()
+end)
+Section:NewButton("Silent Aim [invinsible Fov][200 Fov]", "Silent Aim invinsible 200 Fov", function()
+loadstring(game:HttpGet(("https://www.toptal.com/developers/hastebin/gufenekiye.lua"),true))()
+end)
+Section:NewButton("Silent Aim [invinsible Fov][100 Fov]", "Silent Aim invinsible 10 Fov", function()
+loadstring(game:HttpGet(("https://www.toptal.com/developers/hastebin/fohezepuqe.lua"),true))()
+end)
+Section:NewTextBox("Silent Aim Keybind", "Keybind", function(txt2)
+	getgenv()._G.AimKey = txt2
+end)
+Section:NewButton("Aimbot V2", "Basically Aimbot", function()
+loadstring(game:HttpGet(("https://raw.githubusercontent.com/MinecraftTester5151/fds/main/a"),true))()
+end)
 
 
 local Tab = Window:NewTab("Animations (FE)")
@@ -2127,6 +2239,121 @@ end)
 
 
 
+local Tab = Window:NewTab("Skins/Boombox")
+local Section = Tab:NewSection("Skins")
+
+
+Section:NewButton("Red Sparkle Time", "Red Sparkle Time", function()
+setclipboard("3461309563")
+end)
+Section:NewButton("Blood", "Blood", function()
+setclipboard("108941805")
+end)
+Section:NewButton("Red Grime", "Red Grime", function()
+setclipboard("280779721")
+end)
+Section:NewButton("Gold", "Gold", function()
+setclipboard("134632723")
+end)
+Section:NewButton("Monster assault Camo", "Monster assault Camo", function()
+setclipboard("142656364")
+end)
+Section:NewButton("Chill Triangles", "Chill Triangles", function()
+setclipboard("807738028")
+end)
+Section:NewButton("Blue Bandana", "Blue Bandana", function()
+setclipboard("5657430676")
+end)
+Section:NewButton("Red Bandana", "Red Bandana", function()
+setclipboard("5657568372")
+end)
+Section:NewButton("Worms", "Worms", function()
+setclipboard("7545514855")
+end)
+Section:NewButton("Supreme + Louis vuitton", "Supreme + Louis vuitton", function()
+setclipboard("1156146426")
+end)
+Section:NewButton("Nice Looking Green Skin", "Green Skin", function()
+setclipboard("4944059812")
+end)
+Section:NewButton("Nice Skin", "Nice Skin", function()
+setclipboard("3155472478")
+end)
+Section:NewButton("Cool Skin", "Cool Skin", function()
+setclipboard("2669398912")
+end)
+Section:NewButton("Lightning", "Lightning", function()
+setclipboard("5366577617")
+end)
+Section:NewButton("Space DVD", "Space DVD", function()
+setclipboard("521581065")
+end)
+Section:NewButton("Blue LV", "Blue LV", function()
+setclipboard("5486664842")
+end)
+Section:NewButton("Lava", "Lava", function()
+setclipboard("6238541572")
+end)
+
+
+local Section = Tab:NewSection("Click To Copy id of Song")
+local Section = Tab:NewSection("WARNING SOME ARE LOUD!.")
+
+Section:NewButton("😎The Motto😎", ".",function()
+setclipboard("8990426054")
+end)
+
+Section:NewButton("🔥 London Drill Song", ".",function()
+setclipboard("5542209618")
+end)
+Section:NewButton("🕺Do Da Fortnite🕺", ".",function()
+setclipboard("8994226137")
+end)
+Section:NewButton("💚Owner of SoftVortex Likes This One💚", ".",function()
+setclipboard("9048481823")
+end)
+Section:NewButton("💵 Monney So Big 💵", ".",function()
+setclipboard("7450432312")
+end)
+Section:NewButton("👿a way or another im a bad brother👿", ".",function()
+setclipboard("8478224773")
+end)
+Section:NewButton("🤍NBA YoungBoy - “White Teeth”🤍", ".",function()
+setclipboard("6813288997")
+end)
+Section:NewButton("💙Crip 4 Life💙", ".",function()
+setclipboard("7122471461")
+end)
+Section:NewButton("💙loop💙", ".",function()
+setclipboard("7131714079")
+end)
+Section:NewButton("👿Murder On My Mind👿", ".",function()
+setclipboard("4572859762")
+end)
+Section:NewButton("🔥London Drill🔥", ".",function()
+setclipboard("9020842480")
+end)
+Section:NewButton("🌹Roses🌹", ".",function()
+setclipboard("8434230106")
+end)
+Section:NewButton("🧓registered Se# Offender🧓 long start", ".",function()
+setclipboard("9038069435")
+end)
+Section:NewButton("🌹unreleased lungskull song🌹", ".",function()
+setclipboard("9111553813")
+end)
+Section:NewButton("🌹Love Sosa🌹Loud Start ", ".",function()
+setclipboard("9067166824")
+end)
+Section:NewButton("😂skinny everything h3artcrush $$$😂 bypassed", ".",function()
+setclipboard("9102067208")
+end)
+Section:NewButton("🌹Love Sosa🌹Loud Start ", ".",function()
+setclipboard("9067166824")
+end)
+Section:NewButton("🌹👐Everybody Dies In Their Nightmares👐🌹", ".",function()
+setclipboard("9000673014")
+end)
 
 
 
@@ -2254,10 +2481,3 @@ end)
 --check 2
 loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/scripts/main/check"))()
 
-
-game:GetService("StarterGui"):SetCore("SendNotification", {
-	Title = "Trip Hub";
-	Text = "thx for using Trip Hub!";
-	Icon = "http://www.roblox.com/asset/?id=10034851185";
-	Duration = "4";
-})
