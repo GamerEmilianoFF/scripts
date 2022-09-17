@@ -43167,18 +43167,120 @@
 
 
 
+local Login = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local text1 = Instance.new("TextLabel")
+local text2 = Instance.new("TextLabel")
+local text3 = Instance.new("TextLabel")
+local TextButton = Instance.new("TextButton")
+local TextBox = Instance.new("TextBox")
+local UICorner = Instance.new("UICorner")
+local UICorner_2 = Instance.new("UICorner")
+local ImageLabel = Instance.new("ImageLabel")
+
+--Properties:
+
+Login.Name = "Login"
+Login.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Login.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+Login.ResetOnSpawn = false
+
+Frame.Parent = Login
+Frame.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+Frame.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Frame.Position = UDim2.new(0.0732341781, 0, 0.0434343517, 0)
+Frame.Size = UDim2.new(0, 249, 0, 328)
+Frame.Active = true
+Frame.Draggable = true
+
+text1.Name = "text1"
+text1.Parent = Frame
+text1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+text1.BackgroundTransparency = 5.000
+text1.Position = UDim2.new(0.0120481923, 0, -3.7252903e-09, 0)
+text1.Size = UDim2.new(0, 243, 0, 54)
+text1.Font = Enum.Font.SourceSans
+text1.Text = "Welcome to trip hub"
+text1.TextColor3 = Color3.fromRGB(255, 255, 255)
+text1.TextScaled = true
+text1.TextSize = 14.000
+text1.TextWrapped = true
+
+text2.Name = "text2"
+text2.Parent = Frame
+text2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+text2.BackgroundTransparency = 5.000
+text2.Position = UDim2.new(0.0120481923, 0, 0.115853652, 0)
+text2.Size = UDim2.new(0, 243, 0, 42)
+text2.Font = Enum.Font.SourceSans
+text2.Text = "Premiun"
+text2.TextColor3 = Color3.fromRGB(255, 255, 255)
+text2.TextScaled = true
+text2.TextSize = 14.000
+text2.TextWrapped = true
+
+text3.Name = "text3"
+text3.Parent = Frame
+text3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+text3.BackgroundTransparency = 5.000
+text3.Position = UDim2.new(0.0562249012, 0, 0.506097555, 0)
+text3.Size = UDim2.new(0, 220, 0, 43)
+text3.Font = Enum.Font.SourceSans
+text3.Text = "Enter Password"
+text3.TextColor3 = Color3.fromRGB(255, 255, 255)
+text3.TextScaled = true
+text3.TextSize = 14.000
+text3.TextWrapped = true
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.BackgroundTransparency = 5.000
+TextButton.Position = UDim2.new(0.0441767052, 0, 0.820121944, 0)
+TextButton.Size = UDim2.new(0, 226, 0, 50)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "Enter"
+TextButton.TextColor3 = Color3.fromRGB(354, 354, 354)
+TextButton.TextScaled = true
+TextButton.TextSize = 14.000
+TextButton.TextWrapped = true
+TextButton.MouseButton1Down:Connect(function()
+	if  TextBox.Text == "spirit" then
+		
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/random/main/trip%20pre", true))()
+		
+		Login:Destroy()
+	end
+	
+end)
+
+
+TextBox.Parent = Frame
+TextBox.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+TextBox.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextBox.Position = UDim2.new(0.0963855386, 0, 0.667682946, 0)
+TextBox.Size = UDim2.new(0, 200, 0, 50)
+TextBox.Font = Enum.Font.SourceSans
+TextBox.Text = "Key here"
+TextBox.TextColor3 = Color3.fromRGB(454, 454, 454)
+TextBox.TextScaled = true
+TextBox.TextSize = 14.000
+TextBox.TextWrapped = true
+
+UICorner.CornerRadius = UDim.new(0, 10)
+UICorner.Parent = TextBox
+
+UICorner_2.CornerRadius = UDim.new(0, 10)
+UICorner_2.Parent = Frame
+
+ImageLabel.Parent = Frame
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BackgroundTransparency = 65.000
+ImageLabel.Position = UDim2.new(0.273092389, 0, 0.192073166, 0)
+ImageLabel.Size = UDim2.new(0, 112, 0, 113)
+ImageLabel.Image = "http://www.roblox.com/asset/?id=9664958625"
 
 
 
 
 
 
-
-
-
-
-
-
-
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/random/main/trip%20pre", true))()
