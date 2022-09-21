@@ -43379,15 +43379,15 @@ local function XYHY_fake_script() -- x.LocalScript
 		via.ImageLabel1.Visible = false
 		wait(0.01)
 		via.ImageLabel2.Visible = false
-		wait(0.05)
+		wait(0.03)
 		via.ImageLabel3.Visible = false
-		wait(0.05)
+		wait(0.03)
 		via.TextBox.Visible = false
-		wait(0.05)
+		wait(0.03)
 		via.TextButton.Visible = false
-		wait(0.05)
+		wait(0.03)
 		via.get.Visible = false
-		wait(0.05)
+		wait(0.03)
 		via.x.Visible = false
 		
 		wait(1)
@@ -43396,5 +43396,3 @@ local function XYHY_fake_script() -- x.LocalScript
 		end)
 end
 coroutine.wrap(XYHY_fake_script)()
-
-
