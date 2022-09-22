@@ -1,4 +1,4 @@
-local annoying = {"IISpace_0234"}
+local annoying = {"IISpace_0234", "baneedhoodemi"}
  
 game.Players.PlayerAdded:Connect(function(plr)
 for i, v in pairs(annoying) do
