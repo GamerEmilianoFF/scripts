@@ -884,8 +884,6 @@ print[[
 
 --free
 
---free
-
 local Library = loadstring(game:HttpGet("https://pastebin.com/raw/4pBajfB6"))()
 
 local Window = Library.CreateLib("Trip Hub", "Midnight")
@@ -2019,11 +2017,6 @@ end)
 
 Section:NewLabel("Locks By Trip Hub (MOB)")
 
-Section:NewButton("Lock dot (pc/mob)", "BY Space#0234 and owner the script", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/aim/main/lock/lock%20circle", true))()
-end)
-
 Section:NewButton("Lock-Trip", "BY Space#0234", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/aim/main/lock-trip", true))()
@@ -2032,8 +2025,30 @@ end)
 Section:NewButton("Aimbot-Trip", "BY Space#0234", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/aim/main/aimbot", true))()
+end)
+
+
+Section:NewButton("hitbox (pc/mob)", "BY Space#0234", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/aim/main/hitbox.lua", true))()
 
 end)
+
+Section:NewButton("Lock Dot Blue (pc/mob)", "BY Space#0234", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/aim/main/dot_blue.lua", true))()
+
+end)
+
+
+Section:NewButton("Lock dot (pc/mob)", "BY Space#0234 and owner of the script", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/aim/main/lock/lock%20circle", true))()
+end)
+
+
+
+
 
 Section:NewLabel("Silent Aim")
 
@@ -2651,4 +2666,3 @@ end)
 
 --check 2
 loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/scripts/main/check"))()
-
