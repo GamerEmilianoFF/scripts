@@ -43,9 +43,6 @@ TextButton.TextColor3 = Color3.fromRGB(255, 255 , 255)
 TextButton.TextSize = 18.000
 
 TextButton.MouseButton1Down:connect(function()
-game.Players.LocalPlayer.Character.UpperTorso:Destroy()
-game.Players.LocalPlayer.Character.LeftUpperLeg:Destroy()
-game.Players.LocalPlayer.Character.RightUpperLeg:Destroy()
-game.Players.LocalPlayer.Character.LeftLowerArm:Destroy()
-game.Players.LocalPlayer.Character.RightLowerArm:Destroy()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/scripts_v2/main/anti%20stomp",true))()
+
 end)
