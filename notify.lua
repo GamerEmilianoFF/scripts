@@ -1,5 +1,4 @@
 --Credits to AbstractPoo
---https://github.com/AbstractPoo
 local rs = game:GetService("RunService")
 local ts = game:GetService("TweenService")
 
@@ -74,7 +73,7 @@ local notifications = {
 	closeOpened = nil
 }
 
-function notifications:notificacion(options)
+function notifications:notify(options)
 	local theme = self.colorSchemes[notifications.theme]
 	local callbacksBool = options.Accept or options.Dismiss
 	options.Title = options.Title or "Notification"
