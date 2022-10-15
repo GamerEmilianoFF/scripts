@@ -882,16 +882,67 @@ print[[
 
 
 
+
 --free
 
-local Library = loadstring(game:HttpGet("https://pastebin.com/raw/4pBajfB6"))()
+ local notifications = loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/scripts/main/notify.lua", true))()
 
-local Window = Library.CreateLib("Trip Hub", "Midnight")
 
+notifications:notify {
+    Title = "Notify Credits", 
+    Description = "Credits of notify: AbstractPoo",
+    Icon = 6031071053, 
+    Length = 2
+}
+
+
+notifications:notify {
+    Title = "Trip Hub", 
+    Description = "Thx for using Trip Hub",
+    Icon = 6031071053, 
+    Length = 5
+}
+
+local tiempo = 3
+
+--[[
+
+notifications:notify{
+    Title = "Title", 
+    Description = "Description",
+    Icon = 6031071053, -- icon id (string or integer)
+    Accept = { -- settings for accept button
+        Text = "Yes",
+        Callback = function()
+            print("Accepted")
+        end
+    },
+    Dismiss = { --settings for dismiss button
+        Text = "No",
+        Callback = function()
+            print("Dismissed")
+        end
+    },
+    Length = 3 -- duration of notification
+}
+
+]]--
+
+
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/elxocasXD/UI-LIBRARY/main/Kavo.lua"))()
+
+
+local Window = Library.CreateLib("Trip Hub                                                 discord.gg/79fKXVuJfr", "Sentinel2")
 local Tab = Window:NewTab("Main")
---18 buttons
---2 sliders
+
+
+
 local Section = Tab:NewSection("Speed Bypass")
+
+
+local SpeedB = 230
+
 
 Section:NewButton("Speed KeyBind (F)", "Key (F)", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
@@ -902,7 +953,7 @@ Section:NewButton("Speed KeyBind (F)", "Key (F)", function()
         while down do
             if not down then break end
             local char = plr.Character
-            char.HumanoidRootPart.Velocity = char.HumanoidRootPart.CFrame.lookVector * 230
+            char.HumanoidRootPart.Velocity = char.HumanoidRootPart.CFrame.lookVector * SpeedB
             wait()
         end
     end
@@ -917,6 +968,8 @@ Section:NewButton("Speed KeyBind (F)", "Key (F)", function()
 --end
 end)
 
+
+
 Section:NewButton("Speed KeyBind (C)", "Key (C)", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
         plr = game:GetService('Players').LocalPlayer
@@ -926,7 +979,7 @@ Section:NewButton("Speed KeyBind (C)", "Key (C)", function()
                while down do
                    if not down then break end
                    local char = plr.Character
-                   char.HumanoidRootPart.Velocity = char.HumanoidRootPart.CFrame.lookVector * 230
+                   char.HumanoidRootPart.Velocity = char.HumanoidRootPart.CFrame.lookVector * SpeedB
                    wait()
                end
            end
@@ -942,128 +995,130 @@ Section:NewButton("Speed KeyBind (C)", "Key (C)", function()
        --end
 end)
 
-Section:NewSlider("Speed Slider", "Speed Slider", 400, 0, function(value) 
+Section:NewSlider("Speed Slider", "Speed Slider", 350, 0, function(value) 
     loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
-    plr = game:GetService('Players').LocalPlayer
- 
-    down = true
-     
-    function onButton1Down(mouse)
-     
-        down = true
-     
-        while down do
-     
-            if not down then break end
-     
-            local char = plr.Character
-     
-            char.HumanoidRootPart.Velocity = char.HumanoidRootPart.CFrame.lookVector * value
-     
-            wait()
-     
-        end
-     
-    end
-     
-    function onButton1Up(mouse)
-     
-        down = false
-     
-    end
-     
-    function onSelected(mouse)
-     
-        mouse.KeyDown:connect(function(c) if c:lower()=="c"then onButton1Down(mouse)end end)
-     
-        mouse.KeyUp:connect(function(c) if c:lower()=="c"then onButton1Up(mouse)end end)
-     
-    end
-     
-    onSelected(game.Players.LocalPlayer:GetMouse())
-    --end
-end)
-
-Section:NewButton("Speed Button", "for Mob", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/madebyemiliano/main/Speed%20bypass",true))()
-
-end)
-
-Section:NewButton("Speed Toggle", "for Mob", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/toggles_speed/main/Speed",true))()
+SpeedB = value
 
 end)
 
 
 local Section = Tab:NewSection("CFrame Speed")
 
-
-Section:NewButton("Cframe Speed (Z)", "", function()    
-
-loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
-
-    	repeat
-		wait()
-	until game:IsLoaded()
-	local L_134_ = game:service('Players')
-	local L_135_ = L_134_.LocalPlayer
-	repeat
-		wait()
-	until L_135_.Character
-	local L_136_ = game:service('UserInputService')
-	local L_137_ = game:service('RunService')
-	getgenv().Multiplier = 0.5
-	local L_138_ = true
-	local L_139_
-	L_136_.InputBegan:connect(function(L_140_arg0)
-		if L_140_arg0.KeyCode == Enum.KeyCode.LeftBracket then
-			Multiplier = Multiplier + 0.01
-			print(Multiplier)
-			wait(0.2)
-			while L_136_:IsKeyDown(Enum.KeyCode.LeftBracket) do
-				wait()
-				Multiplier = Multiplier + 0.01
-				print(Multiplier)
-			end
-		end
-		if L_140_arg0.KeyCode == Enum.KeyCode.RightBracket then
-			Multiplier = Multiplier - 0.01
-			print(Multiplier)
-			wait(0.2)
-			while L_136_:IsKeyDown(Enum.KeyCode.RightBracket) do
-				wait()
-				Multiplier = Multiplier - 0.01
-				print(Multiplier)
-			end
-		end
-		if L_140_arg0.KeyCode == Enum.KeyCode.Z then
-			L_138_ = not L_138_
-			if L_138_ == true then
-				repeat
-					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.Humanoid.MoveDirection * Multiplier
-					game:GetService("RunService").Stepped:wait()
-				until L_138_ == false
-			end
-		end
-	end)
+Section:NewButton("Damage Fix", "", function()
+    for _, v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+        if v:IsA("Script") and v.Name ~= "Health" and v.Name ~= "Sound" and v:FindFirstChild("LocalScript") then
+            v:Destroy()
+        end
+    end
+    game.Players.LocalPlayer.CharacterAdded:Connect(function(char)
+        repeat
+            wait()
+        until game.Players.LocalPlayer.Character
+        char.ChildAdded:Connect(function(child)
+            if child:IsA("Script") then 
+                wait(0.1)
+                if child:FindFirstChild("LocalScript") then
+                    child.LocalScript:FireServer()
+                end
+            end
+        end)
+    end)
 end)
-
-
-Section:NewSlider("Cframe Speed Slider", "recommend 1-4", 6, 0, function(s)
+Section:NewButton("CFrame Speed (C)", "", function()
+        repeat
+        wait()
+    until game:IsLoaded()
+    local L_134_ = game:service('Players')
+    local L_135_ = L_134_.LocalPlayer
+    repeat
+        wait()
+    until L_135_.Character
+    local L_136_ = game:service('UserInputService')
+    local L_137_ = game:service('RunService')
+    getgenv().Multiplier = 0.5
+    local L_138_ = true
+    local L_139_
+    L_136_.InputBegan:connect(function(L_140_arg0)
+        if L_140_arg0.KeyCode == Enum.KeyCode.LeftBracket then
+            Multiplier = Multiplier + 0.01
+            print(Multiplier)
+            wait(0.2)
+            while L_136_:IsKeyDown(Enum.KeyCode.LeftBracket) do
+                wait()
+                Multiplier = Multiplier + 0.01
+                print(Multiplier)
+            end
+        end
+        if L_140_arg0.KeyCode == Enum.KeyCode.RightBracket then
+            Multiplier = Multiplier - 0.01
+            print(Multiplier)
+            wait(0.2)
+            while L_136_:IsKeyDown(Enum.KeyCode.RightBracket) do
+                wait()
+                Multiplier = Multiplier - 0.01
+                print(Multiplier)
+            end
+        end
+        if L_140_arg0.KeyCode == Enum.KeyCode.C then
+            L_138_ = not L_138_
+            if L_138_ == true then
+                repeat
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.Humanoid.MoveDirection * Multiplier
+                    game:GetService("RunService").Stepped:wait()
+                until L_138_ == false
+            end
+        end
+    end)
+end)
+Section:NewSlider("CFrame Speed ", "", 5, 0, function(s)
     getgenv().Multiplier = s
 end)
 
-
-Section:NewButton("CFrame Speed Toggle (Mobile)", "for Mob", function()
+Section:NewButton("CFrame Speed Button (MOB)", "for Mob", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/scripts/main/CFrame%20toggle.lua", true))()
+
+notifications:notify {
+    Title = "Trip Hub", 
+    Description = "modified by Space#0234",
+    Icon = 6031071053, 
+    Length = tiempo
+}
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/scripts/main/CFrame%20toggle.lua",true))()
 
 end)
 
 
+local Section = Tab:NewSection("Speed (For mobile)")
 
+
+
+Section:NewButton("Speed Button (MOB)", "for Mob", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+
+notifications:notify {
+    Title = "Trip Hub", 
+    Description = "modified by Space#0234",
+    Icon = 6031071053, 
+    Length = tiempo
+}
+
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/madebyemiliano/main/Speed%20bypass",true))()
+
+end)
+
+Section:NewButton("Speed Toggle (MOB)", "for Mob", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+
+notifications:notify {
+    Title = "Trip Hub", 
+    Description = "modified by Space#0234",
+    Icon = 6031071053, 
+    Length = tiempo
+}
+
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/toggles_speed/main/Speed",true))()
+
+end)
 
 local Section = Tab:NewSection("Server Sided")
 
@@ -1074,6 +1129,27 @@ Section:NewButton("Server Finder Hub", "search server", function()
 
 end)
 
+Section:NewButton("enter server fast","xd", function(value)
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    local Http = game:GetService("HttpService")
+        local TPS = game:GetService("TeleportService")
+        local Api = "https://games.roblox.com/v1/games/"
+         
+        local _place = game.PlaceId
+        local _servers = Api.._place.."/servers/Public?sortOrder=Asc&limit=100"
+        function ListServers(cursor)
+           local Raw = game:HttpGet(_servers .. ((cursor and "&cursor="..cursor) or ""))
+           return Http:JSONDecode(Raw)
+        end
+         
+        local Server, Next; repeat
+           local Servers = ListServers(Next)
+           Server = Servers.data[1]
+           Next = Servers.nextPageCursor
+        until Server
+         
+        TPS:TeleportToPlaceInstance(_place,Server.id,game.Players.LocalPlayer)
+    end)
 
 Section:NewButton("Rejoin", "Rejoin", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
@@ -1083,8 +1159,58 @@ end)
 
 local Section = Tab:NewSection("Anti Stomp")
 
+Section:NewButton("anti stomp (k)","pc",  function(value)
 
-Section:NewButton("Anti Stomp Button", "For Mob", function()
+notifications:notify {
+    Title = "Trip Hub", 
+    Description = "by Space#0234",
+    Icon = 6031071053, 
+    Length = tiempo
+}
+
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+      local tecla = Enum.KeyCode.K
+        local lol = game:GetService("UserInputService")
+        
+        lol.InputBegan:Connect(function(key)
+                if key.KeyCode == tecla then
+
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/scripts_v2/main/anti%20stomp",true))()
+
+             end
+        end)
+    end)
+    
+    Section:NewButton("anti stomp (u)","pc", function(value)
+
+notifications:notify {
+    Title = "Trip Hub", 
+    Description = "by Space#0234",
+    Icon = 6031071053, 
+    Length = tiempo
+}
+
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+      local tecla = Enum.KeyCode.U
+        local lol = game:GetService("UserInputService")
+        
+        lol.InputBegan:Connect(function(key)
+                if key.KeyCode == tecla then
+           loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/scripts_v2/main/anti%20stomp",true))()
+end
+        end)
+    end)
+
+
+Section:NewButton("Anti Stomp Button (MOB)", "For Mob", function()
+
+notifications:notify {
+    Title = "Trip Hub", 
+    Description = "by Space#0234",
+    Icon = 6031071053, 
+    Length = tiempo
+}
+
     loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/scripts/main/anti%20stomp%20button",true))()
 
@@ -1106,7 +1232,16 @@ Section:NewButton("Chat Spy v2", "v2", function()
 
 end)
 
-Section:NewButton("Trash Talk Button", "For Mob", function()
+
+Section:NewButton("Trash Talk Button (MOB)", "For Mob", function()
+
+notifications:notify {
+    Title = "Trip Hub", 
+    Description = "by Space#0234",
+    Icon = 6031071053, 
+    Length = tiempo
+}
+
     loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/GamerEmilianoFF/main/trash%20gui",true))()
 
@@ -1116,13 +1251,29 @@ end)
 local Section = Tab:NewSection("Jumps Mods")
 
 
-Section:NewButton("No Limits Jumps", "Destroy 3 Jumps Limits", function()
+Section:NewButton("No Limits Jumps ", "Destroy 3 Jumps Limits", function()
+
+notifications:notify {
+    Title = "Trip Hub", 
+    Description = "by Space#0234",
+    Icon = 6031071053, 
+    Length = tiempo
+}
+
     loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/infinite_jumps/main/Jumps",true))()
 
 end)
 
-Section:NewButton("Inf Jumps", "Jump for fly", function()
+Section:NewButton("Inf Jumps (MOB)", "Jump for fly", function()
+
+notifications:notify {
+    Title = "Trip Hub", 
+    Description = "by Space#0234",
+    Icon = 6031071053, 
+    Length = tiempo
+}
+
     loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
 
     local InfiniteJumpEnabled = true
@@ -1140,25 +1291,81 @@ Section:NewButton("Inf Jumps", "Jump for fly", function()
 end)
 
 
+Section:NewButton("inf jump (PC)", "you can jump how many times you want", function()
+
+notifications:notify {
+    Title = "Trip Hub", 
+    Description = "by SoftVortex",
+    Icon = 6031071053, 
+    Length = tiempo
+}
+
+local Player = game:GetService'Players'.LocalPlayer;
+local UIS = game:GetService'UserInputService';
+
+_G.JumpHeight = 50;
+
+function Action(Object, Function) if Object ~= nil then Function(Object); end end
+
+UIS.InputBegan:connect(function(UserInput)
+    if UserInput.UserInputType == Enum.UserInputType.Keyboard and UserInput.KeyCode == Enum.KeyCode.Space then
+        Action(Player.Character.Humanoid, function(self)
+            if self:GetState() == Enum.HumanoidStateType.Jumping or self:GetState() == Enum.HumanoidStateType.Freefall then
+                Action(self.Parent.HumanoidRootPart, function(self)
+                    self.Velocity = Vector3.new(0, _G.JumpHeight, 0);
+                end)
+            end
+        end)
+    end
+end)
+end)
+
 local Section = Tab:NewSection("Other Mods")
 
-Section:NewButton("Anti Ban", "Kicks you when a mod/admin/star Has Joined", function()
-local annoying = {"JokeTheFool", "Sherosama", "dtbbullet", "AStrongMuscle", "XavierWild", "NikoSenpai", "UziGarage", "iumu", "Benoxa", "Luutyy", "clubstar54", "givkitheth", "DrxcoBaby" , "DrxcoRxsh" , "ROVTAED" , "clayonADHD" , "ihatehenri" , "wDynamic" , "Dark_Legacies" , "HiurrW" , "6ugged" , "llHxtedOppll" , "DeszKAndrees" , "WWWHYYYYYYYYYYYYYY" , "DigitalAngels" , "monkey1991cool" , "IkykoI" , "shinepranked" , "eliteloopkiller" , "RestfuIly" , "Remurez" , "Craxelss" , "prokiller357089" , "Deluxura" , "Iateforever" , "romeothefathamster" , "SinisterLimitless" , "xXStrikerTentacle215" , "lmTheHxliday" , "G5OUL" , "saialt11" , "T_4Q" , "theyluvkyro" , "A3sReturn" , "B4NKFUNDS" , "YourFatherMetal" , "YourFatherGenux" , "SwagminLerk" , "MarcsRevenge" , "Leppions" , "KivieArsenal" , "WeaponMods" , "ImTheHxliday" , "0uwy" , "dtbkxng" , "saiheartshin" , "Tezza4321" , "rvkudo" , "FateIsAChimp"}
- 
-game.Players.PlayerAdded:Connect(function(plr)
-for i, v in pairs(annoying) do
-if plr.Name == v then
-local loc = game.Players.LocalPlayer
-loc:Kick("Kicked an admin/mod/star has joined")
-end
-end
-end)
+
+Section:NewButton("No Shadows", "Removes All Shadows", function()
+
+notifications:notify {
+    Title = "Trip Hub", 
+    Description = "by Space#0234",
+    Icon = 6031071053, 
+    Length = tiempo
+}
+
+game:GetService("Lighting").GlobalShadows = false
+game:GetService("Lighting").ShadowSoftness = 0
 end)
 
+Section:NewButton("Anti Flashbang", "AntiFlashBang", function()
+
+notifications:notify {
+    Title = "Trip Hub", 
+    Description = "by Space#0234",
+    Icon = 6031071053, 
+    Length = tiempo
+}
+
+		while wait() do
+			local XD = game:GetService("Players").LocalPlayer.PlayerGui.MainScreenGui
+	
+			if XD:FindFirstChild("whiteScreen") then
+				XD.whiteScreen:Destroy()
+			end
+			wait(0.2)
+		end
+end)
 
 
 
 Section:NewButton("Spin (F)","pc", function(value)
+
+notifications:notify {
+    Title = "Trip Hub", 
+    Description = "by Space#0234",
+    Icon = 6031071053, 
+    Length = tiempo
+}
+
     loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
     
 local L_165_ = false
@@ -1190,14 +1397,152 @@ local L_165_ = false
 	end)
     end)
 
+	local speed = 20
 
-Section:NewButton("No-Clip Toggle", "No-Clip", function()
+Section:NewButton("Fly (X)","pc", function(value)
     loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/scripts/main/noclip", true))()
+      --loadstring(game:HttpGet("https://pastebin.com/raw/uxKf9adp",true))()
 
-end)
+local plr = game.Players.LocalPlayer
+	local mouse = plr:GetMouse()
+
+	localplayer = plr
+
+	if workspace:FindFirstChild("Core") then
+		workspace.Core:Destroy()
+	end
+
+	local Core = Instance.new("Part")
+	Core.Name = "Core"
+	Core.Size = Vector3.new(0.05, 0.05, 0.05)
+
+	spawn(function()
+		Core.Parent = workspace
+		local Weld = Instance.new("Weld", Core)
+		Weld.Part0 = Core
+		Weld.Part1 = localplayer.Character.LowerTorso
+		Weld.C0 = CFrame.new(0, 0, 0)
+	end)
+
+	workspace:WaitForChild("Core")
+
+	local torso = workspace.Core
+	flying = true
+	local keys={a=false,d=false,w=false,s=false} 
+	local e1
+	local e2
+	local function start()
+		local pos = Instance.new("BodyPosition",torso)
+		local gyro = Instance.new("BodyGyro",torso)
+		pos.Name="EPIXPOS"
+		pos.maxForce = Vector3.new(math.huge, math.huge, math.huge)
+		pos.position = torso.Position
+		gyro.maxTorque = Vector3.new(9e9, 9e9, 9e9) 
+		gyro.cframe = torso.CFrame
+		repeat
+			wait()
+			localplayer.Character.Humanoid.PlatformStand=true
+			local new=gyro.cframe - gyro.cframe.p + pos.position
+			if not keys.w and not keys.s and not keys.a and not keys.d then
+				speed = 20
+			end
+			if keys.w then 
+				new = new + workspace.CurrentCamera.CoordinateFrame.lookVector * speed
+				speed=speed+0
+			end
+			if keys.s then 
+				new = new - workspace.CurrentCamera.CoordinateFrame.lookVector * speed
+				speed=speed+0
+			end
+			if keys.d then 
+				new = new * CFrame.new(speed,0,0)
+				speed=speed+0
+			end
+			if keys.a then 
+				new = new * CFrame.new(-speed,0,0)
+				speed=speed+0
+			end
+			if speed>20 then
+				speed=5
+			end
+			pos.position=new.p
+			if keys.w then
+				gyro.cframe = workspace.CurrentCamera.CoordinateFrame*CFrame.Angles(-math.rad(speed*0),0,0)
+			elseif keys.s then
+				gyro.cframe = workspace.CurrentCamera.CoordinateFrame*CFrame.Angles(math.rad(speed*0),0,0)
+			else
+				gyro.cframe = workspace.CurrentCamera.CoordinateFrame
+			end
+		until flying == false
+		if gyro then gyro:Destroy() end
+		if pos then pos:Destroy() end
+		flying=false
+		localplayer.Character.Humanoid.PlatformStand=false
+		speed=20
+	end
+	e1=mouse.KeyDown:connect(function(key)
+		if not torso or not torso.Parent then flying=false e1:disconnect() e2:disconnect() return end
+		if key=="w" then
+			keys.w=true
+		elseif key=="s" then
+			keys.s=true
+		elseif key=="a" then
+			keys.a=true
+		elseif key=="d" then
+			keys.d=true
+		elseif key=="x" then
+			if flying==true then
+				flying=false
+			else
+				flying=true
+				start()
+			end
+		end
+	end)
+	e2=mouse.KeyUp:connect(function(key)
+		if key=="w" then
+			keys.w=false
+		elseif key=="s" then
+			keys.s=false
+		elseif key=="a" then
+			keys.a=false
+		elseif key=="d" then
+			keys.d=false
+		end
+	end)
+	start()
+
+    end)
+
+    
+
+
+    Section:NewButton("anti slow","anti slow no perm", function(value)
+
+notifications:notify {
+    Title = "Trip Hub", 
+    Description = "by Oblivion",
+    Icon = 6031071053, 
+    Length = tiempo
+}
+
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+        loadstring(game:HttpGet("https://pastebin.com/raw/8dib2xhn",true))()
+    end)
+
+
+
+
 
 Section:NewButton("Kick Me Button", "Kick me", function()
+
+notifications:notify {
+    Title = "Trip Hub", 
+    Description = "by Space#0234",
+    Icon = 6031071053, 
+    Length = tiempo
+}
+
     loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
     loadstring(game:HttpGet("https://pastebin.com/raw/x6pKVqxw", true))()
 
@@ -1219,23 +1564,140 @@ Section:NewButton("No Fog", "No Fog", function()
 
 end)
 
+local Section = Tab:NewSection("Mods dhm")
+
+Section:NewSlider("kill streak","good" ,0,99999,function(value)
+    game.Players.LocalPlayer.Information.Streaks.Value = value
+   end)
+
+
+Section:NewButton("inf zoom", "inf zoom", function()
+
+notifications:notify {
+    Title = "Trip Hub", 
+    Description = "by Space#0234",
+    Icon = 6031071053, 
+    Length = tiempo
+}
+
+game:GetService("Players").LocalPlayer.CameraMaxZoomDistance = math.huge
+     game:GetService("Players").LocalPlayer.PlayerGui.MainScreenGui.Aim.Top.Visible = false
+     game:GetService("Players").LocalPlayer.PlayerGui.MainScreenGui.Aim.Right.Visible = false
+     game:GetService("Players").LocalPlayer.PlayerGui.MainScreenGui.Aim.Left.Visible = false
+     game:GetService("Players").LocalPlayer.PlayerGui.MainScreenGui.Aim.Bottom.Visible = false 
+end)
+
+
+Section:NewToggle("Auto Stomp", "AutoStomp", function(value)
+
+notifications:notify {
+    Title = "Trip Hub", 
+    Description = "by SoftVortex",
+    Icon = 6031071053, 
+    Length = tiempo
+}
+
+_G.stompem = value
+        while _G.stompem do
+      wait(0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000001)
+        game.ReplicatedStorage.MainRemote:FireServer("Stomp")
+end
+
+end)
+
+
+
+local Section = Tab:NewSection("Player")
+
+
 Section:NewButton("Korblox (Right)", "Client", function()
+
+
+notifications:notify {
+    Title = "Trip Hub", 
+    Description = "only you can see it :(",
+    Icon = 6031071053, 
+    Length = tiempo
+}
+
     loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Invooker11/Koblox-and-Headless/main/Right%20Leg",true))()
 
 end)
 
 Section:NewButton("Korblox (Left)", "Client", function()
+
+notifications:notify {
+    Title = "Trip Hub", 
+    Description = "only you can see it :(",
+    Icon = 6031071053, 
+    Length = tiempo
+}
+
     loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/korblox-left/main/xd",true))()
 
 end)
 
 Section:NewButton("Headless", "Client", function()
+
+notifications:notify {
+    Title = "Trip Hub", 
+    Description = "only you can see it :(",
+    Icon = 6031071053, 
+    Length = tiempo
+}
+
     loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Invooker11/Koblox-and-Headless/main/Headless"))()
 
 end)
+
+Section:NewButton("korblox right (FE)","FE", function(value)
+
+notifications:notify {
+    Title = "Trip Hub", 
+    Description = "everyone can see it :D",
+    Icon = 6031071053, 
+    Length = tiempo
+}
+
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+      game.Players.LocalPlayer.Character.RightUpperLeg:Destroy()
+    end)
+
+    Section:NewButton("Headless (FE) (BUGGY)","FE", function(value)
+
+notifications:notify {
+    Title = "Trip Hub", 
+    Description = "everyone can see it :D",
+    Icon = 6031071053, 
+    Length = tiempo
+}
+
+
+        loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+        pcall(function()
+            game.Players.LocalPlayer.Character.Head.Neck:Destroy()
+            game.Players.LocalPlayer.Character.UpperTorso.NeckAttachment:Destroy()
+            game.Players.LocalPlayer.Character.Humanoid.HealthDisplayDistance = math.huge
+            game.Players.LocalPlayer.Character.Humanoid.NameDisplayDistance = math.huge
+            game.Players.LocalPlayer.Character.Head.Size = Vector3.new(0,0,0)
+            game.Players.LocalPlayer.Character.Head.Massless = true
+            game.Players.LocalPlayer.Character.Head.CanCollide = false
+    
+            heazd = true
+    
+            while heazd == true do 
+                pcall(function()  
+                    game.Players.LocalPlayer.Character.Head.NeckRigAttachment.CFrame =  CFrame.new(0, 100000.4736328125, 0)
+                    game.Players.LocalPlayer.Character.UpperTorso.NeckRigAttachment.CFrame =  CFrame.new(0, 100000.4736328125, 0)
+                    game.Players.LocalPlayer.Character.Head.CFrame = CFrame.new(0, 100000.4736328125, 0)
+                end)
+                wait()
+            end
+        end)
+        end)
 
 
 
@@ -1819,6 +2281,14 @@ Section:NewButton("Cursor Red Circle", "Cursor Red Circle", function()
     Cursor.Image = "rbxassetid://973823018"
     Cursor.ScaleType = Enum.ScaleType.Fit
     Cursor.Position = UDim2.new(0.5, 0, 0.46, 0)
+
+    notifications:notify {
+        Title = "Trip Hub", 
+        Description = "by Space#0234",
+        Icon = 6031071053, 
+        Length = tiempo
+    }
+
 end)
 
 Section:NewButton("Cursor White (+)", "(+)", function()
@@ -1838,6 +2308,14 @@ Section:NewButton("Cursor White (+)", "(+)", function()
     Cursor.Image = "rbxassetid://3874001308"
     Cursor.ScaleType = Enum.ScaleType.Fit
     Cursor.Position = UDim2.new(0.5, 0, 0.5, 0)
+
+    notifications:notify {
+        Title = "Trip Hub", 
+        Description = "by Space#0234",
+        Icon = 6031071053, 
+        Length = tiempo
+    }
+
 end)
 
 Section:NewButton("Cursor white Circle", "Circle", function()
@@ -1857,6 +2335,28 @@ Section:NewButton("Cursor white Circle", "Circle", function()
     Cursor.Image = "rbxassetid://3355815697"
     Cursor.ScaleType = Enum.ScaleType.Fit
     Cursor.Position = UDim2.new(0.5, 0, 0.5, 0)
+
+    notifications:notify {
+        Title = "Trip Hub", 
+        Description = "by Space#0234",
+        Icon = 6031071053, 
+        Length = tiempo
+    }
+
+end)
+
+
+Section:NewButton("Cursor Changer", "Cursor Changer", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/cursors/main/Cursor%20Changer",true))()
+ notifications:notify {
+        Title = "Trip Hub", 
+        Description = "by Space#0234 and _-_-_-_-_-_-_-_-_-_-_-_-_#4562",
+        Icon = 6031071053, 
+        Length = tiempo
+    }
+
 end)
 
 Section:NewLabel("Destroy Cursor")
@@ -1922,6 +2422,14 @@ Section:NewButton("fov 120", "120", function()
 end)
 
 Section:NewButton("Fov Changer", "changer", function()
+
+notifications:notify {
+    Title = "Trip Hub", 
+    Description = "cum",
+    Icon = 6031071053, 
+    Length = tiempo
+}
+
     loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
     loadstring(game:HttpGet("https://pastebin.com/raw/wC4V0q1S", true))()
 
@@ -1932,31 +2440,84 @@ end)
 local Tab = Window:NewTab("Esp")
 local Section = Tab:NewSection("Esp")
 
-Section:NewButton("Esp Box", "Esp Box", function()
+Section:NewButton("UNIX Esp ", "UNIX Esp", function()
+
+notifications:notify {
+    Title = "Trip Hub", 
+    Description = "BY IDK",
+    Icon = 6031071053, 
+    Length = tiempo
+}
+
     loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
     spawn(loadstring(game:HttpGet("https://pastebin.com/raw/zKjj0TQD", true)))();
 
 end)
 
 Section:NewButton("Esp Box and Name", "Esp Box and Name", function()
+
+notifications:notify {
+    Title = "Trip Hub", 
+    Description = "BY IDK",
+    Icon = 6031071053, 
+    Length = tiempo
+}
+
     loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
     local ESP = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kiriot22/ESP-Lib/main/ESP.lua"))()
     ESP:Toggle(true)
 end)
 
 Section:NewButton("Esp V2 (Pc)", "For PC", function()
+
+notifications:notify {
+    Title = "Trip Hub", 
+    Description = "BY IDK",
+    Icon = 6031071053, 
+    Length = tiempo
+}
+
     loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/ic3w0lf22/Unnamed-ESP/master/UnnamedESP.lua"))()
 
 end)
 
+Section:NewButton("fates esp and aimlock","PC/MOB", function(value)
+
+notifications:notify {
+    Title = "Trip Hub", 
+    Description = "BY IDK",
+    Icon = 6031071053, 
+    Length = tiempo
+}
+
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-esp/main/main.lua"))()
+    end)
+
 Section:NewButton("Bliss Hit Box (PC)", "For PC", function()
+
+notifications:notify {
+    Title = "Trip Hub", 
+    Description = "BY IDK",
+    Icon = 6031071053, 
+    Length = tiempo
+}
+
     loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Cornyllius/ESPs/main/BlissESP.lua", true))()
 
 end)
 
 Section:NewButton("Owl Hub", "Owl Hub", function()
+
+notifications:notify {
+    Title = "Trip Hub", 
+    Description = "BY IDK",
+    Icon = 6031071053, 
+    Length = tiempo
+}
+
     loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
     local t = {}
     setmetatable(t, {
@@ -1975,10 +2536,50 @@ Section:NewButton("Owl Hub", "Owl Hub", function()
 end)
 
 Section:NewButton("View Player", "View Player", function()
+
+notifications:notify {
+    Title = "Trip Hub", 
+    Description = "BY Space#0234",
+    Icon = 6031071053, 
+    Length = tiempo
+}
+
     loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/scripts/main/view%20scripts"))()
 
 end)
+
+
+
+local Section = Tab:NewSection("Esp Fill")
+
+
+Section:NewToggle("Esp fill", "esp fill", function(state)
+    if state then
+getgenv().enabled = true --Toggle on/off
+getgenv().filluseteamcolor = false --Toggle fill color using player team color on/off
+getgenv().outlineuseteamcolor = false --Toggle outline color using player team color on/off
+getgenv().fillcolor = Color3.new(0, 0, 0) --Change fill color, no need to edit if using team color
+getgenv().outlinecolor = Color3.new(1, 1, 1) --Change outline color, no need to edit if using team color
+getgenv().filltrans = 5 --Change fill transparency
+getgenv().outlinetrans = 0 
+ 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/esp/main/esp.lua"))()
+    else
+getgenv().enabled = false 
+
+     end
+end)
+
+
+
+Section:NewColorPicker("Esp fill Color", "esp fill", Color3.fromRGB(1,1,1), function(cpp)
+
+getgenv().outlinecolor = cpp
+
+
+end)
+
 
 
 
@@ -2014,85 +2615,341 @@ Section:NewButton("Kitten Legit", "Kitten Legit", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/Tfey2JbA"))()
 
 end)
+    
+Section:NewButton("Temporal X v2.0.3","pc", function(value)
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+    loadstring(game:HttpGet("https://pastebin.com/raw/w2S8YyDt", true))()
+    end)
+
+
 
 Section:NewLabel("Locks By Trip Hub (MOB)")
+
+Section:NewButton("Lock dot (pc/mob)", "BY Space#0234 and owner of the script", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+
+notifications:notify {
+    Title = "Trip Hub", 
+    Description = "PATCHED :(",
+    Icon = 6031071053, 
+    Length = tiempo
+}
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/aim/main/lock/lock%20circle", true))()
+end)
 
 Section:NewButton("Lock-Trip", "BY Space#0234", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/aim/main/lock-trip", true))()
+
+notifications:notify {
+    Title = "Trip Hub", 
+    Description = "modified by Space#0234",
+    Icon = 6031071053, 
+    Length = tiempo
+}
+
 end)
 
 Section:NewButton("Aimbot-Trip", "BY Space#0234", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/aim/main/aimbot", true))()
+
+notifications:notify {
+    Title = "Trip Hub", 
+    Description = "modified by Space#0234",
+    Icon = 6031071053, 
+    Length = tiempo
+}
+
 end)
 
 
-Section:NewButton("hitbox (pc/mob)", "BY Space#0234", function()
+Section:NewButton("hitbox (pc/mob)", "BY Space#0234 and owner of the script", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+
+notifications:notify {
+    Title = "Trip Hub", 
+    Description = "PATCHED :(",
+    Icon = 6031071053, 
+    Length = tiempo
+}
 loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/aim/main/hitbox.lua", true))()
-
 end)
 
-Section:NewButton("Lock Dot Blue (pc/mob)", "BY Space#0234", function()
+
+Section:NewButton("Dot Blue(pc/mob)", "BY Space#0234 and owner of the script", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+notifications:notify {
+    Title = "Trip Hub", 
+    Description = "WORKS! :D",
+    Icon = 6031071053, 
+    Length = tiempo
+}
+
 loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/aim/main/dot_blue.lua", true))()
-
 end)
 
 
-Section:NewButton("Lock dot (pc/mob)", "BY Space#0234 and owner of the script", function()
+
+Section:NewButton("Silent Red (pc/mob)", "BY Space#0234", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/aim/main/lock/lock%20circle", true))()
+notifications:notify {
+    Title = "Trip Hub", 
+    Description = "WORKS! :D",
+    Icon = 6031071053, 
+    Length = tiempo
+}
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/aim/main/silent%20red", true))()
 end)
-
-
 
 
 
 Section:NewLabel("Silent Aim")
 
-Section:NewButton("Rainbow Lock and Esp", "", function()
+ 
+
+Section:NewButton("Rainbow Lock and Esp", "Pc", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
     loadstring(game:HttpGet("https://pastebin.com/raw/SgTvDfd9"))()
 
 end)
 
-Section:NewButton("Silent (350)", "350", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
-    loadstring(game:HttpGet('https://pastebin.com/raw/XEdqn1Gg'))()
+
+Section:NewSlider("Silent Fov Slider", "Fov Slider", 320, 0, function(xdxd) 
+notifications:notify {
+    Title = "Trip Hub", 
+    Description = "first you must select the size of the fov and then execute the button below called (silent aim) ",
+    Icon = 6031071053, 
+    Length = 10
+}
+
+
+_G.FOV = xdxd
 
 end)
 
-Section:NewButton("Silent (240)", "240", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
- loadstring(game:HttpGet('https://pastebin.com/raw/HGQ2EnRw'))()
+
+Section:NewButton("silent aim","", function(value)
+loadstring(game:HttpGet("https://pastebin.com/raw/d1rMxaf9",true))()
+
+
+_G.Prediction =  (  .18  )
+ 
+ 
+_G.AimKey =  (  "c"  )
+ 
+ 
+
+ 
+local SilentAim = true
+local LocalPlayer = game:GetService("Players").LocalPlayer
+local Players = game:GetService("Players")
+local Mouse = LocalPlayer:GetMouse()
+local Camera = game:GetService("Workspace").CurrentCamera
+hookmetamethod = hookmetamethod
+Drawing = Drawing
+ 
+_G.FOV_CIRCLE = Drawing.new("Circle")
+ 
+local FOV_CIRCLE = _G.FOV_CIRCLE
+ 
+FOV_CIRCLE.Visible = true
+FOV_CIRCLE.Filled = false
+FOV_CIRCLE.Thickness = 1
+FOV_CIRCLE.Transparency = 1
+FOV_CIRCLE.Color = Color3.new(0, 1, 0)
+FOV_CIRCLE.Radius = _G.FOV
+FOV_CIRCLE.Position = Vector2.new(Camera.ViewportSize.X / 2, Camera.ViewportSize.Y / 2)
+-- Options
+Options = {
+    Torso = "HumanoidRootPart";
+    Head = "Head";
+}
+ 
+local function MoveFovCircle()
+    pcall(function()
+        local DoIt = true
+        spawn(function()
+            while DoIt do task.wait()
+                FOV_CIRCLE.Position = Vector2.new(Mouse.X, (Mouse.Y + 36))
+            end
+        end)
+    end)
+end coroutine.wrap(MoveFovCircle)()
+ 
+Mouse.KeyDown:Connect(function(KeyPressed)
+    if KeyPressed == (_G.AimKey:lower()) then
+        if SilentAim == false then
+            FOV_CIRCLE.Color = Color3.new(0, 1, 0)
+            SilentAim = true
+        elseif SilentAim == true then
+            FOV_CIRCLE.Color = Color3.new(1, 0, 0)
+            SilentAim = false
+        end
+    end
+end)
+ 
+local oldIndex = nil 
+oldIndex = hookmetamethod(game, "__index", function(self, Index)
+    if self == Mouse and (Index == "Hit") then 
+        local Distance = 9e9
+        local Targete = nil
+        if SilentAim then
+            
+            for _, v in pairs(Players:GetPlayers()) do 
+                if v ~= LocalPlayer and v.Character and v.Character:FindFirstChild("HumanoidRootPart") and v.Character:FindFirstChild("Humanoid") and v.Character:FindFirstChild("Humanoid").Health > 0 then
+                    local Enemy = v.Character    
+                    local CastingFrom = CFrame.new(Camera.CFrame.Position, Enemy[Options.Torso].CFrame.Position) * CFrame.new(0, 0, -4)
+                    local RayCast = Ray.new(CastingFrom.Position, CastingFrom.LookVector * 9000)
+                    local World, ToSpace = workspace:FindPartOnRayWithIgnoreList(RayCast, {LocalPlayer.Character:FindFirstChild("Head")})
+                    local RootWorld = (Enemy[Options.Torso].CFrame.Position - ToSpace).magnitude
+                    if RootWorld < 4 then
+                        local RootPartPosition, Visible = Camera:WorldToScreenPoint(Enemy[Options.Torso].Position)
+                        if Visible then
+                            local Real_Magnitude = (Vector2.new(Mouse.X, Mouse.Y) - Vector2.new(RootPartPosition.X, RootPartPosition.Y)).Magnitude
+                            if Real_Magnitude < Distance and Real_Magnitude < FOV_CIRCLE.Radius then
+                                Distance = Real_Magnitude
+                                Targete = Enemy
+                            end
+                        end
+                    end
+                end
+            end
+        end
+        
+        if Targete ~= nil and Targete[Options.Torso] and Targete:FindFirstChild("Humanoid").Health > 0 then
+            if SilentAim then
+                local ShootThis = Targete[Options.Torso] -- or Options.Head
+                local Predicted_Position = ShootThis.CFrame + (ShootThis.Velocity * _G.Prediction + Vector3.new(0,-1,0)) --  (-1) = Less blatant
+                return ((Index == "Hit" and Predicted_Position)) -- Return
+            end
+        end
+        
+    end
+    return oldIndex(self, Index)
 end)
 
-Section:NewButton("Silent Aim [Big Fov]", "Silent Aim With Big Fov", function()
-loadstring(game:HttpGet(("https://pastebin.com/raw/6EVXCMaf"),true))()
+
+   end)
+
+
+
+
+
+local Tab = Window:NewTab("Skins")
+local Section = Tab:NewSection("Skins")
+
+Section:NewButton("Red Sparkle Time", "Red Sparkle Time", function()
+game.ReplicatedStorage.MainRemote:FireServer("Skin", "3461309563")
 end)
-Section:NewButton("Silent Aim [200 Fov]", "Silent Aim With 200 Fov", function()
-loadstring(game:HttpGet(("https://pastebin.com/raw/EzWShU0J"),true))()
+Section:NewButton("Blood", "Blood", function()
+game.ReplicatedStorage.MainRemote:FireServer("Skin", "108941805")
 end)
-Section:NewButton("Silent Aim [100 Fov]", "Silent Aim With 100 Fov", function()
-loadstring(game:HttpGet(("https://www.toptal.com/developers/hastebin/apexadaxav.lua"),true))()
+Section:NewButton("Red Grime", "Red Grime", function()
+game.ReplicatedStorage.MainRemote:FireServer("Skin","280779721")
 end)
-Section:NewButton("Silent Aim [invinsible Fov][Big Fov]", "Silent Aim invinsible Big Fov", function()
-loadstring(game:HttpGet(("https://www.toptal.com/developers/hastebin/esasilopor.lua"),true))()
+Section:NewButton("Gold", "Gold", function()
+game.ReplicatedStorage.MainRemote:FireServer("Skin","134632723")
 end)
-Section:NewButton("Silent Aim [invinsible Fov][200 Fov]", "Silent Aim invinsible 200 Fov", function()
-loadstring(game:HttpGet(("https://www.toptal.com/developers/hastebin/gufenekiye.lua"),true))()
+Section:NewButton("Monster assault Camo", "Monster assault Camo", function()
+game.ReplicatedStorage.MainRemote:FireServer("Skin","142656364")
 end)
-Section:NewButton("Silent Aim [invinsible Fov][100 Fov]", "Silent Aim invinsible 10 Fov", function()
-loadstring(game:HttpGet(("https://www.toptal.com/developers/hastebin/fohezepuqe.lua"),true))()
+Section:NewButton("Chill Triangles", "Chill Triangles", function()
+game.ReplicatedStorage.MainRemote:FireServer("Skin","807738028")
 end)
-Section:NewTextBox("Silent Aim Keybind", "Keybind", function(txt2)
-	getgenv()._G.AimKey = txt2
+Section:NewButton("Blue Bandana", "Blue Bandana", function()
+game.ReplicatedStorage.MainRemote:FireServer("Skin","5657430676")
 end)
-Section:NewButton("Aimbot V2", "Basically Aimbot", function()
-loadstring(game:HttpGet(("https://raw.githubusercontent.com/MinecraftTester5151/fds/main/a"),true))()
+Section:NewButton("Red Bandana", "Red Bandana", function()
+game.ReplicatedStorage.MainRemote:FireServer("Skin","5657568372")
 end)
+Section:NewButton("Worms", "Worms", function()
+game.ReplicatedStorage.MainRemote:FireServer("Skin","7545514855")
+end)
+Section:NewButton("Supreme + Louis vuitton", "Supreme + Louis vuitton", function()
+game.ReplicatedStorage.MainRemote:FireServer("Skin","1156146426")
+end)
+Section:NewButton("Nice Looking Green Skin", "Green Skin", function()
+game.ReplicatedStorage.MainRemote:FireServer("Skin","4944059812")
+end)
+Section:NewButton("Nice Skin", "Nice Skin", function()
+game.ReplicatedStorage.MainRemote:FireServer("Skin","3155472478")
+end)
+Section:NewButton("Cool Skin", "Cool Skin", function()
+game.ReplicatedStorage.MainRemote:FireServer("Skin","2669398912")
+end)
+Section:NewButton("Lightning", "Lightning", function()
+game.ReplicatedStorage.MainRemote:FireServer("Skin","5366577617")
+end)
+Section:NewButton("Space DVD", "Space DVD", function()
+game.ReplicatedStorage.MainRemote:FireServer("Skin","521581065")
+end)
+Section:NewButton("Blue LV", "Blue LV", function()
+game.ReplicatedStorage.MainRemote:FireServer("Skin","5486664842")
+end)
+Section:NewButton("Lava", "Lava", function()
+game.ReplicatedStorage.MainRemote:FireServer("Skin","6238541572")
+end)
+
+Section:NewButton("sanrio", "sanrio", function()
+    game.ReplicatedStorage.MainRemote:FireServer("Skin","10142373277")
+    end)
+
+    Section:NewButton("my melody pink and white", "my melody pink and white", function()
+        game.ReplicatedStorage.MainRemote:FireServer("Skin","10142315257")
+        end)
+
+        Section:NewButton("my melody full pink matching", "my melody full pink matching", function()
+            game.ReplicatedStorage.MainRemote:FireServer("Skin","10142308798")
+            end)
+
+            Section:NewButton("kuromi full pink matching", "kuromi full pink matching", function()
+                game.ReplicatedStorage.MainRemote:FireServer("Skin","10144459264")
+                end)
+
+                Section:NewButton("cinnamon roll", "cinnamon roll", function()
+                    game.ReplicatedStorage.MainRemote:FireServer("Skin","10142245992")
+                    end)
+
+                    Section:NewButton("hello kitty", "hello kitty", function()
+                        game.ReplicatedStorage.MainRemote:FireServer("Skin","10141707840")
+                        end)
+
+                        Section:NewButton("hello kitty 2", "hello kitty 2", function()
+                            game.ReplicatedStorage.MainRemote:FireServer("Skin","10141722124")
+                            end)
+
+                            Section:NewButton("pompompurin", "pompompurin", function()
+                                game.ReplicatedStorage.MainRemote:FireServer("Skin","10142378746")
+                                end)
+
+                                Section:NewButton("badtz maru ", "badtz maru ", function()
+                                    game.ReplicatedStorage.MainRemote:FireServer("Skin","10155574621")
+                                    end)
+
+                                    Section:NewButton("keroppi", "keroppi", function()
+                                        game.ReplicatedStorage.MainRemote:FireServer("Skin","10155587101")
+                                        end)
+
+                                        Section:NewButton("tuxedo-sam", "tuxedo-sam", function()
+                                            game.ReplicatedStorage.MainRemote:FireServer("Skin","10155609648")
+                                            end)
+
+                                            Section:NewButton("pink camo", "pink camo", function()
+                                                game.ReplicatedStorage.MainRemote:FireServer("Skin","10265975848")
+                                                end)
+
+                                                Section:NewButton("duolingo", "duolingo", function()
+                                                    game.ReplicatedStorage.MainRemote:FireServer("Skin","10278895457")
+                                                    end)
+
+                                                    Section:NewButton("red camo", "red camo", function()
+                                                        game.ReplicatedStorage.MainRemote:FireServer("Skin","10620461727")
+                                                        end)
+
+                                                    
 
 
 local Tab = Window:NewTab("Animations (FE)")
@@ -2250,121 +3107,6 @@ end)
 
 
 
-local Tab = Window:NewTab("Skins/Boombox")
-local Section = Tab:NewSection("Skins")
-
-
-Section:NewButton("Red Sparkle Time", "Red Sparkle Time", function()
-setclipboard("3461309563")
-end)
-Section:NewButton("Blood", "Blood", function()
-setclipboard("108941805")
-end)
-Section:NewButton("Red Grime", "Red Grime", function()
-setclipboard("280779721")
-end)
-Section:NewButton("Gold", "Gold", function()
-setclipboard("134632723")
-end)
-Section:NewButton("Monster assault Camo", "Monster assault Camo", function()
-setclipboard("142656364")
-end)
-Section:NewButton("Chill Triangles", "Chill Triangles", function()
-setclipboard("807738028")
-end)
-Section:NewButton("Blue Bandana", "Blue Bandana", function()
-setclipboard("5657430676")
-end)
-Section:NewButton("Red Bandana", "Red Bandana", function()
-setclipboard("5657568372")
-end)
-Section:NewButton("Worms", "Worms", function()
-setclipboard("7545514855")
-end)
-Section:NewButton("Supreme + Louis vuitton", "Supreme + Louis vuitton", function()
-setclipboard("1156146426")
-end)
-Section:NewButton("Nice Looking Green Skin", "Green Skin", function()
-setclipboard("4944059812")
-end)
-Section:NewButton("Nice Skin", "Nice Skin", function()
-setclipboard("3155472478")
-end)
-Section:NewButton("Cool Skin", "Cool Skin", function()
-setclipboard("2669398912")
-end)
-Section:NewButton("Lightning", "Lightning", function()
-setclipboard("5366577617")
-end)
-Section:NewButton("Space DVD", "Space DVD", function()
-setclipboard("521581065")
-end)
-Section:NewButton("Blue LV", "Blue LV", function()
-setclipboard("5486664842")
-end)
-Section:NewButton("Lava", "Lava", function()
-setclipboard("6238541572")
-end)
-
-
-local Section = Tab:NewSection("Click To Copy id of Song")
-local Section = Tab:NewSection("WARNING SOME ARE LOUD!.")
-
-Section:NewButton("😎The Motto😎", ".",function()
-setclipboard("8990426054")
-end)
-
-Section:NewButton("🔥 London Drill Song", ".",function()
-setclipboard("5542209618")
-end)
-Section:NewButton("🕺Do Da Fortnite🕺", ".",function()
-setclipboard("8994226137")
-end)
-Section:NewButton("💚Owner of SoftVortex Likes This One💚", ".",function()
-setclipboard("9048481823")
-end)
-Section:NewButton("💵 Monney So Big 💵", ".",function()
-setclipboard("7450432312")
-end)
-Section:NewButton("👿a way or another im a bad brother👿", ".",function()
-setclipboard("8478224773")
-end)
-Section:NewButton("🤍NBA YoungBoy - “White Teeth”🤍", ".",function()
-setclipboard("6813288997")
-end)
-Section:NewButton("💙Crip 4 Life💙", ".",function()
-setclipboard("7122471461")
-end)
-Section:NewButton("💙loop💙", ".",function()
-setclipboard("7131714079")
-end)
-Section:NewButton("👿Murder On My Mind👿", ".",function()
-setclipboard("4572859762")
-end)
-Section:NewButton("🔥London Drill🔥", ".",function()
-setclipboard("9020842480")
-end)
-Section:NewButton("🌹Roses🌹", ".",function()
-setclipboard("8434230106")
-end)
-Section:NewButton("🧓registered Se# Offender🧓 long start", ".",function()
-setclipboard("9038069435")
-end)
-Section:NewButton("🌹unreleased lungskull song🌹", ".",function()
-setclipboard("9111553813")
-end)
-Section:NewButton("🌹Love Sosa🌹Loud Start ", ".",function()
-setclipboard("9067166824")
-end)
-Section:NewButton("😂skinny everything h3artcrush $$$😂 bypassed", ".",function()
-setclipboard("9102067208")
-end)
-Section:NewButton("🌹Love Sosa🌹Loud Start ", ".",function()
-setclipboard("9067166824")
-end)
-Section:NewButton("🌹👐Everybody Dies In Their Nightmares👐🌹", ".",function()
-setclipboard("9000673014")
-end)
 
 
 
@@ -2395,6 +3137,30 @@ Section:NewButton("Anti Lag (Dont shirt)", "", function()
 
 end)
 
+Section:NewButton("booster (Recommended)","AND RTX", function(value)
+
+
+    local timeBegan = tick()
+    for i,v in ipairs(workspace:GetDescendants()) do
+        if v:IsA("BasePart") then 
+            v.Material = "SmoothPlastic"
+        end
+    end
+    for i,v in ipairs(game:GetService("Lighting"):GetChildren()) do
+        v:Destroy()
+    end
+    local timeEnd = tick() - timeBegan
+    local timeMS = math.floor(timeEnd*1000)
+    print("SmoothFPS loaded successfully in " .. timeMS .. "ms")
+
+    notifications:notify {
+        Title = "Trip Hub", 
+        Description = "the best anti-lag By Space#0234",
+        Icon = 6031071053, 
+        Length = tiempo
+    }
+
+    end)
 
 
 local Tab = Window:NewTab("Credits")
@@ -2412,6 +3178,8 @@ end)
 Section:NewButton("Copy Youtube link", "Youtube", function()
 setclipboard("https://www.youtube.com/channel/UCRiszwo8e1FmlWUBhPRMUsQ")
 end)
+
+local Section = Tab:NewSection("Settings UI")
 
 Section:NewKeybind("close/open Key", "key (Y)", Enum.KeyCode.Y, function()
 	Library:ToggleUI()
@@ -2663,6 +3431,10 @@ end
 coroutine.wrap(NZUQWVR_fake_script)()
 
 end)
+ 
 
---check 2
-loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/scripts/main/check"))()
+--noti owner
+loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/scripts/main/theow.lua"))()
+
+
+
