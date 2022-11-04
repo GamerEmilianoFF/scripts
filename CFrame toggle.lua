@@ -11794,68 +11794,61 @@ print[[
 
 
 
+--toggle
 
-local ScreenGui = Instance.new("ScreenGui")
+local Toggle = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
-local toggle = Instance.new("TextButton")
+local TextButton = Instance.new("TextButton")
 local UICorner_2 = Instance.new("UICorner")
 
 --Properties:
 
-ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-ScreenGui.ResetOnSpawn = false
+Toggle.Name = "Toggle"
+Toggle.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Toggle.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+Toggle.ResetOnSpawn = false
 
-Frame.Parent = ScreenGui
-Frame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
-Frame.Position = UDim2.new(0.583586633, 0, 0.14094843, 0)
-Frame.Size = UDim2.new(0, 234, 0, 118)
+Frame.Parent = Toggle
+Frame.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+Frame.Position = UDim2.new(0.284875154, 0, 0.0723192096, 0)
+Frame.Size = UDim2.new(0, 222, 0, 76)
 Frame.Active = true
 Frame.Draggable = true
 
-UICorner.CornerRadius = UDim.new(0, 13)
+UICorner.CornerRadius = UDim.new(0, 15)
 UICorner.Parent = Frame
 
-toggle.Name = "toggle"
-toggle.Parent = Frame
-toggle.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-toggle.Position = UDim2.new(0.111171618, 0, 0.231031209, 0)
-toggle.Size = UDim2.new(0, 180, 0, 63)
-toggle.Font = Enum.Font.SourceSans
-toggle.Text = "toggle"
-toggle.TextColor3 = Color3.fromRGB(255, 255, 255)
-toggle.TextScaled = true
-toggle.TextSize = 14.000
-toggle.TextWrapped = true
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+TextButton.Position = UDim2.new(0.107666701, 0, 0.154473558, 0)
+TextButton.Size = UDim2.new(0, 176, 0, 51)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "CFrame"
+TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.TextScaled = true
+TextButton.TextSize = 14.000
+TextButton.TextWrapped = true
 
-UICorner_2.CornerRadius = UDim.new(0, 13)
-UICorner_2.Parent = toggle
+local script = Instance.new('LocalScript', TextButton)
 
--- Scripts:
+local state = true
+script.Parent.MouseButton1Down:Connect(function()
+	print"By Space#0234"
+	state = not state
+	if not state then
+		script.Parent.Text = "off"
 
-local function IQTSY_fake_script() -- toggle.LocalScript 
-	local script = Instance.new('LocalScript', toggle)
+		for i, v in pairs(script.Parent.Parent.Parent:GetChildren()) do
+			if v:IsA("TextButton") then 
 
-	local state = true
-	script.Parent.MouseButton1Down:Connect(function()
-		print"By Space#0234"
-		state = not state
-		if not state then
-			script.Parent.Text = "on"
-			
-			for i, v in pairs(script.Parent.Parent.Parent:GetChildren()) do
-				if v:IsA("TextButton") then 
-					
-			
 
-					
-					v.Visible = false
-					v.TextLabel.Visible = false
-				end
+
+
+				v.Visible = false
+				v.TextLabel.Visible = false
 			end
-
-
+		end
 
 
 repeat
@@ -11903,28 +11896,26 @@ repeat
 
 
 
-		else
-			script.Parent.Text = "off"
-			--script
-			for i, v in pairs(script.Parent.Parent.Parent:GetChildren()) do
-				if v:IsA("TextButton") then 
-					
-					v.Visible = true
-					v.TextLabel.Visible = true
+	else
+		script.Parent.Text = "on"
+		--script
+		for i, v in pairs(script.Parent.Parent.Parent:GetChildren()) do
+			if v:IsA("TextButton") then 
+
+				v.Visible = true
+				v.TextLabel.Visible = true
 
 
 
 
-				end
 			end
+		end
 
 plr = game:GetService('Players').LocalPlayer
 
 getgenv().Multiplier = 0
+	end
+end)
 
-		end
-	end)
-	
-	
-end
-coroutine.wrap(IQTSY_fake_script)()
+UICorner_2.CornerRadius = UDim.new(0, 15)
+UICorner_2.Parent = TextButton
