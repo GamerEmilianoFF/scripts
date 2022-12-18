@@ -91,7 +91,7 @@ Credit.Position = UDim2.new(0.195238099, 0, 0.866141737, 0)
 Credit.Size = UDim2.new(0, 128, 0, 17)
 Credit.Font = Enum.Font.SourceSans
 Credit.FontSize = Enum.FontSize.Size18
-Credit.Text = "Created by Space#0234"
+Credit.Text = "Created by Space"
 Credit.TextColor3 = Color3.new(1, 1, 1)
 Credit.TextSize = 16
 Credit.TextStrokeColor3 = Color3.new(0.196078, 0.196078, 0.196078)
@@ -105,14 +105,35 @@ Toggle.MouseButton1Click:connect(function()
 		Status.TextColor3 = Color3.new(0,185,0)
 		Stepped = game:GetService("RunService").Stepped:Connect(function()
 			if not Clipon == false then
-				for a, b in pairs(Workspace:GetChildren()) do
-                if b.Name == Plr.Name then
-                for i, v in pairs(Workspace[Plr.Name]:GetChildren()) do
-                if v:IsA("BasePart") then
-                v.CanCollide = false
-                end end end end
+    pcall(function()
+    for i,v in pairs(game:GetService("Players"):GetChildren()) do
+        if v ~= game:GetService("Players").LocalPlayer.Character.Name then
+            
+                v.character.HumanoidRootPart.CanCollide = false
+                v.character.LeftHand.CanCollide = false
+                v.character.LeftLowerArm.CanCollide = false
+                v.character.LeftUpperArm.CanCollide = false
+                v.character.RightLowerArm.CanCollide = false
+                v.character.RightUpperArm.CanCollide = false
+                v.character.RightHand.CanCollide = false
+                v.character.LeftFoot.CanCollide = false
+                v.Character.Head.CanCollide = false
+                v.character.LeftLowerLeg.CanCollide = false
+                v.character.LeftUpperLeg.CanCollide = false
+                v.character.RightFoot.CanCollide = false
+                v.character.RightLowerLeg.CanCollide = false
+                v.character.RightUpperLeg.CanCollide = false
+                v.Character.UpperTorso.CanCollide = false
+                v.Character.LowerTorso.CanCollide = false
+                v.Character.HumanoidRootPart.CanCollide = false
+            end
+    end
+    end)
+
+
 			else
 				Stepped:Disconnect()
+
 			end
 		end)
 	elseif Status.Text == "on" then
